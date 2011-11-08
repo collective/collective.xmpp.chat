@@ -1,4 +1,8 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>1000</version>
+    <version>1000</version>
+        <dependencies>
+            <dependency>profile-jarn.xmpp.core:default</dependency>
+            <dependency>profile-babble.ui:default</dependency>
+        </dependencies>
 </metadata>

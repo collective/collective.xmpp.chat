@@ -25,11 +25,10 @@ setup(name='babble.xmpp',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'jarn.xmpp.core',
+          'babble.ui',
       ],
       entry_points="""
-      # -*- Entry points: -*-
-
       [z3c.autoinclude.plugin]
       target = plone
       """,
