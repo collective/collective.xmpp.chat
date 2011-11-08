@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <metadata>
+    <description>Babble XMPP/Jabber</description>
     <version>1000</version>
-        <dependencies>
-            <dependency>profile-jarn.xmpp.core:default</dependency>
-            <dependency>profile-babble.ui:default</dependency>
-        </dependencies>
+    <dependencies>
+        <dependency>profile-jarn.xmpp.core:default</dependency>
+        <dependency>profile-babble.ui:default</dependency>
+    </dependencies>
 </metadata>

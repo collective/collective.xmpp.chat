@@ -5,15 +5,16 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="babble.xmpp">
 
-  <five:registerPackage package="." initialize=".initialize" />
-  <include package=".browser"/>
+    <five:registerPackage package="." initialize=".initialize" />
+    <includeDependencies package="." />
+    <include package=".browser"/>
 
-  <genericsetup:registerProfile
-      name="default"
-      title="babble.xmpp"
-      directory="profiles/default"
-      description="Installs the babble.xmpp package"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
+    <genericsetup:registerProfile
+        name="default"
+        title="babble.xmpp"
+        directory="profiles/default"
+        description="Installs the babble.xmpp package"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
   
 </configure>
