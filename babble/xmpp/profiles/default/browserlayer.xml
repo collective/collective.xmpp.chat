@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="babble.xmpp"
+        interface="babble.xmpp.browser.interfaces.IBabbleXMPPLayer"
+     />
+</layers>

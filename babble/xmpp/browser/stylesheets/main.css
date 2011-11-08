@@ -1,0 +1,51 @@
+.oc-chat-content ul {
+    margin: 0px;
+    padding: 0px;
+    width: 209px;
+}
+
+.oc-chat-content #online-users li {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 1em;
+    background-color: #DCEAC5;
+    width: 209px;
+    font-weight: bold;
+}
+
+.oc-chat-content #online-users li.offline {
+    display: none;
+}
+
+.oc-chat-content #online-users li.odd {
+    background-color: #DCEAC5; /* Make this difference */
+}
+
+#online-users {
+    border: none;
+    margin: 0;
+    position: relative;
+    top: 0;
+}
+
+#online-users li > a.expanded {
+    color: #205C90;
+    background-color: #DCEAC5; /* Make this difference */
+}
+
+#online-users li > a.expanded + div.user-details-form {
+    display: none;
+}
+
+#online-users li > a.expanded:hover:before {
+    background-color: #DCEAC5; /* Make this difference */
+}
+
+#online-users li > a:after {
+    content: none;
+    width: 0;
+    height: 0;
+    top: 0;
+    margin: 0;
+    border: 0;
+}
