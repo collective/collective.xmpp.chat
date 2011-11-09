@@ -15,5 +15,15 @@
         directory="javascripts"
         layer=".interfaces.IBabbleXMPPLayer"
         />
+
+    <browser:page
+        for="*"
+        attribute="render_chat_box"
+        class=".chatbox.ChatBox"
+        name="render_chat_box"
+        permission="zope2.View"
+        layer=".interfaces.IBabbleXMPPLayer"
+        /> 
+
         
 </configure>
