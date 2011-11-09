@@ -1,11 +1,12 @@
 $(document).ready(function () {
-    $.hook('show');
+    $.hook(['show', 'hide']);
     chat_id = 'online-users-container';
     $("div#"+chat_id)
         .bind('onbeforeshow', function (e) { })
         .bind('onshow', function (e) { })
         .bind('onaftershow', function (e) { 
             var cookie = jQuery.cookie('chats-open-'+username);
+            var open_chats = [];
             if (cookie) {
                 open_chats = cookie.split('|');
             }
@@ -37,10 +38,10 @@ $(document).ready(function () {
             }
         });
 
-
     $('a.user-details-toggle').live('click', function (e) {
         var userid = $(this).parent().attr('data-userid');
-        startChat('chatbox_'+userid);
+        //FIXME: HARDCODED
+        startChat('chatbox_'+userid, 'alex@devbox');
         e.preventDefault();
     });
 });
