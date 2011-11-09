@@ -1,5 +1,5 @@
-from zope.interface import Interface
+from babble.ui.browser.interfaces import IBabbleUILayer
     
-class IBabbleXMPPLayer(Interface):
+class IBabbleXMPPLayer(IBabbleUILayer):
     """Marker Interface for a custom BrowserLayer
     """
