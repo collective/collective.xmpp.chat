@@ -4,6 +4,5 @@
     <version>1000</version>
     <dependencies>
         <dependency>profile-jarn.xmpp.core:default</dependency>
-        <dependency>profile-babble.ui:default</dependency>
     </dependencies>
 </metadata>
