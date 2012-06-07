@@ -1,3 +1,173 @@
+div#form-widgets-conversation {
+    overflow-y: scroll;
+    height: 300px;
+    padding: 1em 0 1em 1em;
+	border :1px solid #ccc;
+}
+
+div.no-contacts-message {
+    padding-top:1em;
+    padding-left:1em;
+}
+
+dd.online-contacts {
+    padding: 0 !important;
+}
+
+dd.online-contacts-max {
+    padding: 0 !important;
+    height: 18em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+div.chatportlet-online-contact {
+    padding:0.7em;
+}
+
+div.filter-contacts-message{
+	font-size: 10px;
+}
+
+.chat-head {
+	padding:7px;
+	color: #ffffff;
+    margin: 0;
+	font-size: 100%;
+}
+
+.chat-head-chatbox {
+	background-color: #578308;
+	padding:7px;
+	color: #ffffff;
+}
+
+.chat-head-chatroom {
+	background-color: #2D617A;
+	padding:7px;
+	color: #ffffff;
+}
+
+.chat-head-minimized-with-messages {
+    background-color: #5C0803;
+}
+
+.chat-blink {
+	background-color: #176689;
+	border-right:1px solid #176689;
+	border-left:1px solid #176689;
+}
+
+.chat-content {
+	font-family: arial,sans-serif;
+	font-size: 13px;
+	color: #333333;
+	height:200px;
+	width:209px;
+	overflow-y:auto;
+	overflow-x:auto;
+	padding:7px;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #eeeeee;
+	background-color: #ffffff;
+	line-height: 1.3em;
+}
+
+.chat-message-them {
+    nowrap;
+}
+
+.chat-input {
+	padding: 5px;
+	background-color: #ffffff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+}
+
+.chat-textarea {
+	width: 206px;
+	height:44px;
+	padding:3px 0pt 3px 3px;
+	border: 1px solid #eeeeee;
+	margin: 1px;
+	overflow:hidden;
+}
+
+.chat-textarea-chatbox-selected {
+	border: 2px solid #578308;
+	margin:0;
+}
+
+.chat-textarea-chatroom-selected {
+	border: 2px solid #2D617A;
+	margin:0;
+}
+
+.chat-message {
+	margin-left:1em;
+}
+
+.chat-info {
+	margin-left:-1em;
+	color:#666666;
+
+}
+
+.chat-message-from {
+	margin-left:-1em;
+	font-weight: bold;
+}
+
+.chat-message-me {
+	margin-left:-1em;
+	font-weight: bold;
+    color: #436976;
+}
+
+.chat-message-them {
+	margin-left:-1em;
+	font-weight: bold;
+    color: #F62817;
+}
+
+.chat-message-error {
+	margin-left:-1em;
+    color:#76797C;
+    font-size:90%;
+    font-weight:normal;
+}
+
+.chat-options {
+	float: right;
+}
+
+.chat-options a {
+	text-decoration: none;
+	color: white;
+	font-weight:bold;
+	font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+    padding-right: 1em;
+}
+
+div.chat-title {
+	float: left;
+	font-weight: bold;
+}
+
+div.chat-title a {
+    color: white;
+}
+
+div#online-users-container {
+    right: 20px;
+}
+
+.activated{
+    display: block !important;
+}
+
 .oc-chat-content ul {
     margin: 0px;
     padding: 0px;
@@ -54,3 +224,14 @@
 form.sendXMPPMessage {
     margin: 0;
 }
+
+.chatbox {
+	position: fixed;
+	position:expression("absolute");
+	width: 225px;
+	display:none;
+    /*  44px; TODO: This must somehow be configurable, in case the bottom.feeder is not installed */
+    bottom: 44px; 
+    z-index: 3; /* So that it's higher than the content actions */
+}
+
