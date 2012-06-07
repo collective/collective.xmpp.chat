@@ -25,5 +25,23 @@
         layer=".interfaces.IBabbleXMPPLayer"
         /> 
 
+    <browser:viewlet  
+        name="babble.ui.onlinecontacts"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.OnlineContacts"
+        permission="zope2.View" 
+        template="./templates/onlinecontacts.pt"
+        layer=".interfaces.IBabbleXMPPLayer"
+        />
+
+    <browser:viewlet  
+        for="*"
+        name="babble.ui.chatdata"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.ChatData"
+        template="./templates/chatdata_viewlet.pt"
+        permission="zope2.View" 
+        layer=".interfaces.IBabbleXMPPLayer"
+        />
         
 </configure>

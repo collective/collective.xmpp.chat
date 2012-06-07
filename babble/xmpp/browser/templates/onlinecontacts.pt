@@ -1,0 +1,16 @@
+<div id="online-users-container" 
+     class="chatbox">
+    <div class="chat-head oc-chat-head"> 
+        <div class="chat-title">Online Users</div> 
+        <div class="chat-options"> 
+            <a href="javascript:void(0)" 
+               tal:attributes="onclick string:javascript:toggleChat('online-users-container')">-</a> 
+            <a href="javascript:void(0)" 
+               tal:attributes="onclick string:javascript:closeChat('online-users-container', null)">X</a> 
+        </div>  
+        <br clear="all"/> 
+    </div> 
+    <div class="chat-content oc-chat-content">
+        <ul id="online-users"></ul>
+    </div> 
+</div>
