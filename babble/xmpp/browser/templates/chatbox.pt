@@ -1,0 +1,64 @@
+<div class="chatbox"
+     tal:attributes="id options/box_id"
+     tal:define="chat_id options/chat_id;
+                 member context/@@plone_portal_state/member;
+                 box_id options/box_id;
+                 audience options/audience;
+                 chat_type options/chat_type;
+                 base_url python:context.portal_url();
+                 title python:view.get_box_title(chat_id)">
+
+    <div class="chat-head"
+         tal:attributes="class string:chat-head chat-head-$chat_type"> 
+        <div class="chat-title">
+            <a  tal:condition="python:chat_type == 'chatroom'"
+                tal:attributes="href audience"
+                tal:content="title">title</a>
+            <a  tal:condition="python:chat_type == 'chatbox'"
+                tal:attributes="href string:${base_url}/author/${audience}"
+                tal:content="title">title</a>
+        </div> 
+        <div class="chat-options"> 
+            <a href="javascript:void(0)" 
+               tal:attributes="onclick string:javascript:toggleChat('$chat_id')">-</a> 
+            <a href="javascript:void(0)" 
+               tal:attributes="onclick string:javascript:closeChat('$chat_id', '$audience')">X</a> 
+        </div>  
+        <br clear="all"/> 
+    </div> 
+    <div class="chat-content"
+         tal:attributes="class string:chat-content chat-content-$chat_type"
+         tal:define="messages options/messages;">
+
+        <div tal:repeat="message python:messages.get(audience, [])"
+                class="chat-message">  
+            <span 
+                tal:condition="python:message[0] != member.getId()"
+                class="chat-message-them">
+                <span 
+                    class="chat-message-time"
+                    tal:content="structure python: message[2].split('T')[1].rsplit(':',2)[0]" tal:omit-tag="python:True"/> 
+                <tal:inline tal:replace="python:message[3]"/>:&nbsp;</span>
+            <span tal:condition="python:message[0] == member.getId()"
+                class="chat-message-me">
+                <span 
+                    class="chat-message-time"
+                    tal:content="structure python:
+                    message[2].split('T')[1].rsplit(':',2)[0]" tal:omit-tag="python:True"/> me:&nbsp;</span>
+            <span class="chat-message-content"
+                    tal:content="structure python: message[1]">
+            </span>  
+        </div>
+    </div> 
+    <div class="chat-input replyForm"
+         tal:attributes="class string:chat-input chat-input-$chat_type">
+        <form class="sendXMPPMessage" action="" method="post">
+            <textarea type="text" name="message" 
+                    class="chat-textarea"
+                    placeholder="Personal message"
+                    tal:attributes="data-recipient options/jid;
+                                    onkeydown string:javascript:return keypressed(event, this, '$audience', '$box_id', '$chat_type');"
+                    i18n:attributes="placeholder"/>
+        </form>
+    </div>
+</div>
