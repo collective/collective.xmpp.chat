@@ -26,7 +26,6 @@ setup(name='babble.xmpp',
       install_requires=[
           'setuptools',
           'jarn.xmpp.core',
-          'babble.ui',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]
