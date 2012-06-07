@@ -1,10 +1,17 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
+ 
+    <javascript id="++resource++babble.xmpp.javascripts/sha1.js"/>
+
+    <javascript 
+        id="++resource++babble.xmpp.javascripts/jquery.cookie.js"
+        insert-after="jquery.js"
+        />
 
     <javascript 
         expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous()"
         id="++resource++babble.xmpp.javascripts/jquery.hook.js"
-        insert-after="++resource++babble.ui.javascripts/babble.ui.js"
+        insert-after="++resource++babble.xmpp.javascripts/sha1.js"
         />
 
     <javascript 
