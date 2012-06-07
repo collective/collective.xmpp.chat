@@ -16,6 +16,12 @@
         layer=".interfaces.IBabbleXMPPLayer"
         />
 
+    <browser:resourceDirectory
+        name="babble.xmpp.images"
+        directory="images"
+        layer=".interfaces.IBabbleXMPPLayer"
+        />
+
     <browser:page
         for="*"
         attribute="render_chat_box"
@@ -43,5 +49,14 @@
         permission="zope2.View" 
         layer=".interfaces.IBabbleXMPPLayer"
         />
-        
+
+    <browser:viewlet  
+        name="actionbar.panel.chat"
+        manager="actionbar.panel.browser.interfaces.IActionbarPanel"
+        class=".viewlets.ChatViewlet"
+        permission="zope2.View" 
+        template="./templates/chat_viewlet.pt"
+        layer=".interfaces.IBabbleXMPPLayer"
+        />
+
 </configure>

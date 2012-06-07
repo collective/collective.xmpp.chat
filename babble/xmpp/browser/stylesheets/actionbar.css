@@ -1,0 +1,93 @@
+.oc-chat-head {
+	background: #385503;
+    width: 213px;
+}
+
+.cr-chat-head {
+	background: #0F3A4F;
+    width: 213px;
+}
+
+.oc-chat-content, .cr-chat-content {
+	height:279px !important;
+    width: 100%;
+    padding: 0px;
+}
+
+.oc-chat-content dl, .cr-chat-content dl {
+    margin: 0px;
+    padding: 0px;
+}
+
+.oc-chat-content dd, .cr-chat-content dd {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 1em;
+}
+
+.oc-chat-content dd.odd {
+    background-color: #DCEAC5;
+}
+
+.oc-chat-content {
+    background-color: #ECF4DF;
+}
+
+.cr-chat-content dd.odd {
+    background-color: #E2EEF4; 
+}
+
+.cr-chat-content {
+    background-color: #EFF6FA;
+}
+
+.chatbox {
+    bottom: 44px; /* To allow space for the bottom bar */
+}
+
+/* Styling for the chat panel bottom feeder */
+#footpanel a.chat {
+	background: url(++resource++babble.xmpp.images/comment_user_32.png) no-repeat 3px center;
+	width: 135px;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	text-indent: 0; 
+    /*--Reset text indent since there will be a combination of both text and image--*/
+}
+
+#footpanel a.chatrooms {
+	background: url(++resource++babble.client.images/comment_32.png) no-repeat 3px center;
+}
+
+/*--Right align the chat and alert panels--*/
+#footpanel li#chatpanel, #footpanel li#alertpanel {	float: right; }  
+
+#chatpanel .subpanel li { 
+    background: url(++resource++babble.xmpp.images/dash.gif) repeat-x left center; 
+}
+
+#chatpanel .subpanel li span {
+	padding: 5px;
+	background: #fff;
+	color: #777;
+	float: left;
+}
+
+#chatpanel .subpanel li a img {
+	float: left;
+	margin: 0 5px;
+}
+
+#chatpanel .subpanel li a{
+	padding: 3px 0;	margin: 0;
+	line-height: 32px;
+	height: 32px; 
+	background: #fff;
+	display: block;
+}
+
+#chatpanel .subpanel li a:hover {
+	background: #DEE7EC;
+	text-decoration: none;
+}
+
