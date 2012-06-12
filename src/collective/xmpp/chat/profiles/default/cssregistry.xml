@@ -3,7 +3,7 @@
 
     <stylesheet 
         title=""
-        id="++resource++babble.xmpp.stylesheets/main.css"
+        id="++resource++collective.xmpp.chat.stylesheets/main.css"
         media="screen" 
         rel="stylesheet" 
         rendering="import"
@@ -16,7 +16,7 @@
 
     <stylesheet 
         title=""
-        id="++resource++babble.xmpp.stylesheets/actionbar.css"
+        id="++resource++collective.xmpp.chat.stylesheets/actionbar.css"
         media="screen" 
         rel="stylesheet" 
         rendering="import"

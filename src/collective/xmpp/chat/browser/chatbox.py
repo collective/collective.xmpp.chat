@@ -5,8 +5,8 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 
-from babble.xmpp.browser.interfaces import IChatBox
-from babble.xmpp import iso8601
+from collective.xmpp.chat.browser.interfaces import IChatBox
+from collective.xmpp.chat import iso8601
 
 
 class ChatBox(BrowserView):

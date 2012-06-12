@@ -3,7 +3,7 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="babble.xmpp">
+    i18n_domain="collective.xmpp.chat">
 
     <five:registerPackage package="." initialize=".initialize" />
     <includeDependencies package="." />
@@ -11,9 +11,9 @@
 
     <genericsetup:registerProfile
         name="default"
-        title="babble.xmpp"
+        title="collective.xmpp.chat"
         directory="profiles/default"
-        description="Installs the babble.xmpp package"
+        description="Installs the collective.xmpp.chat package"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
   

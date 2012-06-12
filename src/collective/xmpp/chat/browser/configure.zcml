@@ -2,22 +2,22 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="babble.xmpp">
+    i18n_domain="collective.xmpp.chat">
 
     <browser:resourceDirectory
-        name="babble.xmpp.stylesheets"
+        name="collective.xmpp.chat.stylesheets"
         directory="stylesheets"
         layer=".interfaces.IBabbleXMPPLayer"
         />
 
     <browser:resourceDirectory
-        name="babble.xmpp.javascripts"
+        name="collective.xmpp.chat.javascripts"
         directory="javascripts"
         layer=".interfaces.IBabbleXMPPLayer"
         />
 
     <browser:resourceDirectory
-        name="babble.xmpp.images"
+        name="collective.xmpp.chat.images"
         directory="images"
         layer=".interfaces.IBabbleXMPPLayer"
         />
@@ -32,7 +32,7 @@
         /> 
 
     <browser:viewlet  
-        name="babble.xmpp.onlinecontacts"
+        name="collective.xmpp.chat.onlinecontacts"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlets.OnlineContacts"
         permission="zope2.View" 
@@ -42,7 +42,7 @@
 
     <browser:viewlet  
         for="*"
-        name="babble.xmpp.chatdata"
+        name="collective.xmpp.chat.chatdata"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlets.ChatData"
         template="./templates/chatdata_viewlet.pt"
