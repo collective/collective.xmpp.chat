@@ -12,6 +12,17 @@ Plone Conference's sprint.
 
 Email me for more info: jc@opkode.com
 
+
+MySQL support for ejabberd:
+---------------------------
+
+Short instructions:
+1. svn checkout http://svn.process-one.net/ejabberd-modules/mysql/trunk/ mysql
+2. ./build.sh
+3. Copy the beam files
+4. Start ejabberd again
+
+
 Installing mod_archive for server side message storing:
 --------------------------------------------------------
 
@@ -44,7 +55,21 @@ add-on module for ejabberd.
        erlc -I includes/ejabberd/include mod_archive.erl
 
 4. Now copy the generated *.beam* files from the *ebin* directory to where youre ejabberd *.beam* files are.
-5. Check *README.txt* or use the configuration file example provided in the conf dir to update your ejabberd.cfg configuration file.
+   For example, if you are using the supplied *buildout.cfg* file:::
+    
+    cp ./src/ejabberd-modules/mod_archive/trunk/ebin/mod_archive_odbc.beam ./parts/ejabberd/lib/ejabberd/ebin/
+    cp ./src/ejabberd-modules/mod_archive/trunk/ebin/mod_archive_webview.beam ./parts/ejabberd/lib/ejabberd/ebin/
+
+5. Edit *ejabberd.cfg* and add the HTTP and module definitions {["archive"], mod_archive_webview} to 
+   the list of request handlers: ::
+        listen, [
+            {5280, ejabberd_http, [
+                {
+                    request_handlers, [{["archive"], mod_archive_webview}]
+                }
+            ]}
+        ]
+
 6. Now start ejabberd. If there's a problem, probably ejabberd log files will report an error message.
 
 .. _Plone: http://plone.org
@@ -55,5 +80,4 @@ add-on module for ejabberd.
 .. _XEP-0136: http://www.ejabberd.im/mod_archive
 .. _ejabberd-modules: http://svn.process-one.net/ejabberd-modules/
 .. _mr.developer: http://pypi.python.org/pypi/mr.developer
-
 
