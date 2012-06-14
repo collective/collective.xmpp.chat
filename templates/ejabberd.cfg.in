@@ -26,13 +26,17 @@
            ]},
 
   {5280, ejabberd_http, [
-       http_bind, 
-       web_admin
-      ]}
-
- ]}.
+       web_admin,
+        { request_handlers, [
+                {["http-bind"], mod_http_bind},
+                {["archive"], mod_archive_webview}
+        ]}
+  ]}
+]}.
 
 {auth_method, internal}.
+{odbc_server, {mysql, "localhost", "ejabberd", "root", "secret"}}.
+{odbc_keepalive_interval, 3600}.
 
 {shaper, normal, {maxrate, 1000}}.
 {shaper, fast, {maxrate, 50000}}.
@@ -73,6 +77,15 @@
  [
   {mod_adhoc,    []},
   {mod_announce, [{access, announce}]},
+  {mod_archive_odbc, [
+    {database_type, "mysql"},
+    {default_auto_save, true},
+    {enforce_default_auto_save, false},
+    {default_expire, infinity},
+    {session_duration, 1800},
+    {enforce_min_expire, 0},
+    {enforce_max_expire, infinity}
+    ]},
   {mod_caps,     []}, 
   {mod_configure,[]},
   {mod_disco,    []},
