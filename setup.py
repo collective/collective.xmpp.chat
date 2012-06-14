@@ -29,6 +29,11 @@ setup(name='collective.xmpp.chat',
           'jarn.xmpp.core',
           'actionbar.panel',
       ],
+      extras_require = {
+        "sphinx": [ "Sphinx >=1.0",
+                    "repoze.sphinx.autointerface",
+                  ],
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone
