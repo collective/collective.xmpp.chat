@@ -171,15 +171,15 @@ div#online-users-container {
 .oc-chat-content ul {
     margin: 0px;
     padding: 0px;
-    width: 209px;
 }
 
 .oc-chat-content #online-users li {
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding: 1em;
+    margin: 0;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: #DCEAC5;
     background-color: #DCEAC5;
-    width: 209px;
     font-weight: bold;
 }
 
@@ -191,7 +191,25 @@ div#online-users-container {
     background-color: #DCEAC5; /* Make this difference */
 }
 
+.oc-chat-content #online-users li a, 
+.oc-chat-content #online-users li a:before,
+.oc-chat-content #online-users li a:hover,
+.oc-chat-content #online-users li a:hover::before {
+    background: #DCEAC5;
+    color: #205C90;
+}
+
+.oc-chat-content #online-users li {
+    border: 1px solid #DCEAC5;
+}
+
+.oc-chat-content #online-users li:hover {
+    border: 1px solid #578308;
+    background: #DBE9C0;
+}
+
 #online-users {
+    width: 100%;
     border: none;
     margin: 0;
     position: relative;
