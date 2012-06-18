@@ -20,9 +20,9 @@
         </div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:toggleChat('$chat_id')">-</a> 
+               tal:attributes="onclick string:javascript:xmppchat.toggleChat('$chat_id')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('$chat_id', '$audience')">X</a> 
+               tal:attributes="onclick string:javascript:xmppchat.closeChat('$chat_id', '$audience')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
@@ -57,7 +57,7 @@
                     class="chat-textarea"
                     placeholder="Personal message"
                     tal:attributes="data-recipient options/jid;
-                                    onkeydown string:javascript:return keypressed(event, this, '$audience', '$box_id', '$chat_type');"
+                                    onkeydown string:javascript:return xmppchat.keyPressed(event, this, '$audience', '$box_id', '$chat_type');"
                     i18n:attributes="placeholder"/>
         </form>
     </div>

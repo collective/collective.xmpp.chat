@@ -4,9 +4,9 @@
         <div class="chat-title">Online Users</div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:toggleChat('online-users-container')">-</a> 
+               tal:attributes="onclick string:javascript:xmppchat.toggleChat('online-users-container')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:closeChat('online-users-container', null)">X</a> 
+               tal:attributes="onclick string:javascript:xmppchat.closeChat('online-users-container', null)">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
