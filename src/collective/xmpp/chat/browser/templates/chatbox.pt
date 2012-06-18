@@ -5,6 +5,7 @@
                  box_id options/box_id;
                  audience options/audience;
                  chat_type options/chat_type;
+                 jid options/jid;
                  base_url python:context.portal_url();
                  title python:view.get_box_title(chat_id)">
 
@@ -20,9 +21,9 @@
         </div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.toggleChat('$chat_id')">-</a> 
+               tal:attributes="onclick string:javascript:xmppchat.toggleChat('$jid')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.closeChat('$chat_id', '$audience')">X</a> 
+               tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid', '$audience')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
@@ -56,7 +57,7 @@
             <textarea type="text" name="message" 
                     class="chat-textarea"
                     placeholder="Personal message"
-                    tal:attributes="data-recipient options/jid;
+                    tal:attributes="data-recipient jid;
                                     onkeydown string:javascript:return xmppchat.keyPressed(event, this, '$audience', '$box_id', '$chat_type');"
                     i18n:attributes="placeholder"/>
         </form>
