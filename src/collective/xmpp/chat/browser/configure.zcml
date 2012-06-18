@@ -24,6 +24,15 @@
 
     <browser:page
         for="*"
+        name="xmpp-userDetails"
+        class="jarn.xmpp.core.browser.userinfo.XMPPUserDetails"
+        template="user_details.pt"
+        layer=".interfaces.IBabbleXMPPLayer"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
         attribute="render_chat_box"
         class=".chatbox.ChatBox"
         name="render_chat_box"

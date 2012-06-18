@@ -31,7 +31,8 @@ class ChatBox(BrowserView):
         if not '_' in chat_id:
             return chat_id
 
-        chat_type, contact = chat_id.split('_', 1)
+        chat_type, jid = chat_id.split('_', 1)
+        contact = jid.rsplit('@', 1)[0]
         if chat_type == 'chatbox':
             return self.get_fullname(contact)
         elif chat_type == 'chatroom':

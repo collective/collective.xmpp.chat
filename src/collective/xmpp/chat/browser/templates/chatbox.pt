@@ -23,7 +23,7 @@
             <a href="javascript:void(0)" 
                tal:attributes="onclick string:javascript:xmppchat.toggleChat('$jid')">-</a> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid', '$audience')">X</a> 
+               tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
