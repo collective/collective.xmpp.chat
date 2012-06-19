@@ -25,7 +25,7 @@
     <browser:page
         for="*"
         name="xmpp-userDetails"
-        class="jarn.xmpp.core.browser.userinfo.XMPPUserDetails"
+        class=".userinfo.XMPPUserDetails"
         template="user_details.pt"
         layer=".interfaces.IBabbleXMPPLayer"
         permission="zope2.View"
