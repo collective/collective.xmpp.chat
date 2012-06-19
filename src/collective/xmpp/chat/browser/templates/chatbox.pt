@@ -29,7 +29,7 @@
     </div> 
     <div class="chat-content"
          tal:attributes="class string:chat-content chat-content-$chat_type"
-         tal:define="messages options/messages;">
+         tal:define="messages options/messages|python:{};">
 
         <div tal:repeat="message python:messages.get(audience, [])"
                 class="chat-message">  
