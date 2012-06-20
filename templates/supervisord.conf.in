@@ -43,10 +43,3 @@ autostart= true
 autorestart = true
 priority = 300
 
-[program:instance]
-command = ${buildout:bin-directory}/instance console
-startretries = 10
-redirect_stderr = true
-autostart= true
-autorestart = true
-priority = 300
