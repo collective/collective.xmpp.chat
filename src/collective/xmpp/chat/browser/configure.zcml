@@ -60,8 +60,8 @@
         />
 
     <browser:viewlet  
-        name="actionbar.panel.chat"
-        manager="actionbar.panel.browser.interfaces.IActionbarPanel"
+        name="collective.xmpp.chat.onlineusers"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlets.ChatViewlet"
         permission="zope2.View" 
         template="./templates/chat_viewlet.pt"
