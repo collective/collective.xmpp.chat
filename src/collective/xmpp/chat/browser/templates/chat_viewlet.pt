@@ -1,5 +1,5 @@
 <dl>
-    <dt id="chatpanel"
+    <dt class="chatpanel"
         tal:define="portal_url context/portal_url"
         tal:condition="not: view/anonymous">
 

@@ -1,16 +1,31 @@
-<div id="online-users-container" 
-     class="chatbox">
-    <div class="chat-head oc-chat-head"> 
-        <div class="chat-title">Online Users</div> 
-        <div class="chat-options"> 
-            <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.toggleChat('online-users-container')">-</a> 
-            <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.closeChat('online-users-container', null)">X</a> 
-        </div>  
-        <br clear="all"/> 
+<div id="online-users-container" class="chatbox">
+    <div class="chat-head"> 
+        <ul class="tabs">
+            <li><a class="s" href="#users">Users</a></li>
+            <li><a class="s" href="#chatrooms">Chatrooms</a></li>
+        </ul>
     </div> 
-    <div class="chat-content oc-chat-content">
-        <ul id="online-users"></ul>
-    </div> 
+
+    <!-- tab "panes" -->
+    <div class="panes">
+        <div id="users" class="oc-chat-content">
+            <form class="setXMPPStatus" action="" method="post">
+                <label class="status-select" for="user-select-status"> 
+                    My status is:
+                    <select id="user-select-status">
+                        <option value="online">Online</option>
+                        <option value="busy">Busy</option>
+                        <option value="away">Away</option>
+                        <option value="offline">Offline</option>
+                    </select>
+                </label>
+            </form>
+            <ul id="online-users"></ul>
+        </div> 
+        
+        <div id="chatrooms" class="oc-chat-content">
+            Here be chatrooms
+        </div>
+    </div>
+
 </div>

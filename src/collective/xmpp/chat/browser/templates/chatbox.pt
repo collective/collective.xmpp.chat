@@ -9,6 +9,10 @@
                  base_url python:context.portal_url();
                  title python:view.get_box_title(chat_id)">
 
+    <div class="chat-content"
+         tal:attributes="class string:chat-content chat-content-$chat_type"
+         tal:define="messages options/messages|python:{};">
+
     <div class="chat-head"
          tal:attributes="class string:chat-head chat-head-$chat_type"> 
         <div class="chat-title">
@@ -21,15 +25,10 @@
         </div> 
         <div class="chat-options"> 
             <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.toggleChat('$jid')">-</a> 
-            <a href="javascript:void(0)" 
                tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid')">X</a> 
         </div>  
         <br clear="all"/> 
     </div> 
-    <div class="chat-content"
-         tal:attributes="class string:chat-content chat-content-$chat_type"
-         tal:define="messages options/messages|python:{};">
 
         <div tal:repeat="message python:messages.get(audience, [])"
                 class="chat-message">  
@@ -51,15 +50,12 @@
             </span>  
         </div>
     </div> 
-    <div class="chat-input replyForm"
-         tal:attributes="class string:chat-input chat-input-$chat_type">
-        <form class="sendXMPPMessage" action="" method="post">
-            <textarea type="text" name="message" 
-                    class="chat-textarea"
-                    placeholder="Personal message"
-                    tal:attributes="data-recipient jid;
-                                    onkeydown string:javascript:return xmppchat.keyPressed(event, this, '$audience', '$box_id', '$chat_type');"
-                    i18n:attributes="placeholder"/>
-        </form>
-    </div>
+    <form class="sendXMPPMessage" action="" method="post">
+        <textarea type="text" name="message" 
+                class="chat-textarea"
+                placeholder="Personal message"
+                tal:attributes="data-recipient jid;
+                                onkeydown string:javascript:return xmppchat.keyPressed(event, this, '$audience', '$box_id', '$chat_type');"
+                i18n:attributes="placeholder"/>
+    </form>
 </div>

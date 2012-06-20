@@ -1,4 +1,4 @@
-dt#chatpanel {
+dt.chatpanel {
     margin-right: 1em;
     padding: 0.25em 0.5em;
 	z-index: 9999; /*--Keeps the panel on top of all other elements--*/
@@ -49,7 +49,6 @@ div.filter-contacts-message{
 }
 
 .chat-head {
-	padding:7px;
 	color: #ffffff;
     margin: 0;
 	font-size: 100%;
@@ -78,43 +77,30 @@ div.filter-contacts-message{
 }
 
 .chat-content {
-	font-family: arial,sans-serif;
 	font-size: 13px;
 	color: #333333;
 	height:200px;
-	width:209px;
 	overflow-y:auto;
 	overflow-x:auto;
-	padding:7px;
-	border-left:1px solid #cccccc;
-	border-right:1px solid #cccccc;
-	border-bottom:1px solid #eeeeee;
+	border:1px solid #999;
 	background-color: #ffffff;
 	line-height: 1.3em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
 }
 
 .chat-message-them {
     nowrap;
 }
 
-.chat-input {
-	padding: 5px;
-	background-color: #ffffff;
-	border-left:1px solid #cccccc;
-	border-right:1px solid #cccccc;
-	border-bottom:1px solid #cccccc;
-}
-
 .chat-textarea {
-	width: 190px;
-	padding:3px 0pt 3px 3px;
+	padding:3px;
 	border: 0;
-	margin: 1px;
 	overflow:hidden;
 }
 
 .chat-textarea-chatbox-selected {
-	border: 2px solid #578308;
+	border: 1px solid #578308;
 	margin:0;
 }
 
@@ -165,7 +151,6 @@ div.filter-contacts-message{
 	text-decoration: none;
 	color: white;
 	font-weight:bold;
-	font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
     padding-right: 1em;
 }
 
@@ -179,7 +164,7 @@ div.chat-title a {
 }
 
 div#online-users-container {
-    right: 20px;
+    right: 15px;
 }
 
 .activated{
@@ -193,9 +178,9 @@ div#online-users-container {
 
 .oc-chat-content #online-users li {
     margin: 0;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     background: #DCEAC5;
     background-color: #DCEAC5;
     font-weight: bold;
@@ -222,7 +207,6 @@ div#online-users-container {
 }
 
 .oc-chat-content #online-users li:hover {
-    border: 1px solid #578308;
     background: #DBE9C0;
 }
 
@@ -264,15 +248,10 @@ form.sendXMPPMessage {
 .chatbox {
 	position: fixed;
 	position:expression("absolute");
-	width: 225px;
+	width: 200px;
 	display:none;
-    bottom: 0; 
+    bottom: 1.3em; 
     z-index: 3; /* So that it's higher than the content actions */
-}
-
-.oc-chat-head {
-	background: #385503;
-    width: 213px;
 }
 
 .cr-chat-head {
@@ -302,7 +281,7 @@ form.sendXMPPMessage {
 }
 
 .oc-chat-content {
-    background-color: #ECF4DF;
+    background-color: #f9f9f9;
 }
 
 .cr-chat-content dd.odd {
@@ -325,4 +304,104 @@ form.sendXMPPMessage {
 
 #footpanel a.chatrooms {
 	background: url(++resource++babble.client.images/comment_32.png) no-repeat 3px center;
+}
+
+form.setXMPPStatus {
+    margin: 0.5em 0 0.5em 0.5em;
+}
+
+select#user-select-status {
+    float: right;
+    margin-right: 0.5em;
+}
+
+
+
+/* root element for tabs  */
+ul.tabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    height:30px;
+}
+
+/* single tab */
+ul.tabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+}
+
+/* link inside the tab. uses a background image */
+ul.tabs a {
+    background: url(++resource++collective.xmpp.chat.images/blue.png) no-repeat -420px 0;
+    font-size:13px;
+    display:block;
+    height: 30px;
+    line-height:30px;
+    width: 134px;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top:1px;
+}
+
+ul.tabs a:active {
+    outline:none;
+}
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover {
+    background-position: -420px -31px;
+    color:#fff;
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+    background-position: -420px -62px;
+    cursor:default !important;
+    color:#000 !important;
+    font-weight: bold;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+/* width 1 */
+ul.tabs a.s { background-position: -553px 0; width:81px; }
+ul.tabs a.s:hover { background-position: -553px -31px; }
+ul.tabs a.s.current  { background-position: -553px -62px; }
+
+/* width 2 */
+ul.tabs a.l { background-position: -248px -0px; width:174px; }
+ul.tabs a.l:hover { background-position: -248px -31px; }
+ul.tabs a.l.current { background-position: -248px -62px; }
+
+
+/* width 3 */
+ul.tabs a.xl { background-position: 0 -0px; width:248px; }
+ul.tabs a.xl:hover { background-position: 0 -31px; }
+ul.tabs a.xl.current { background-position: 0 -62px; }
+
+.panes div {
+    border: 1px solid #999;
+    height: 100px;
+    font-size: 14px;
+    background-color: white;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+}
+
+form.sendXMPPMessage {
+    background: white;
+    border: 1px solid #999;
+    padding:0.5em;
+    margin: 0;
+    position: relative;
+    -webkit-border-top-right-radius: 0em;
+    -webkit-border-top-left-radius: 0em;
 }
