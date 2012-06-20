@@ -307,16 +307,14 @@ form.sendXMPPMessage {
 	background: url(++resource++babble.client.images/comment_32.png) no-repeat 3px center;
 }
 
-form.setXMPPStatus {
+form.set-xmpp-status {
     margin: 0.5em 0 0.5em 0.5em;
 }
 
-select#user-select-status {
+select#select-xmpp-status {
     float: right;
     margin-right: 0.5em;
 }
-
-
 
 /* root element for tabs  */
 ul.tabs {

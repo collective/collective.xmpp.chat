@@ -9,10 +9,10 @@
     <!-- tab "panes" -->
     <div class="panes">
         <div id="users" class="oc-chat-content">
-            <form class="setXMPPStatus" action="" method="post">
-                <label class="status-select" for="user-select-status"> 
+            <form class="set-xmpp-status" action="" method="post">
+                <label class="status-select" for="select-xmpp-status"> 
                     My status is:
-                    <select id="user-select-status">
+                    <select id="select-xmpp-status">
                         <option value="online">Online</option>
                         <option value="busy">Busy</option>
                         <option value="away">Away</option>
