@@ -177,38 +177,53 @@ div#online-users-container {
     padding: 0px;
 }
 
-.oc-chat-content #online-users li {
-    margin: 0;
-    padding-left: 0.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    background: #DCEAC5;
-    background-color: #DCEAC5;
-    font-weight: bold;
-}
-
-.oc-chat-content #online-users li.offline {
-    display: none;
-}
-
 .oc-chat-content #online-users li.odd {
     background-color: #DCEAC5; /* Make this difference */
 }
 
-.oc-chat-content #online-users li a, 
-.oc-chat-content #online-users li a:before,
-.oc-chat-content #online-users li a:hover,
-.oc-chat-content #online-users li a:hover::before {
-    background: #DCEAC5;
-    color: #205C90;
+.oc-chat-content #online-users li:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li {
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li.offline:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li.offline {
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li.busy:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li.busy {
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li.away:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li.away {
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 3px center;
+}
+
+.oc-chat-content #online-users li a {
+    margin-left: 2em;
+}
+
+#online-users li > a::before {
+    content: none;
+    background: #999;
 }
 
 .oc-chat-content #online-users li {
     border: 1px solid #DCEAC5;
-}
-
-.oc-chat-content #online-users li:hover {
-    background: #DBE9C0;
 }
 
 #online-users {
@@ -222,15 +237,12 @@ div#online-users-container {
 
 #online-users li > a.expanded {
     color: #205C90;
-    background-color: #DCEAC5; /* Make this difference */
+    background: #CCC;
+    font-weight: normal;
 }
 
 #online-users li > a.expanded + div.user-details-form {
     display: none;
-}
-
-#online-users li > a.expanded:hover:before {
-    background-color: #DCEAC5; /* Make this difference */
 }
 
 #online-users li > a:after {
@@ -295,7 +307,7 @@ form.sendXMPPMessage {
 
 /* Styling for the chat panel bottom feeder */
 #footpanel a.chat {
-	background: url(++resource++babble.xmpp.images/comment_user_32.png) no-repeat 3px center;
+	background: url(++resource++collective.xmpp.chat.images/comment_user_32.png) no-repeat 3px center;
 	width: 135px;
 	border-left: 1px solid #bbb;
 	border-right: 1px solid #bbb;
@@ -304,7 +316,7 @@ form.sendXMPPMessage {
 }
 
 #footpanel a.chatrooms {
-	background: url(++resource++babble.client.images/comment_32.png) no-repeat 3px center;
+	background: url(++resource++collective.xmpp.chat.images/comment_32.png) no-repeat 3px center;
 }
 
 form.set-xmpp-status {
