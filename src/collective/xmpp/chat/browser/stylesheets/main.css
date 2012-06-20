@@ -51,6 +51,7 @@ div.filter-contacts-message{
 .chat-head {
 	color: #ffffff;
     margin: 0;
+    margin-bottom: 0.5em;
 	font-size: 100%;
 }
 
@@ -83,6 +84,7 @@ div.filter-contacts-message{
 	overflow-y:auto;
 	overflow-x:auto;
 	border:1px solid #999;
+    border-bottom: 0px;
 	background-color: #ffffff;
 	line-height: 1.3em;
     -webkit-border-top-right-radius: 0.5em;
@@ -110,34 +112,29 @@ div.filter-contacts-message{
 }
 
 .chat-message {
-	margin-left:1em;
+	margin-left: 0.5em;
 }
 
 .chat-info {
-	margin-left:-1em;
 	color:#666666;
 
 }
 
 .chat-message-from {
-	margin-left:-1em;
 	font-weight: bold;
 }
 
 .chat-message-me {
-	margin-left:-1em;
 	font-weight: bold;
     color: #436976;
 }
 
 .chat-message-them {
-	margin-left:-1em;
 	font-weight: bold;
     color: #F62817;
 }
 
 .chat-message-error {
-	margin-left:-1em;
     color:#76797C;
     font-size:90%;
     font-weight:normal;
@@ -169,6 +166,10 @@ div#online-users-container {
 
 .activated{
     display: block !important;
+}
+
+.oc-chat-head {
+    margin-bottom: 0;
 }
 
 .oc-chat-content ul {
