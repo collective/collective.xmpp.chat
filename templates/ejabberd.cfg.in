@@ -16,15 +16,6 @@
          {max_stanza_size, 131072}
         ]},
   
-  {{${collaboration_port}, {${collaboration_allowed_subnet}} }, ejabberd_service, [
-            {access, all}, 
-            {shaper_rule, fast},
-            {ip, {127, 0, 0, 1}},
-            {hosts, ["collaboration.${xmppdomain}"],
-             [{password, "${component_password}"}]
-            }
-           ]},
-
   {5280, ejabberd_http, [
        web_admin,
         { request_handlers, [
