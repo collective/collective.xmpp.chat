@@ -27,7 +27,6 @@ setup(name='collective.xmpp.chat',
       install_requires=[
           'setuptools',
           'jarn.xmpp.core',
-          'actionbar.panel',
       ],
       extras_require = {
         "sphinx": [ "Sphinx >=1.0",
