@@ -1,3 +1,22 @@
+dt#chatpanel {
+    margin-right: 1em;
+    padding: 0.25em 0.5em;
+	z-index: 9999; /*--Keeps the panel on top of all other elements--*/
+	background: #e3e2e2;
+	border: 1px solid #c3c3c3;
+	border-bottom: none;
+	position: fixed;
+	bottom: 0; right: 0;
+    font-size: 80%;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+}
+
+a#toggle-online-users:after {
+    content: " ▲";
+    display: inline-block;
+}
+
 div#form-widgets-conversation {
     overflow-y: scroll;
     height: 300px;
@@ -247,8 +266,63 @@ form.sendXMPPMessage {
 	position:expression("absolute");
 	width: 225px;
 	display:none;
-    /*  44px; TODO: This must somehow be configurable, in case the bottom.feeder is not installed */
-    bottom: 44px; 
+    bottom: 0; 
     z-index: 3; /* So that it's higher than the content actions */
 }
 
+.oc-chat-head {
+	background: #385503;
+    width: 213px;
+}
+
+.cr-chat-head {
+	background: #0F3A4F;
+    width: 213px;
+}
+
+.oc-chat-content, .cr-chat-content {
+	height:279px !important;
+    width: 100%;
+    padding: 0px;
+}
+
+.oc-chat-content dl, .cr-chat-content dl {
+    margin: 0px;
+    padding: 0px;
+}
+
+.oc-chat-content dd, .cr-chat-content dd {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 1em;
+}
+
+.oc-chat-content dd.odd {
+    background-color: #DCEAC5;
+}
+
+.oc-chat-content {
+    background-color: #ECF4DF;
+}
+
+.cr-chat-content dd.odd {
+    background-color: #E2EEF4; 
+}
+
+.cr-chat-content {
+    background-color: #EFF6FA;
+}
+
+/* Styling for the chat panel bottom feeder */
+#footpanel a.chat {
+	background: url(++resource++babble.xmpp.images/comment_user_32.png) no-repeat 3px center;
+	width: 135px;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	text-indent: 0; 
+    /*--Reset text indent since there will be a combination of both text and image--*/
+}
+
+#footpanel a.chatrooms {
+	background: url(++resource++babble.client.images/comment_32.png) no-repeat 3px center;
+}
