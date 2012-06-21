@@ -56,7 +56,7 @@ div.filter-contacts-message{
 }
 
 .chat-head-chatbox {
-	background-color: #578308;
+	background-color: #75AD0A;
 	padding:7px;
 	color: #ffffff;
 }
@@ -140,17 +140,6 @@ div.filter-contacts-message{
     font-weight:normal;
 }
 
-.chat-options {
-	float: right;
-}
-
-.chat-options a {
-	text-decoration: none;
-	color: white;
-	font-weight:bold;
-    padding-right: 1em;
-}
-
 div.chat-title {
 	float: left;
 	font-weight: bold;
@@ -158,6 +147,7 @@ div.chat-title {
 
 div.chat-title a {
     color: white;
+    text-shadow: 1px 1px 0px #5cb811;
 }
 
 div#online-users-container {
@@ -415,4 +405,39 @@ form.sendXMPPMessage {
     position: relative;
     -webkit-border-top-right-radius: 0em;
     -webkit-border-top-left-radius: 0em;
+}
+
+.chatbox-button {
+	float: right;
+    -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+    box-shadow:inset 0px 1px 0px 0px #caefab;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #75AD0A), color-stop(1, #5cb811) );
+    background:-moz-linear-gradient( center top, #75AD0A 5%, #5cb811 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#75AD0A', endColorstr='#5cb811');
+    background-color:#75AD0A;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #268a16;
+    display:inline-block;
+    color:white!important;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:0px 4px;
+    text-decoration:none;
+    text-shadow: 1px 1px 0px #aade7c;
+}
+.chatbox-button:hover {
+    -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+    box-shadow:inset 0px 1px 0px 0px #caefab;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #75AD0A), color-stop(1, #5cb811) );
+    background:-moz-linear-gradient( center top, #75AD0A 5%, #5cb811 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#75AD0A', endColorstr='#5cb811');
+}
+.chatbox-button:active {
+    position:relative;
+    top:1px;
 }

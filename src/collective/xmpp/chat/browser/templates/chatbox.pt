@@ -23,10 +23,9 @@
                 tal:attributes="href string:${base_url}/author/${audience}"
                 tal:content="title">title</a>
         </div> 
-        <div class="chat-options"> 
-            <a href="javascript:void(0)" 
-               tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid')">X</a> 
-        </div>  
+        <a href="javascript:void(0)" 
+            class="chatbox-button"
+            tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid')">X</a> 
         <br clear="all"/> 
     </div> 
 
