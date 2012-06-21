@@ -9,8 +9,8 @@ Plone Conference's sprint.
 
 Email me for more info: jc@opkode.com
 
-Contents:
-----------
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
