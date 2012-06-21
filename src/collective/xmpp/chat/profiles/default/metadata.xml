@@ -3,6 +3,7 @@
     <description>Babble XMPP/Jabber</description>
     <version>1000</version>
     <dependencies>
+        <dependency>profile-plone.app.jquery:default</dependency>
         <dependency>profile-jarn.xmpp.core:default</dependency>
     </dependencies>
 </metadata>
