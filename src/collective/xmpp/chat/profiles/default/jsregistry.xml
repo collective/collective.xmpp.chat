@@ -16,7 +16,13 @@
 
     <javascript 
         expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous()"
-        id="++resource++collective.xmpp.chat.javascripts/collective.xmpp.chat.js"
+        id="++resource++collective.xmpp.chat.javascripts/chat.js"
+        insert-after="jquery.hook.js"
+        />
+
+    <javascript 
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous()"
+        id="++resource++collective.xmpp.chat.javascripts/chatui.js"
         insert-after="jquery.hook.js"
         />
 
