@@ -1,5 +1,6 @@
 <div class="chatbox"
-     tal:attributes="id options/box_id"
+     tal:attributes="id options/box_id;
+                     data-recipient jid"
      tal:define="chat_id options/chat_id;
                  member context/@@plone_portal_state/member;
                  box_id options/box_id;
@@ -9,12 +10,8 @@
                  base_url python:context.portal_url();
                  title python:view.get_box_title(chat_id)">
 
-    <div class="chat-content"
-         tal:attributes="class string:chat-content chat-content-$chat_type"
-         tal:define="messages options/messages|python:{};">
-
     <div class="chat-head"
-         tal:attributes="class string:chat-head chat-head-$chat_type"> 
+        tal:attributes="class string:chat-head chat-head-$chat_type"> 
         <div class="chat-title">
             <a  tal:condition="python:chat_type == 'chatroom'"
                 tal:attributes="href audience"
@@ -23,11 +20,13 @@
                 tal:attributes="href string:${base_url}/author/${audience}"
                 tal:content="title">title</a>
         </div> 
-        <a href="javascript:void(0)" 
-            class="chatbox-button"
-            tal:attributes="onclick string:javascript:xmppchat.closeChat('$jid')">X</a> 
+        <a href="javascript:void(0)" class="chatbox-button close-chatbox-button">X</a> 
         <br clear="all"/> 
     </div> 
+
+    <div class="chat-content"
+         tal:attributes="class string:chat-content chat-content-$chat_type"
+         tal:define="messages options/messages|python:{};">
 
         <div tal:repeat="message python:messages.get(audience, [])"
                 class="chat-message">  
@@ -53,8 +52,7 @@
         <textarea type="text" name="message" 
                 class="chat-textarea"
                 placeholder="Personal message"
-                tal:attributes="data-recipient jid;
-                                onkeydown string:javascript:return xmppchat.keyPressed(event, this, '$audience', '$box_id', '$chat_type');"
+                tal:attributes="data-recipient jid"
                 i18n:attributes="placeholder"/>
     </form>
 </div>

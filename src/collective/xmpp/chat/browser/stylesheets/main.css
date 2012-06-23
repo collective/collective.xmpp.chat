@@ -51,7 +51,6 @@ div.filter-contacts-message{
 .chat-head {
 	color: #ffffff;
     margin: 0;
-    margin-bottom: 0.5em;
 	font-size: 100%;
 }
 
@@ -59,6 +58,8 @@ div.filter-contacts-message{
 	background-color: #75AD0A;
 	padding:7px;
 	color: #ffffff;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
 }
 
 .chat-head-chatroom {
@@ -78,21 +79,16 @@ div.filter-contacts-message{
 }
 
 .chat-content {
+    padding-top: 0.5em;
 	font-size: 13px;
 	color: #333333;
-	height:200px;
+	height:190px;
 	overflow-y:auto;
 	overflow-x:auto;
 	border:1px solid #999;
     border-bottom: 0px;
 	background-color: #ffffff;
 	line-height: 1.3em;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-}
-
-.chat-message-them {
-    nowrap;
 }
 
 .chat-textarea {
@@ -130,8 +126,14 @@ div.filter-contacts-message{
 }
 
 .chat-message-them {
+    nowrap;
 	font-weight: bold;
     color: #F62817;
+}
+
+/* FIXME */
+div.delayed .chat-message-them { 
+    color: black;
 }
 
 .chat-message-error {
@@ -179,11 +181,13 @@ div#online-users-container {
 	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 3px center;
 }
 
-.oc-chat-content #online-users li.offline:hover {
+.oc-chat-content #online-users li.offline:hover,
+.oc-chat-content #online-users li.unavailable:hover {
 	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
 }
 
-.oc-chat-content #online-users li.offline {
+.oc-chat-content #online-users li.offline,
+.oc-chat-content #online-users li.unavailable {
 	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
 }
 
@@ -248,7 +252,7 @@ form.sendXMPPMessage {
     margin: 0;
 }
 
-.chatbox {
+div.chatbox {
 	position: fixed;
 	position:expression("absolute");
 	width: 200px;
