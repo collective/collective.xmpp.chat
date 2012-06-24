@@ -3,7 +3,6 @@
                      data-recipient jid"
      tal:define="chat_id options/chat_id;
                  member context/@@plone_portal_state/member;
-                 box_id options/box_id;
                  audience options/audience;
                  chat_type options/chat_type;
                  jid options/jid;
