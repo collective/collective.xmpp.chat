@@ -38,7 +38,7 @@ class ChatBox(BrowserView):
             return getSite().unrestrictedTraverse(contact).Title()
         return contact
 
-    def render_chat_box(self, chat_id, box_id, tzoffset, jid):
+    def render_chat_box(self, chat_id, box_id, jid):
         """ """
         chat_type, audience = chat_id.split('_', 1)
         return self.template(
