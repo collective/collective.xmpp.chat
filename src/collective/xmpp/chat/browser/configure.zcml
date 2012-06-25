@@ -31,15 +31,6 @@
         permission="zope2.View"
         />
 
-    <browser:page
-        for="*"
-        attribute="render_chat_box"
-        class=".chatbox.ChatBox"
-        name="render_chat_box"
-        permission="zope2.View"
-        layer=".interfaces.IBabbleXMPPLayer"
-        /> 
-
     <browser:viewlet  
         name="collective.xmpp.chat.onlinecontacts"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
