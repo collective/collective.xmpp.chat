@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
-    <description>Babble XMPP/Jabber</description>
+    <description>XMPP/Jabber Instant Messaging for Plone</description>
     <version>1000</version>
     <dependencies>
         <dependency>profile-plone.app.jquery:default</dependency>
