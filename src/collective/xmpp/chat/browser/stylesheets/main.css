@@ -131,6 +131,11 @@ div.filter-contacts-message{
     color: #F62817;
 }
 
+.chat-event {
+    margin-left: 0.5em;
+    color: #808080;
+}
+
 div.delayed .chat-message-them { 
     color: #FB5D50;
 }
