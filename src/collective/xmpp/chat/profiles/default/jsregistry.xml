@@ -9,6 +9,11 @@
         />
 
     <javascript 
+        id="++resource++collective.xmpp.chat.javascripts/store.js/store.js"
+        insert-after="jquery.js"
+        />
+
+    <javascript 
         expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous()"
         id="++resource++collective.xmpp.chat.javascripts/jquery.hook.js"
         insert-after="++resource++collective.xmpp.chat.javascripts/sha1.js"
