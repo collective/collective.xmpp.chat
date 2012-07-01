@@ -131,9 +131,12 @@ div.filter-contacts-message{
     color: #F62817;
 }
 
-/* FIXME */
 div.delayed .chat-message-them { 
-    color: black;
+    color: #FB5D50;
+}
+
+div.delayed .chat-message-me { 
+    color: #7EABBB;
 }
 
 .chat-message-error {
