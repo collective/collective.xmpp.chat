@@ -2,8 +2,9 @@
     <div class="chat-head oc-chat-head"> 
         <ul class="tabs">
             <li><a class="s" href="#users">Users</a></li>
-            <li><a class="s" href="#chatrooms">Chatrooms</a></li>
+            <li><a class="s" href="#chatrooms">Rooms</a></li>
         </ul>
+        <a href="javascript:void(0)" class="close-controlbox-button" data-recipient="staalburger@devbox">X</a>
     </div> 
 
     <!-- tab "panes" -->
@@ -23,8 +24,8 @@
             <ul id="online-users"></ul>
         </div> 
         
-        <div id="chatrooms" class="oc-chat-content">
-            Here be chatrooms
+        <div id="chatrooms">
+            <p class="not-implemented">Functionality not yet available.</p>
         </div>
     </div>
 

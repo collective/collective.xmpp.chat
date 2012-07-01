@@ -79,10 +79,10 @@ div.filter-contacts-message{
 }
 
 .chat-content {
-    padding-top: 0.5em;
+    padding: 0.3em;
 	font-size: 13px;
 	color: #333333;
-	height:190px;
+	height:192px;
 	overflow-y:auto;
 	overflow-x:auto;
 	border:1px solid #999;
@@ -95,6 +95,7 @@ div.filter-contacts-message{
 	padding:3px;
 	border: 0;
 	overflow:hidden;
+    height: 54px;
 }
 
 .chat-textarea-chatbox-selected {
@@ -107,17 +108,9 @@ div.filter-contacts-message{
 	margin:0;
 }
 
-.chat-message {
-	margin-left: 0.5em;
-}
-
 .chat-info {
 	color:#666666;
 
-}
-
-.chat-message-from {
-	font-weight: bold;
 }
 
 .chat-message-me {
@@ -132,7 +125,16 @@ div.filter-contacts-message{
 }
 
 .chat-event {
-    margin-left: 0.5em;
+    color: #808080;
+}
+
+div#chatrooms {
+    height: 279px;
+}
+
+p.not-implemented {
+    margin-top: 3em;
+    margin-left: 0.3em;
     color: #808080;
 }
 
@@ -169,7 +171,53 @@ div#online-users-container {
 }
 
 .oc-chat-head {
-    margin-bottom: 0;
+    margin: 0;
+	background-color: #FFF;
+	padding:0;
+    margin: 0;
+	color: #FFF;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    height: 31px;
+    width: 201px;
+    clear right;
+    background-color: #5390C8;
+}
+
+.oc-chat-head .close-controlbox-button {
+    float: right;
+    margin: 0.5em;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6) );
+    background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+    background-color:#ffffff;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #888;
+    display:inline-block;
+    color: #666;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:0px 4px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+}
+
+.oc-chat-head .close-controlbox-button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff) );
+    background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+    background-color:#f6f6f6;
+}
+
+.oc-chat-head .close-controlbox-button:active {
+    position:relative;
+    top:1px;
 }
 
 .oc-chat-content ul {
@@ -255,7 +303,6 @@ div#online-users-container {
 .user-details-toggle {
     cursor: pointer;
 }
-
 form.sendXMPPMessage {
     margin: 0;
 }
@@ -265,7 +312,7 @@ div.chatbox {
 	position:expression("absolute");
 	width: 200px;
 	display:none;
-    bottom: 1.3em; 
+    bottom: 1.4em; 
     z-index: 3; /* So that it's higher than the content actions */
 }
 
@@ -276,7 +323,7 @@ div.chatbox {
 
 .oc-chat-content, .cr-chat-content {
 	height:279px !important;
-    width: 100%;
+    width: 199px;
     padding: 0px;
 }
 
@@ -322,7 +369,7 @@ div.chatbox {
 }
 
 form.set-xmpp-status {
-    margin: 0.5em 0 0.5em 0.5em;
+    padding: 0.5em 0 0.5em 0.5em;
 }
 
 select#select-xmpp-status {
@@ -336,6 +383,7 @@ ul.tabs {
     margin:0 !important;
     padding:0;
     height:30px;
+    float: left;
 }
 
 /* single tab */
@@ -349,19 +397,25 @@ ul.tabs li {
 
 /* link inside the tab. uses a background image */
 ul.tabs a {
-    background: url(++resource++collective.xmpp.chat.images/blue.png) no-repeat -420px 0;
     font-size:13px;
     display:block;
     height: 30px;
     line-height:30px;
-    width: 134px;
     text-align:center;
     text-decoration:none;
     color:#333;
-    padding:0px;
-    margin:0px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin:0;
     position:relative;
-    top:1px;
+}
+
+ul.tabs li a {
+    border: 1px solid #999;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    color:#666;
+    background-color:#EEE;
 }
 
 ul.tabs a:active {
@@ -370,8 +424,6 @@ ul.tabs a:active {
 
 /* when mouse enters the tab move the background image */
 ul.tabs a:hover {
-    background-position: -420px -31px;
-    color:#fff;
 }
 
 /* active tab uses a class name "current". its highlight is also done by moving the background image. */
@@ -380,33 +432,18 @@ ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
     cursor:default !important;
     color:#000 !important;
     font-weight: bold;
+    background-color: #FFF;
+    border-bottom: 0;
+    height: 31px;
 }
-
-/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
-/* width 1 */
-ul.tabs a.s { background-position: -553px 0; width:81px; }
-ul.tabs a.s:hover { background-position: -553px -31px; }
-ul.tabs a.s.current  { background-position: -553px -62px; }
-
-/* width 2 */
-ul.tabs a.l { background-position: -248px -0px; width:174px; }
-ul.tabs a.l:hover { background-position: -248px -31px; }
-ul.tabs a.l.current { background-position: -248px -62px; }
-
-
-/* width 3 */
-ul.tabs a.xl { background-position: 0 -0px; width:248px; }
-ul.tabs a.xl:hover { background-position: 0 -31px; }
-ul.tabs a.xl.current { background-position: 0 -62px; }
 
 .panes div {
     border: 1px solid #999;
-    height: 100px;
     font-size: 14px;
     background-color: white;
-    -webkit-border-top-right-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
+    width: 199px;
 }
 
 form.sendXMPPMessage {
