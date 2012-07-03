@@ -24,6 +24,14 @@
 
     <browser:page
         for="*"
+        name="search-users"
+        class=".userinfo.SearchUsers"
+        layer=".interfaces.IBabbleXMPPLayer"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
         name="xmpp-userDetails"
         class=".userinfo.XMPPUserDetails"
         template="user_details.pt"
