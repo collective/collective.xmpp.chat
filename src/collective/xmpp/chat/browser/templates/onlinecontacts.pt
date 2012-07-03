@@ -3,6 +3,7 @@
         <ul class="tabs">
             <li><a class="s" href="#users">Users</a></li>
             <li><a class="s" href="#chatrooms">Rooms</a></li>
+            <li><a class="s" href="#settings">Config</a></li>
         </ul>
         <a href="javascript:void(0)" class="close-controlbox-button" data-recipient="staalburger@devbox">X</a>
     </div> 
@@ -18,12 +19,24 @@
                     <option value="offline">Offline</option>
                 </select>
             </form>
-            <ul id="online-users"></ul>
+            <div class="add-xmpp-contact">
+                <a href="#" >Add a contact</a>
+            </div>
+            <form class="search-xmpp-contact" style="display:none">
+                <input type="text" name="identifier" class="username"/>
+                <button type="submit">Search</button>
+                <ul id="found-users"></ul>
+            </form>
+            <ul id="xmpp-contacts"></ul>
         </div> 
         
         <div id="chatrooms">
             <p class="not-implemented">Functionality not yet available.</p>
         </div>
-    </div>
 
+        <div id="settings">
+            <p class="not-implemented">Functionality not yet available.</p>
+        </div>
+
+    </div>
 </div>

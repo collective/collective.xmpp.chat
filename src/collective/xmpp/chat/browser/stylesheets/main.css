@@ -128,6 +128,7 @@ div.filter-contacts-message{
     color: #808080;
 }
 
+div#settings, 
 div#chatrooms {
     height: 279px;
 }
@@ -168,6 +169,25 @@ div#online-users-container {
 
 .activated{
     display: block !important;
+}
+
+div.add-xmpp-contact {
+    border:1px solid #ddd; 
+    padding: 5px;
+    padding-left: 2em;
+    margin: 0 0.5em;
+    background: url('/add_icon.png') no-repeat 7px 4px;
+    font-weight: bold;
+}
+
+form.search-xmpp-contact {
+    border:1px solid #ddd; 
+    margin: 0 0.5em;
+    padding: 1em 0.3em 1em 0.3em;
+}
+
+form.search-xmpp-contact input {
+    width: 9em;
 }
 
 .oc-chat-head {
@@ -225,79 +245,54 @@ div#online-users-container {
     padding: 0px;
 }
 
-.oc-chat-content #online-users li.odd {
+.oc-chat-content #xmpp-contacts li.odd {
     background-color: #DCEAC5; /* Make this difference */
 }
 
-.oc-chat-content #online-users li:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 3px center;
+.oc-chat-content #xmpp-contacts li:hover,
+.oc-chat-content #xmpp-contacts li {
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px 2px;
 }
 
-.oc-chat-content #online-users li {
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 3px center;
+.oc-chat-content #xmpp-contacts li.offline:hover,
+.oc-chat-content #xmpp-contacts li.unavailable:hover,
+.oc-chat-content #xmpp-contacts li.offline,
+.oc-chat-content #xmpp-contacts li.unavailable {
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px 2px;
 }
 
-.oc-chat-content #online-users li.offline:hover,
-.oc-chat-content #online-users li.unavailable:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
+.oc-chat-content #xmpp-contacts li.busy,
+.oc-chat-content #xmpp-contacts li.busy:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px 2px;
 }
 
-.oc-chat-content #online-users li.offline,
-.oc-chat-content #online-users li.unavailable {
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
+.oc-chat-content #xmpp-contacts li.away,
+.oc-chat-content #xmpp-contacts li.away:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px 2px;
 }
 
-.oc-chat-content #online-users li.busy:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 3px center;
-}
-
-.oc-chat-content #online-users li.busy {
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 3px center;
-}
-
-.oc-chat-content #online-users li.away:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 3px center;
-}
-
-.oc-chat-content #online-users li.away {
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 3px center;
-}
-
-.oc-chat-content #online-users li a {
+.oc-chat-content #xmpp-contacts li a {
     margin-left: 2em;
 }
 
-#online-users li > a::before {
+#xmpp-contacts li > a::before {
     content: none;
     background: #999;
 }
 
-.oc-chat-content #online-users li {
-    border: 1px solid #DCEAC5;
-}
-
-#online-users {
+#xmpp-contacts {
     width: 100%;
-    border: none;
     margin: 0;
     position: relative;
     top: 0;
+    border: none;
+    padding-top: 0.5em;
+}
+
+#xmpp-contacts li {
+    border: none;
     display: block;
-}
-
-#online-users li > a.expanded {
-    color: #205C90;
-    background: #CCC;
-    font-weight: normal;
-}
-
-#online-users li > a:after {
-    content: none;
-    width: 0;
-    height: 0;
-    top: 0;
-    margin: 0;
-    border: 0;
+    padding: 0.5em 0.5em 0 0.5em;
 }
 
 .user-details-toggle {
@@ -404,8 +399,8 @@ ul.tabs a {
     text-align:center;
     text-decoration:none;
     color:#333;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
     margin:0;
     position:relative;
 }
@@ -428,7 +423,6 @@ ul.tabs a:hover {
 
 /* active tab uses a class name "current". its highlight is also done by moving the background image. */
 ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
-    background-position: -420px -62px;
     cursor:default !important;
     color:#000 !important;
     font-weight: bold;
@@ -437,7 +431,9 @@ ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
     height: 31px;
 }
 
-.panes div {
+.panes div#users,
+.panes div#chatrooms,
+.panes div#settings {
     border: 1px solid #999;
     font-size: 14px;
     background-color: white;
@@ -535,18 +531,18 @@ dl.dropdown {
 }
 
 .dropdown a.online { 
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 3px center;
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px 2px;
 }
 
 .dropdown a.offline { 
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 3px center;
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px 2px;
 }
 
 .dropdown a.busy { 
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 3px center;
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px 2px;
 }
 
 .dropdown a.away { 
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 3px center;
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px 2px;
 }
 
