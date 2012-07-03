@@ -242,7 +242,7 @@ form.search-xmpp-contact input {
 
 .oc-chat-content ul {
     margin: 0px;
-    padding: 0px;
+    padding-top: 0.5em;
 }
 
 .oc-chat-content #xmpp-contacts li.odd {
@@ -275,6 +275,10 @@ form.search-xmpp-contact input {
     margin-left: 2em;
 }
 
+.remove-xmpp-contact-dialog .ui-dialog-buttonpane {
+    border: none;
+}
+
 #xmpp-contacts li > a::before {
     content: none;
     background: #999;
@@ -298,6 +302,13 @@ form.search-xmpp-contact input {
 .user-details-toggle {
     cursor: pointer;
 }
+
+a.remove-xmpp-contact {
+    background: url('/delete_icon.png') no-repeat right top;
+    padding: 0.5em 1em 1em 0.5em;
+    float: right;
+}
+
 form.sendXMPPMessage {
     margin: 0;
 }
@@ -392,15 +403,15 @@ ul.tabs li {
 
 /* link inside the tab. uses a background image */
 ul.tabs a {
-    font-size:13px;
+    font-size:12px;
     display:block;
     height: 30px;
     line-height:30px;
     text-align:center;
     text-decoration:none;
     color:#333;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     margin:0;
     position:relative;
 }
