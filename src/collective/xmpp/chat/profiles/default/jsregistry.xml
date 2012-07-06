@@ -3,6 +3,9 @@
 
     <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.js"
         insert-after="++resource++plone.app.jquery.js"/>
+
+    <javascript id="++resource++collective.xmpp.chat.javascripts/backbone.js"
+        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js">
  
     <javascript id="++resource++collective.xmpp.chat.javascripts/sha1.js"/>
 
@@ -24,8 +27,8 @@
 
     <javascript 
         id="++resource++collective.xmpp.chat.javascripts/chat.js"
+        insert-after="++resource++collective.xmpp.chat.javascripts/backbone.js"
         authenticated="True" 
-        insert-after="++resource++underscore.js"
         />
 
     <javascript 
