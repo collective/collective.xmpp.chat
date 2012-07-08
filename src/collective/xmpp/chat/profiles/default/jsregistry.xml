@@ -2,10 +2,12 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
     <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.js"
-        insert-after="++resource++plone.app.jquery.js"/>
+        insert-after="++resource++jarn.xmpp.core.ui.js"
+        />
 
     <javascript id="++resource++collective.xmpp.chat.javascripts/backbone.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js">
+        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
+        />
  
     <javascript id="++resource++collective.xmpp.chat.javascripts/sha1.js"/>
 
