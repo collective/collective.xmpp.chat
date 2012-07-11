@@ -12,12 +12,14 @@
     <div class="panes">
         <div id="users" class="oc-chat-content">
             <form class="set-xmpp-status" action="" method="post">
-                <select id="select-xmpp-status">
-                    <option value="online">Online</option>
-                    <option value="busy">Busy</option>
-                    <option value="away">Away</option>
-                    <option value="offline">Offline</option>
-                </select>
+                <span id="xmpp-status-holder">
+                    <select id="select-xmpp-status">
+                        <option value="online">Online</option>
+                        <option value="busy">Busy</option>
+                        <option value="away">Away</option>
+                        <option value="offline">Offline</option>
+                    </select>
+                </span>
             </form>
             <div class="add-xmpp-contact">
                 <a href="#" title="Click to search for new users to add as chat contacts">Add a contact</a>
