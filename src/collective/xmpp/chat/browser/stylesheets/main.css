@@ -312,10 +312,6 @@ a.remove-xmpp-contact {
     float: right;
 }
 
-form.sendXMPPMessage {
-    margin: 0;
-}
-
 div.chatbox {
 	position: fixed;
 	position:expression("absolute");
@@ -453,6 +449,8 @@ ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
     background-color: white;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
     width: 199px;
 }
 
@@ -462,8 +460,10 @@ form.sendXMPPMessage {
     padding:0.5em;
     margin: 0;
     position: relative;
-    -webkit-border-top-right-radius: 0em;
-    -webkit-border-top-left-radius: 0em;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .chatbox-button {

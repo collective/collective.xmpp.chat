@@ -12,6 +12,7 @@
         cookable="True"
         enabled="1" 
         expression=""
+        insert-after="++resource++jarn.xmpp.core.css/styles.css"
         />
 
 </object>
