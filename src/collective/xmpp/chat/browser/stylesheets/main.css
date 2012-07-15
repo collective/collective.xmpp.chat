@@ -185,6 +185,10 @@ div.add-xmpp-contact {
     font-weight: bold;
 }
 
+ul#found-users {
+    padding-top: 0.5em;
+}
+
 form.search-xmpp-contact {
     border:1px solid #ddd; 
     margin: 0 0.5em;
@@ -254,6 +258,11 @@ form.search-xmpp-contact input {
     background-color: #DCEAC5; /* Make this difference */
 }
 
+#xmppchat-roster dd.current-xmpp-contact,
+#xmppchat-roster dd.current-xmpp-contact:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px top;
+}
+
 #xmppchat-roster dd.current-xmpp-contact.offline:hover,
 #xmppchat-roster dd.current-xmpp-contact.unavailable:hover,
 #xmppchat-roster dd.current-xmpp-contact.offline,
@@ -309,7 +318,7 @@ form.search-xmpp-contact input {
 
 a.remove-xmpp-contact {
     background: url('/delete_icon.png') no-repeat right top;
-    padding: 0.5em 1em 1em 0.5em;
+    padding: 0.5em 1em 1em 0;
     float: right;
 }
 
