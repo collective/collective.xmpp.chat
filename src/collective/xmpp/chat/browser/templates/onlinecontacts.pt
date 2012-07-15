@@ -29,7 +29,7 @@
                 <button type="submit">Search</button>
                 <ul id="found-users"></ul>
             </form>
-            <ul id="xmpp-contacts"></ul>
+            <dl id="xmppchat-roster"></dl>
         </div> 
         
         <div id="chatrooms">

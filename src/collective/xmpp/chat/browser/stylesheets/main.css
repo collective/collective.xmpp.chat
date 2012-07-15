@@ -179,10 +179,9 @@ a.subscribe-to-user {
 
 div.add-xmpp-contact {
     border:1px solid #ddd; 
-    padding: 5px;
-    padding-left: 2em;
+    padding: 3px 3px 3px 25px;
     margin: 0 0.5em;
-    background: url('/add_icon.png') no-repeat 7px 4px;
+    background: url('/add_icon.png') no-repeat 5px 3px;
     font-weight: bold;
 }
 
@@ -246,38 +245,37 @@ form.search-xmpp-contact input {
     top:1px;
 }
 
-.oc-chat-content ul {
+.oc-chat-content dt {
     margin: 0px;
     padding-top: 0.5em;
 }
 
-.oc-chat-content #xmpp-contacts li.odd {
+#xmppchat-roster dd.odd {
     background-color: #DCEAC5; /* Make this difference */
 }
 
-.oc-chat-content #xmpp-contacts li:hover,
-.oc-chat-content #xmpp-contacts li {
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px 2px;
+#xmppchat-roster dd.current-xmpp-contact.offline:hover,
+#xmppchat-roster dd.current-xmpp-contact.unavailable:hover,
+#xmppchat-roster dd.current-xmpp-contact.offline,
+#xmppchat-roster dd.current-xmpp-contact.unavailable {
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px top;
 }
 
-.oc-chat-content #xmpp-contacts li.offline:hover,
-.oc-chat-content #xmpp-contacts li.unavailable:hover,
-.oc-chat-content #xmpp-contacts li.offline,
-.oc-chat-content #xmpp-contacts li.unavailable {
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px 2px;
+#xmppchat-roster dd.current-xmpp-contact.busy,
+#xmppchat-roster dd.current-xmpp-contact.busy:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px top;
 }
 
-.oc-chat-content #xmpp-contacts li.busy,
-.oc-chat-content #xmpp-contacts li.busy:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px 2px;
+#xmppchat-roster dd.current-xmpp-contact.away,
+#xmppchat-roster dd.current-xmpp-contact.away:hover {
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px top;
 }
 
-.oc-chat-content #xmpp-contacts li.away,
-.oc-chat-content #xmpp-contacts li.away:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px 2px;
+#xmppchat-roster dd.requesting-xmpp-contact button{
+    margin-left: 0.5em;
 }
 
-.oc-chat-content #xmpp-contacts li a {
+#xmppchat-roster dd a {
     margin-left: 2em;
 }
 
@@ -285,12 +283,7 @@ form.search-xmpp-contact input {
     border: none;
 }
 
-#xmpp-contacts li > a::before {
-    content: none;
-    background: #999;
-}
-
-#xmpp-contacts {
+#xmppchat-roster {
     width: 100%;
     margin: 0;
     position: relative;
@@ -299,10 +292,19 @@ form.search-xmpp-contact input {
     padding-top: 0.5em;
 }
 
-#xmpp-contacts li {
+#xmppchat-roster dt {
+    display: none;
+    font-size: 13px;
+    color: #666;
+    border: none;
+    padding: 0.3em 0.5em 0 0.5em;
+}
+
+#xmppchat-roster dd {
+    font-weight: bold;
     border: none;
     display: block;
-    padding: 0.5em 0.5em 0 0.5em;
+    padding: 0.3em 0.5em 0 0.5em;
 }
 
 a.remove-xmpp-contact {
@@ -373,7 +375,7 @@ div.chatbox {
 }
 
 form.set-xmpp-status {
-    padding: 0.5em 0 0.5em 0.5em;
+    padding: 0.5em 0 0.3em 0.5em;
 }
 
 select#select-xmpp-status {
@@ -508,7 +510,7 @@ dl.dropdown {
 .dropdown dd { position:relative; }
 
 .dropdown dt a {
-    padding:5px 5px 5px 30px; 
+    padding:3px 3px 3px 25px; 
 }
 
 .dropdown dt a {
@@ -544,18 +546,18 @@ dl.dropdown {
 }
 
 .dropdown a.online { 
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px 2px;
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat left top;
 }
 
 .dropdown a.offline { 
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px 2px;
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat left top;
 }
 
 .dropdown a.busy { 
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px 2px;
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat left top;
 }
 
 .dropdown a.away { 
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px 2px;
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat left top;
 }
 
