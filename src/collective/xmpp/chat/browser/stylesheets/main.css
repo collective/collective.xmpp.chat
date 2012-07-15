@@ -303,7 +303,6 @@ form.search-xmpp-contact input {
     border: none;
     display: block;
     padding: 0.5em 0.5em 0 0.5em;
-    cursor: pointer;
 }
 
 a.remove-xmpp-contact {
