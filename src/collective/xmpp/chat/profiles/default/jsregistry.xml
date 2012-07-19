@@ -33,10 +33,4 @@
         authenticated="True" 
         />
 
-    <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/chatui.js"
-        authenticated="True" 
-        insert-after="++resource++collective.xmpp.chat.javascripts/chat.js"
-        />
-
 </object>
