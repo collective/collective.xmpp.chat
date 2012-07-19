@@ -68,10 +68,6 @@ div.filter-contacts-message{
 	color: #ffffff;
 }
 
-.chat-head-minimized-with-messages {
-    background-color: #5C0803;
-}
-
 .chat-blink {
 	background-color: #176689;
 	border-right:1px solid #176689;
@@ -367,20 +363,6 @@ div.chatbox {
 
 .cr-chat-content {
     background-color: #EFF6FA;
-}
-
-/* Styling for the chat panel bottom feeder */
-#footpanel a.chat {
-	background: url(++resource++collective.xmpp.chat.images/comment_user_32.png) no-repeat 3px center;
-	width: 135px;
-	border-left: 1px solid #bbb;
-	border-right: 1px solid #bbb;
-	text-indent: 0; 
-    /*--Reset text indent since there will be a combination of both text and image--*/
-}
-
-#footpanel a.chatrooms {
-	background: url(++resource++collective.xmpp.chat.images/comment_32.png) no-repeat 3px center;
 }
 
 form.set-xmpp-status {
