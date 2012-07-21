@@ -107,6 +107,7 @@ div.filter-contacts-message{
 
 .participants ul.participant-list li {
     padding: 0.5em 0 0 0.5em;
+    display: block;
 }
 
 .chatroom form.sendXMPPMessage {
