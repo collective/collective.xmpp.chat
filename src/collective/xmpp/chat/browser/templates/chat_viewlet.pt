@@ -1,11 +1,21 @@
-<dl>
-    <dt class="chatpanel"
-        tal:define="portal_url context/portal_url"
-        tal:condition="not: view/anonymous">
+<div id="chatpanel"
+    tal:define="portal_url context/portal_url"
+    tal:condition="not: view/anonymous">
 
+    <div id="collective-xmpp-chat-data" 
+        tal:define="
+                portal context/@@plone_portal_state/portal;
+                member context/@@plone_portal_state/member;
+                username member/getId;
+                base_url python:context.portal_url();"
+        tal:attributes="
+                username username;
+                base_url base_url;
+                "></div>
+
+    <div id="toggle-controlbox">
         <a href="#" class="chat" id="toggle-online-users">
             Online Users (<strong id="online-count">0</strong>)
         </a>
-    </dt>
-</dl>
-
+    </div>
+</div>

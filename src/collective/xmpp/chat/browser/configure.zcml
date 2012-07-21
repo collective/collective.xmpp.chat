@@ -49,16 +49,6 @@
         />
 
     <browser:viewlet  
-        for="*"
-        name="collective.xmpp.chat.chatdata"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class=".viewlets.ChatData"
-        template="./templates/chatdata_viewlet.pt"
-        permission="zope2.View" 
-        layer=".interfaces.IBabbleXMPPLayer"
-        />
-
-    <browser:viewlet  
         name="collective.xmpp.chat.onlineusers"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlets.ChatViewlet"
