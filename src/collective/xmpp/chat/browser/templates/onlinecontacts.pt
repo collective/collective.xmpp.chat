@@ -33,7 +33,11 @@
         </div> 
         
         <div id="chatrooms">
-            <p class="not-implemented">Functionality not yet available.</p>
+            <form class="add-chatroom" action="" method="post">
+                <input type="text" name="chatroom" class="new-chatroom-name" placeholder="New chat room"/>
+                <button type="submit">Create</button>
+            </form>
+            <ul id="available-chatrooms"></ul>
         </div>
 
         <div id="settings">
