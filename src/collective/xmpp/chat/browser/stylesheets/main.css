@@ -62,7 +62,7 @@ div.filter-contacts-message{
 }
 
 .chat-head-chatbox {
-	background-color: #75AD0A;
+	background-color: #4B7003;
 }
 
 .chat-head-chatroom {
@@ -133,7 +133,7 @@ input.new-chatroom-name {
     padding: 0.3em;
 	font-size: 13px;
 	color: #333333;
-	height:192px;
+	height:193px;
 	overflow-y:auto;
 	overflow-x:auto;
 	border:1px solid #999;
@@ -284,6 +284,7 @@ form.search-xmpp-contact input {
     text-shadow:1px 1px 0px #ffffff;
 }
 
+.chatbox-button:hover,
 .oc-chat-head .close-controlbox-button:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff) );
     background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
@@ -291,6 +292,7 @@ form.search-xmpp-contact input {
     background-color:#f6f6f6;
 }
 
+.chatbox-button:active,
 .oc-chat-head .close-controlbox-button:active {
     position:relative;
     top:1px;
@@ -531,38 +533,26 @@ form.sendXMPPMessage {
 }
 
 .chatbox-button {
-	float: right;
-    -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
-    box-shadow:inset 0px 1px 0px 0px #caefab;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #75AD0A), color-stop(1, #5cb811) );
-    background:-moz-linear-gradient( center top, #75AD0A 5%, #5cb811 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#75AD0A', endColorstr='#5cb811');
-    background-color:#75AD0A;
+    float: right;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6) );
+    background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
+    background-color:#ffffff;
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
     border-radius:6px;
-    border:1px solid #268a16;
+    border:1px solid #888;
     display:inline-block;
-    color:white!important;
+    color: #666 !important;
     font-family:arial;
     font-size:12px;
     font-weight:bold;
     padding:0px 4px;
     text-decoration:none;
-    text-shadow: 1px 1px 0px #aade7c;
-}
-.chatbox-button:hover {
-    -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
-    box-shadow:inset 0px 1px 0px 0px #caefab;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #75AD0A), color-stop(1, #5cb811) );
-    background:-moz-linear-gradient( center top, #75AD0A 5%, #5cb811 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#75AD0A', endColorstr='#5cb811');
-}
-.chatbox-button:active {
-    position:relative;
-    top:1px;
+    text-shadow:1px 1px 0px #ffffff;
 }
 
 /* status dropdown styles */       
