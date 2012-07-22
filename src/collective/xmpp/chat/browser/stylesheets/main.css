@@ -58,7 +58,7 @@ div.filter-contacts-message{
 	font-size: 100%;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
-	padding:7px;
+	padding: 3px 0 3px 7px;
 }
 
 .chat-head-chatbox {
@@ -83,10 +83,6 @@ div.filter-contacts-message{
     width: 200px;
 }
 
-.chatroom .chat-content {
-    height: 193px;
-}
-
 .chatroom .chat {
     overflow: auto;
     height: 400px;
@@ -96,7 +92,7 @@ div.filter-contacts-message{
 .chatroom .participants {
     float: left;
     width: 99px;
-    height: 277px;
+    height: 271px;
     background-color: white;
     overflow: auto;
 	border-right: 1px solid #999;
@@ -133,11 +129,12 @@ input.new-chatroom-name {
     padding: 0.3em;
 	font-size: 13px;
 	color: #333333;
-	height:193px;
+	height:194px;
 	overflow-y:auto;
 	overflow-x:auto;
 	border:1px solid #999;
-    border-bottom: 0px;
+    border-bottom: 0;
+    border-top: 0;
 	background-color: #ffffff;
 	line-height: 1.3em;
 }
@@ -146,7 +143,7 @@ input.new-chatroom-name {
 	padding:3px;
 	border: 0;
 	overflow:hidden;
-    height: 54px;
+    height: 48px;
 }
 
 .chat-textarea-chatbox-selected {
@@ -209,9 +206,12 @@ div.chat-title {
 	font-weight: bold;
 }
 
-div.chat-title a {
-    color: white;
-    text-shadow: 1px 1px 0px #5cb811;
+p.user-custom-message,
+p.chatroom-topic {
+    font-size: 80%;
+    font-style: italic;
+    clear: left;
+    height: 1.1em;
 }
 
 .activated{
@@ -248,9 +248,6 @@ form.search-xmpp-contact input {
 
 .oc-chat-head {
     margin: 0;
-	background-color: #FFF;
-	padding:0;
-    margin: 0;
 	color: #FFF;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
@@ -258,11 +255,14 @@ form.search-xmpp-contact input {
     width: 201px;
     clear right;
     background-color: #5390C8;
+	padding: 3px 0 0 0;
 }
 
+.chatbox-button,
 .oc-chat-head .close-controlbox-button {
     float: right;
-    margin: 0.5em;
+    margin-top: 0.2em;
+    margin-right: 0.5em;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
     box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -275,7 +275,7 @@ form.search-xmpp-contact input {
     border-radius:6px;
     border:1px solid #888;
     display:inline-block;
-    color: #666;
+    color: #666 !important;
     font-family:arial;
     font-size:12px;
     font-weight:bold;
@@ -400,23 +400,18 @@ div.chatroom {
     margin-right: 15px;
 }
 
-.cr-chat-head {
-	background: #0F3A4F;
-    width: 213px;
-}
-
-.oc-chat-content, .cr-chat-content {
-	height:279px !important;
+.oc-chat-content {
+	height:276px !important;
     width: 199px;
     padding: 0px;
 }
 
-.oc-chat-content dl, .cr-chat-content dl {
+.oc-chat-content dl {
     margin: 0px;
     padding: 0px;
 }
 
-.oc-chat-content dd, .cr-chat-content dd {
+.oc-chat-content dd {
     margin-left: 0px;
     margin-bottom: 0px;
     padding: 1em;
@@ -428,14 +423,6 @@ div.chatroom {
 
 .oc-chat-content {
     background-color: #f9f9f9;
-}
-
-.cr-chat-content dd.odd {
-    background-color: #E2EEF4; 
-}
-
-.cr-chat-content {
-    background-color: #EFF6FA;
 }
 
 form.set-xmpp-status,
@@ -530,29 +517,6 @@ form.sendXMPPMessage {
     -webkit-border-top-left-radius: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-
-.chatbox-button {
-    float: right;
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6) );
-    background:-moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6');
-    background-color:#ffffff;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid #888;
-    display:inline-block;
-    color: #666 !important;
-    font-family:arial;
-    font-size:12px;
-    font-weight:bold;
-    padding:0px 4px;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #ffffff;
 }
 
 /* status dropdown styles */       
