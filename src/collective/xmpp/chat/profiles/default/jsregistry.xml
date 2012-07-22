@@ -34,7 +34,7 @@
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/chat.js"
+        id="++resource++collective.xmpp.chat.javascripts/converse.js"
         insert-after="++resource++collective.xmpp.chat.javascripts/backbone.js"
         authenticated="True" 
         />
