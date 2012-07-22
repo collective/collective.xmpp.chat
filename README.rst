@@ -9,3 +9,8 @@ superior in design and performance.
 
 Email me for more info: jc@opkode.com
 
+.. _Plone: http://plone.org
+.. _XMPP: http://xmpp.org
+.. _ejabberd: ejabberd.im
+.. _jarn.xmpp.core: https://github.com/ggozad/jarn.xmpp.core
+.. _babble.client: http://plone.org/products/babble.client
