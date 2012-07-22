@@ -348,6 +348,7 @@ form.search-xmpp-contact input {
     padding-top: 0.5em;
 }
 
+#available-chatrooms dt,
 #xmppchat-roster dt {
     display: none;
     font-size: 13px;
@@ -356,6 +357,16 @@ form.search-xmpp-contact input {
     padding: 0.3em 0.5em 0 0.5em;
 }
 
+#available-chatrooms dt {
+    padding-top: 1em;
+}
+
+#available-chatrooms li {
+    display: block;
+}
+
+
+dd.chatroom,
 #xmppchat-roster dd {
     font-weight: bold;
     border: none;
