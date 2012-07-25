@@ -3,7 +3,7 @@
 	position: fixed;
 	bottom: 0; right: 0;
     height: 331px;
-    width: 100%;
+    width: auto;
 }
 
 #toggle-controlbox {
