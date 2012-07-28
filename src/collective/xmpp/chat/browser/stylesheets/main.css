@@ -225,11 +225,29 @@ a.subscribe-to-user {
 }
 
 div.add-xmpp-contact {
+    display: block;
     border:1px solid #ddd; 
-    padding: 3px 3px 3px 25px;
+    padding: 3px 3px 3px 3px;
     margin: 0 0.5em;
-    background: url('/add_icon.png') no-repeat 5px 3px;
+    clear: both;
+    background: url('/add_icon.png') no-repeat 3px 3px;
     font-weight: bold;
+}
+
+div.add-xmpp-contact a.add-xmpp-contact {
+    padding-left: 1.5em;
+}
+
+#fancy-xmpp-status-select a.change-xmpp-status-message {
+    background: url('/pencil_icon.gif') no-repeat right top;
+    float: right;
+    clear: right;
+    width: 1em;
+    height: 1em;
+}
+
+#fancy-xmpp-status-select a.choose-xmpp-status {
+    padding-left: 1.5em;
 }
 
 ul#found-users {
@@ -237,9 +255,8 @@ ul#found-users {
 }
 
 form.search-xmpp-contact {
-    border:1px solid #ddd; 
-    margin: 0 0.5em;
-    padding: 1em 0.3em 1em 0.3em;
+    margin: 0;
+    padding: 1em 0 0 0;
 }
 
 form.search-xmpp-contact input {
@@ -524,6 +541,14 @@ form.sendXMPPMessage {
     border-top-right-radius: 0;
 }
 
+#set-custom-xmpp-status {
+    float: left;
+}
+
+#set-custom-xmpp-status button {
+    padding: 1px 2px 1px 1px;
+}
+
 /* status dropdown styles */       
 dl.dropdown {
     margin-right: 0.5em;
@@ -531,14 +556,19 @@ dl.dropdown {
 .dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
 .dropdown dd { position:relative; }
 
-.dropdown dt a {
-    padding:3px 3px 3px 25px; 
+div.xmpp-status {
+    padding: 3px;
 }
 
-.dropdown dt a {
-    display:block; 
-    border:1px solid #ddd; 
+input.custom-xmpp-status {
+    height: 18px;
 }
+
+#fancy-xmpp-status-select {
+    border:1px solid #ddd; 
+    height: 22px;
+}
+
 .dropdown dt a span {
     cursor:pointer; display:block; padding:5px;
 }
@@ -546,11 +576,11 @@ dl.dropdown {
 .dropdown dd ul { 
     list-style:none; 
     padding:5px 0px; 
-    position:absolute; 
-    left:0px; top:2px; 
+    position:absolute; left:0; top:0; 
     border:1px solid #ddd; 
+    border-top: 0;
     width: 99%;
-    background: #FFF;
+    background-color: #FFF;
     z-index: 99;
 }
 

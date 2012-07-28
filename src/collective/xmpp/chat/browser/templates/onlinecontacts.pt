@@ -22,13 +22,13 @@
                 </span>
             </form>
             <div class="add-xmpp-contact">
-                <a href="#" title="Click to search for new users to add as chat contacts">Add a contact</a>
+                <a class="add-xmpp-contact" href="#" title="Click to search for new users to add as chat contacts">Add a contact</a>
+                <form class="search-xmpp-contact" style="display:none">
+                    <input type="text" name="identifier" class="username" placeholder="Contact name"/>
+                    <button type="submit">Search</button>
+                    <ul id="found-users"></ul>
+                </form>
             </div>
-            <form class="search-xmpp-contact" style="display:none">
-                <input type="text" name="identifier" class="username" placeholder="Contact name"/>
-                <button type="submit">Search</button>
-                <ul id="found-users"></ul>
-            </form>
             <dl id="xmppchat-roster"></dl>
         </div> 
         
