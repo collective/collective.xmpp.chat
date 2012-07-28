@@ -307,26 +307,30 @@ form.search-xmpp-contact input {
     background-color: #DCEAC5; /* Make this difference */
 }
 
+#xmppchat-roster dd.current-xmpp-contact {
+    clear: both;
+}
+
 #xmppchat-roster dd.current-xmpp-contact,
 #xmppchat-roster dd.current-xmpp-contact:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px top;
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat 5px 2px;
 }
 
 #xmppchat-roster dd.current-xmpp-contact.offline:hover,
 #xmppchat-roster dd.current-xmpp-contact.unavailable:hover,
 #xmppchat-roster dd.current-xmpp-contact.offline,
 #xmppchat-roster dd.current-xmpp-contact.unavailable {
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px top;
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat 5px 2px;
 }
 
 #xmppchat-roster dd.current-xmpp-contact.busy,
 #xmppchat-roster dd.current-xmpp-contact.busy:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px top;
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat 5px 2px;
 }
 
 #xmppchat-roster dd.current-xmpp-contact.away,
 #xmppchat-roster dd.current-xmpp-contact.away:hover {
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px top;
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat 5px 2px;
 }
 
 #xmppchat-roster dd.requesting-xmpp-contact button{
@@ -356,7 +360,7 @@ form.search-xmpp-contact input {
     font-size: 13px;
     color: #666;
     border: none;
-    padding: 0.3em 0.5em 0 0.5em;
+    padding: 0.3em 0.5em 0.3em 0.5em;
 }
 
 #available-chatrooms dt {
@@ -373,13 +377,14 @@ dd.chatroom,
     font-weight: bold;
     border: none;
     display: block;
-    padding: 0.3em 0.5em 0 0.5em;
+    padding: 0em 0.5em 0 0.5em;
 }
 
-a.remove-xmpp-contact {
+#xmppchat-roster dd a.remove-xmpp-contact {
     background: url('/delete_icon.png') no-repeat right top;
     padding: 0.5em 1em 1em 0;
     float: right;
+    margin: 0;
 }
 
 div.chatbox {
@@ -563,18 +568,18 @@ dl.dropdown {
 }
 
 .dropdown a.online { 
-	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat left top;
+	background: url(/++resource++collective.xmpp.chat.images/user_online_panel.png) no-repeat left;
 }
 
 .dropdown a.offline { 
-	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat left top;
+	background: url(/++resource++collective.xmpp.chat.images/user_offline_panel.png) no-repeat left;
 }
 
 .dropdown a.busy { 
-	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat left top;
+	background: url(/++resource++collective.xmpp.chat.images/user_busy_panel.png) no-repeat left;
 }
 
 .dropdown a.away { 
-	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat left top;
+	background: url(/++resource++collective.xmpp.chat.images/user_away_panel.png) no-repeat left;
 }
 
