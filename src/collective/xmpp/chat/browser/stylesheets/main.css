@@ -1,5 +1,5 @@
 #chatpanel {
-	z-index: 9999; /*--Keeps the panel on top of all other elements--*/
+	z-index: 3; /*--Keeps the panel on top of all other elements--*/
 	position: fixed;
 	bottom: 0; right: 0;
     height: 331px;
@@ -164,6 +164,12 @@ input.new-chatroom-name {
 .chat-message-me {
 	font-weight: bold;
     color: #436976;
+}
+
+.chat-message-room {
+    nowrap;
+	font-weight: bold;
+    color: #4B7003;
 }
 
 .chat-message-them {
@@ -581,7 +587,7 @@ input.custom-xmpp-status {
     border-top: 0;
     width: 99%;
     background-color: #FFF;
-    z-index: 99;
+    z-index: 4;
 }
 
 .dropdown dd ul li a:hover { 
