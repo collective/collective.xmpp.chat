@@ -5,6 +5,10 @@
         insert-after="++resource++jarn.xmpp.core.ui.js"
         />
 
+    <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.string/lib/underscore.string.js"
+        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
+        />
+
     <javascript id="++resource++collective.xmpp.chat.javascripts/backbone.js"
         insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
         />
