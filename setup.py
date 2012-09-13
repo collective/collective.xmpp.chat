@@ -25,9 +25,9 @@ setup(name='collective.xmpp.chat',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
-          'jarn.xmpp.core',
-          'plone.app.jquery >= 1.7.2',
+            'setuptools',
+            'jarn.xmpp.core',
+            'collective.js.jqueryui'
       ],
       extras_require = {
         "sphinx": [ "Sphinx >=1.0",
