@@ -13,8 +13,6 @@
         insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
         />
  
-    <javascript id="++resource++collective.xmpp.chat.javascripts/sha1.js"/>
-
     <javascript 
         id="++resource++collective.xmpp.chat.javascripts/jquery.cookie.js"
         insert-after="jquery.js"
