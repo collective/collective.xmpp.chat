@@ -1,8 +1,6 @@
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-from jarn.xmpp.core.browser.viewlet import XMPPViewlet
-
 class OnlineContacts(ViewletBase):
     """ This viewlet is registered for and rendered inside the IPortalFooter
         viewletmanager. 
@@ -15,5 +13,9 @@ class ChatData(ViewletBase):
         base url on the page.
     """
 
-class ChatViewlet(XMPPViewlet):
+class ChatViewlet(ViewletBase):
     """ """
+
+    def update(self):
+        super(ChatViewlet, self).update()
+        self.anonymous = self.portal_state.anonymous()
