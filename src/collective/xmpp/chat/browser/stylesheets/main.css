@@ -38,15 +38,6 @@
 	background-color: #2D617A;
 }
 
-5chatroom .room-name {
-    font-size: 150%;
-    font-weight: bold;
-}
-
-.chatroom .room-topic {
-    font-style: italic;
-}
-
 .chatroom .chat-area {
     float: left;
     width: 200px;
