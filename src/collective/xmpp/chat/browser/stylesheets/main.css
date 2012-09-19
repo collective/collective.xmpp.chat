@@ -21,37 +21,6 @@
     height: 1.1em;
 }
 
-div#form-widgets-conversation {
-    overflow-y: scroll;
-    height: 300px;
-    padding: 1em 0 1em 1em;
-	border :1px solid #ccc;
-}
-
-div.no-contacts-message {
-    padding-top:1em;
-    padding-left:1em;
-}
-
-dd.online-contacts {
-    padding: 0 !important;
-}
-
-dd.online-contacts-max {
-    padding: 0 !important;
-    height: 18em;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-div.chatportlet-online-contact {
-    padding:0.7em;
-}
-
-div.filter-contacts-message{
-	font-size: 10px;
-}
-
 .chat-head {
 	color: #ffffff;
     margin: 0;
