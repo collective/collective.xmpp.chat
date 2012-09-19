@@ -214,7 +214,7 @@ div.add-xmpp-contact a.add-xmpp-contact {
 }
 
 #fancy-xmpp-status-select a.change-xmpp-status-message {
-    background: url('/pencil_icon.gif') no-repeat right top;
+    background: url('/pencil_icon.png') no-repeat right top;
     float: right;
     clear: right;
     width: 1em;
