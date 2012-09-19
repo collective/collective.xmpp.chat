@@ -42,7 +42,7 @@
     <browser:viewlet  
         name="collective.xmpp.chat.onlinecontacts"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class=".viewlets.OnlineContacts"
+        class="plone.app.layout.viewlets.common.ViewletBase"
         permission="zope2.View" 
         template="./templates/onlinecontacts.pt"
         layer=".interfaces.IBabbleXMPPLayer"
@@ -51,7 +51,7 @@
     <browser:viewlet  
         name="collective.xmpp.chat.onlineusers"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class=".viewlets.ChatViewlet"
+        class="plone.app.layout.viewlets.common.ViewletBase"
         permission="zope2.View" 
         template="./templates/chat_viewlet.pt"
         layer=".interfaces.IBabbleXMPPLayer"

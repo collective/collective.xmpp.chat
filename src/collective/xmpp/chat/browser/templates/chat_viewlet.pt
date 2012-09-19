@@ -1,6 +1,7 @@
 <div id="chatpanel"
-    tal:define="portal_url context/portal_url"
-    tal:condition="not: view/anonymous">
+    tal:define="is_anon context/portal_membership/isAnonymousUser;
+                portal_url context/portal_url"
+    tal:condition="not: is_anon">
 
     <div id="collective-xmpp-chat-data" 
         tal:define="
