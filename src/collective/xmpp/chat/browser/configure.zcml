@@ -40,11 +40,11 @@
         />
 
     <browser:viewlet  
-        name="collective.xmpp.chat.onlinecontacts"
+        name="collective.xmpp.chat.controlbox"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class="plone.app.layout.viewlets.common.ViewletBase"
         permission="zope2.View" 
-        template="./templates/onlinecontacts.pt"
+        template="./templates/controlbox.pt"
         layer=".interfaces.IBabbleXMPPLayer"
         />
 
@@ -53,7 +53,7 @@
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class="plone.app.layout.viewlets.common.ViewletBase"
         permission="zope2.View" 
-        template="./templates/chat_viewlet.pt"
+        template="./templates/chatpanel.pt"
         layer=".interfaces.IBabbleXMPPLayer"
         />
 

@@ -5,7 +5,7 @@
             <li><a class="s" href="#chatrooms">Rooms</a></li>
             <!--<li><a class="s" href="#settings">Config</a></li>-->
         </ul>
-        <a href="javascript:void(0)" class="close-controlbox-button" data-recipient="staalburger@devbox">X</a>
+        <a href="javascript:void(0)" class="close-controlbox-button">X</a>
     </div> 
 
     <!-- tab "panes" -->
