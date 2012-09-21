@@ -10,17 +10,18 @@
         />
 
     <javascript id="++resource++collective.xmpp.chat.javascripts/backbone.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
+        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.string/lib/underscore.string.js"
         />
  
     <javascript 
         id="++resource++collective.xmpp.chat.javascripts/jquery.cookie.js"
-        insert-after="jquery.js"
+        insert-after="jquery-integration.js"
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/store.js/store.js"
-        insert-after="jquery.js"
+        id="++resource++collective.xmpp.chat.javascripts/burry.js/burry.js"
+        insert-after="++resource++collective.xmpp.chat.javascripts/backbone.js"
+        authenticated="True" 
         />
 
     <javascript 
@@ -37,7 +38,7 @@
 
     <javascript 
         id="++resource++collective.xmpp.chat.javascripts/converse.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/backbone.js"
+        insert-after="++resource++collective.xmpp.chat.javascripts/burry.js/burry.js"
         authenticated="True" 
         />
 
