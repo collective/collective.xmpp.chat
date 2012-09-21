@@ -7,26 +7,26 @@
     <browser:resourceDirectory
         name="collective.xmpp.chat.stylesheets"
         directory="stylesheets"
-        layer=".interfaces.IBabbleXMPPLayer"
+        layer=".interfaces.IXMPPChatLayer"
         />
 
     <browser:resourceDirectory
         name="collective.xmpp.chat.javascripts"
         directory="javascripts"
-        layer=".interfaces.IBabbleXMPPLayer"
+        layer=".interfaces.IXMPPChatLayer"
         />
 
     <browser:resourceDirectory
         name="collective.xmpp.chat.images"
         directory="images"
-        layer=".interfaces.IBabbleXMPPLayer"
+        layer=".interfaces.IXMPPChatLayer"
         />
 
     <browser:page
         for="*"
         name="search-users"
         class=".userinfo.SearchUsers"
-        layer=".interfaces.IBabbleXMPPLayer"
+        layer=".interfaces.IXMPPChatLayer"
         permission="zope2.View"
         />
 
@@ -35,17 +35,8 @@
         name="xmpp-userDetails"
         class=".userinfo.XMPPUserDetails"
         template="user_details.pt"
-        layer=".interfaces.IBabbleXMPPLayer"
+        layer=".interfaces.IXMPPChatLayer"
         permission="zope2.View"
-        />
-
-    <browser:viewlet  
-        name="collective.xmpp.chat.controlbox"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class="plone.app.layout.viewlets.common.ViewletBase"
-        permission="zope2.View" 
-        template="./templates/controlbox.pt"
-        layer=".interfaces.IBabbleXMPPLayer"
         />
 
     <browser:viewlet  
@@ -54,7 +45,7 @@
         class="plone.app.layout.viewlets.common.ViewletBase"
         permission="zope2.View" 
         template="./templates/chatpanel.pt"
-        layer=".interfaces.IBabbleXMPPLayer"
+        layer=".interfaces.IXMPPChatLayer"
         />
 
 </configure>

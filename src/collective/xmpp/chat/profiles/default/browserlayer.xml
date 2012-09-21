@@ -1,6 +1,6 @@
 <layers>
     <layer
         name="collective.xmpp.chat"
-        interface="collective.xmpp.chat.browser.interfaces.IBabbleXMPPLayer"
+        interface="collective.xmpp.chat.browser.interfaces.IXMPPChatLayer"
      />
 </layers>
