@@ -2,7 +2,7 @@ import json
 from plone.app.controlpanel.usergroups import UsersOverviewControlPanel
 from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
-from jarn.xmpp.core.browser import userinfo
+from collective.xmpp.core.browser import userinfo
 
 class XMPPUserDetails(userinfo.XMPPUserDetails):
 

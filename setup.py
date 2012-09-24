@@ -26,7 +26,7 @@ setup(name='collective.xmpp.chat',
       zip_safe=False,
       install_requires=[
             'setuptools',
-            'jarn.xmpp.core',
+            'collective.xmpp.core',
             'collective.js.jqueryui'
       ],
       extras_require = {

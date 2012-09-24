@@ -3,7 +3,7 @@
     <description>XMPP/Jabber Instant Messaging for Plone</description>
     <version>1</version>
     <dependencies>
-        <dependency>profile-jarn.xmpp.core:default</dependency>
+        <dependency>profile-collective.xmpp.core:default</dependency>
         <dependency>profile-collective.js.jqueryui:default</dependency>
     </dependencies>
 </metadata>
