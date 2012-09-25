@@ -14,7 +14,7 @@ Please refer to its README on how to set it up.
 
 Alternatively you can also use the buildout included in this package.
 
-Before setting up the package you need to have a working XMPP server and access to the 
+You'll need to have a working XMPP server and access to the 
 administration account on the server. 
 
 Your XMPP server will have to support the following extensions
