@@ -42,7 +42,7 @@
     <browser:viewlet  
         name="collective.xmpp.chat.onlineusers"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        class="plone.app.layout.viewlets.common.ViewletBase"
+        class=".viewlet.ChatData"
         permission="zope2.View" 
         template="./templates/chatpanel.pt"
         layer=".interfaces.IXMPPChatLayer"

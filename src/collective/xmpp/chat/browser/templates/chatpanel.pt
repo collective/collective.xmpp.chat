@@ -1,13 +1,10 @@
 <div id="chatpanel"
     tal:condition="not: context/portal_membership/isAnonymousUser">
     <div id="collective-xmpp-chat-data" 
-        tal:define="
-                member context/@@plone_portal_state/member;
-                pm context/portal_membership;
-                username member/getId;
-                info python:pm.getMemberInfo(username);
-                fullname info/fullname|username;"
-        tal:attributes="username username; fullname fullname"></div>
+        tal:attributes="
+                username view/username; 
+                fullname view/fullname;
+                auto_subscribe view/auto_subscribe;"></div>
 
     <div id="toggle-controlbox">
         <a href="#" class="chat" id="toggle-online-users">
