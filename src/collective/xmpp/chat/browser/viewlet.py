@@ -13,6 +13,6 @@ class ChatData(ViewletBase):
         member = pm.getAuthenticatedMember()
         self.username = member.getId()
         info = pm.getMemberInfo(self.username)
-        self.fullname = info.get('fullname', self.username)
+        self.fullname = info.get('fullname') or self.username
         registry = getUtility(IRegistry)
         self.auto_subscribe = registry['collective.xmpp.autoSubscribe']
