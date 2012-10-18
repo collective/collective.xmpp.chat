@@ -12,7 +12,9 @@ Installation
 XMPP integration with Plone is provided by the `collective.xmpp.core`_ package.
 Please refer to its README on how to set it up.
 
-Alternatively you can also use the buildout included in this package.
+You can use the buildout at `collective.xmpp.buildout`_.
+
+The buildout in this egg is used for development purposes.
 
 You'll need to have a working XMPP server and access to the 
 administration account on the server. 
@@ -32,6 +34,7 @@ Your XMPP server will have to support the following extensions
 .. _XEP-0124: http://xmpp.org/extensions/xep-0124.html
 .. _XEP-0206: http://xmpp.org/extensions/xep-0206.html
 .. _collective.xmpp.core: http://github.com/collective/collective.xmpp.core
+.. _collective.xmpp.buildout: http://github.com/collective/collective.xmpp.buildout
 .. _Plone: http://plone.org
 .. _XMPP: http://xmpp.org
 .. _ejabberd: ejabberd.im
