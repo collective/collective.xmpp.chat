@@ -14,11 +14,6 @@
         />
  
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/jquery.cookie.js"
-        insert-after="jquery-integration.js"
-        />
-
-    <javascript 
         id="++resource++collective.xmpp.chat.javascripts/burry.js/burry.js"
         insert-after="++resource++collective.xmpp.chat.javascripts/backbone.js"
         authenticated="True" 
