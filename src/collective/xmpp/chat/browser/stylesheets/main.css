@@ -13,6 +13,8 @@
     right: 0;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
 	background: #e3e2e2;
 	border: 1px solid #c3c3c3;
 	border-bottom: none;
@@ -27,6 +29,8 @@
 	font-size: 100%;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
 	padding: 3px 0 3px 7px;
 }
 
@@ -100,10 +104,9 @@ input.new-chatroom-name {
 }
 
 .chat-textarea {
-	padding:3px;
 	border: 0;
-	overflow:hidden;
-    height: 48px;
+    height: 50px;
+    width: 100%;
 }
 
 .chat-textarea-chatbox-selected {
@@ -234,6 +237,8 @@ form.search-xmpp-contact input {
 	color: #FFF;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
     height: 31px;
     width: 201px;
     clear right;
@@ -462,6 +467,8 @@ ul.tabs li a {
     border: 1px solid #999;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
     color:#666;
     background-color:#EEE;
 }
