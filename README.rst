@@ -5,9 +5,9 @@ Introduction
 ``collective.chat.xmpp`` provides instant messaging for Plone_. It uses the 
 XMPP_ protocol and requires an XMPP server (such as ejabberd_) for the message handling.
 
-============
+------------
 Installation
-============
+------------
  
 XMPP integration with Plone is provided by the `collective.xmpp.core`_ package.
 Please refer to its README on how to set it up.
@@ -26,6 +26,26 @@ Your XMPP server will have to support the following extensions
 * `XEP-0144`_ Roster Item Exchange.
 * `XEP-0124`_ Bidirectional-streams Over Synchronous HTTP (BOSH)
 * `XEP-0206`_ XMPP over BOSH
+
+-------------
+Configuration
+-------------
+
+You'll need to have an administrator account on the Jabber server you'll be
+using. Refer to the `collective.xmpp.core`_ README for information on how to
+set this up.
+
+Once you've installed ``collective.xmpp.chat``, you should go to the Plone
+registry in the control panel and set the ``XMPP Domain`` as well as the ``XMPP
+Admin JID`` and ``XMPP Admin Password`` values.
+
+Additionally you have the option ``Auto-subscribe XMPP users``, which is
+disabled by default.
+
+Enable this option if you don't want your users to manually maintain their
+rosters (i.e subscribing and unsubscribing to one another) and would rather
+have everyone subscribe to everyone else. Be careful however, this might cause
+a lot of overhead (and therefore be quite slow) on sites with large userbases.
 
 
 .. _XEP-0045: http://xmpp.org/extensions/xep-0045.html
