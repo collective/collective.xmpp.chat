@@ -5,6 +5,19 @@ Introduction
 ``collective.chat.xmpp`` provides instant messaging for Plone_. It uses the 
 XMPP_ protocol and requires an XMPP server (such as ejabberd_) for the message handling.
 
+--------
+Features
+--------
+
+* Manually or automically subscribe to other users. 
+* With manual roster subscriptions, you can accept or decline contact requests.
+* Chat statuses (online, busy, away, offline)
+* Custom status message
+* Third person messages (/me )
+* Multi-user chat in chatrooms
+* Topics can be set for chatrooms
+* Full name and profile picture support
+
 ------------
 Installation
 ------------
