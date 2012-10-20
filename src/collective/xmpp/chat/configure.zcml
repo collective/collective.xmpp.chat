@@ -5,6 +5,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.xmpp.chat">
 
+    <i18n:registerTranslations directory="locales"/>
     <five:registerPackage package="." initialize=".initialize" />
     <includeDependencies package="." />
     <include package=".browser"/>
