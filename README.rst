@@ -13,6 +13,7 @@ Features
 * With manual roster subscriptions, you can accept or decline contact requests.
 * Chat statuses (online, busy, away, offline)
 * Custom status message
+* Typing notifications (i.e when the contact is typing)
 * Third person messages (/me )
 * Multi-user chat in chatrooms
 * Topics can be set for chatrooms
