@@ -170,9 +170,30 @@ div.delayed .chat-message-me {
     font-weight:normal;
 }
 
-div.chat-title {
+.chat-head .avatar {
+	height: 32px;
 	float: left;
+	margin-right: 6px;
+}
+
+div.chat-title {
+    color: white;
 	font-weight: bold;
+	line-height: 15px;
+	display: block;
+    margin-top: 2px;
+	margin-right: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-shadow: rgba(0,0,0,0.51) 0 -1px 0;
+}
+
+.chat-head-chatbox,
+.chat-head-chatroom {
+    background: linear-gradient(top, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
+	height: 31px;
+	position: relative;
 }
 
 p.user-custom-message,
