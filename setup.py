@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='collective.xmpp.chat',
       version=version,
-      description="Jabber Instant Messaging for Plone",
+      description="XMPP-based instant Messaging for Plone",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -14,9 +14,9 @@ setup(name='collective.xmpp.chat',
         "Framework :: Plone",
         "Programming Language :: Python",
         ],
-      keywords='',
-      author='',
-      author_email='',
+      keywords='xmpp chat messaging',
+      author='JC Brand',
+      author_email='jc@opkode.com',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages('src', exclude=['ez_setup']),
