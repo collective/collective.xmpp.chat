@@ -177,6 +177,7 @@ div.delayed .chat-message-me {
 }
 
 div.chat-title {
+    height: 1.1em;
     color: white;
 	font-weight: bold;
 	line-height: 15px;
@@ -192,7 +193,7 @@ div.chat-title {
 .chat-head-chatbox,
 .chat-head-chatroom {
     background: linear-gradient(top, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);
-	height: 31px;
+	height: 33px;
 	position: relative;
 }
 
@@ -200,8 +201,11 @@ p.user-custom-message,
 p.chatroom-topic {
     font-size: 80%;
     font-style: italic;
-    clear: left;
-    height: 1.1em;
+    height: 1.3em;
+    clear: right;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .activated{
@@ -238,6 +242,12 @@ div.add-xmpp-contact a.add-xmpp-contact {
 
 #fancy-xmpp-status-select a.choose-xmpp-status {
     padding-left: 1.5em;
+    width: 140px;
+    display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    float: left;
 }
 
 ul#found-users {
