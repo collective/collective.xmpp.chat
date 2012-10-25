@@ -1,3 +1,7 @@
+.hidden {
+    display: none
+}
+
 #chatpanel {
 	z-index: 3; /*--Keeps the panel on top of all other elements--*/
 	position: fixed;
@@ -171,7 +175,7 @@ div.delayed .chat-message-me {
 }
 
 .chat-head .avatar {
-	height: 32px;
+	height: 35px;
 	float: left;
 	margin-right: 6px;
 }
@@ -372,7 +376,7 @@ form.search-xmpp-contact input {
     position: relative;
     top: 0;
     border: none;
-    padding-top: 0.5em;
+    margin-top: 0.5em;
 }
 
 #available-chatrooms dt,
@@ -461,8 +465,8 @@ select#select-xmpp-status {
     margin-right: 0.5em;
 }
 
-/* root element for tabs  */
-ul.tabs {
+/* root element for.controlbox-tabs  */
+ul.controlbox-tabs {
     list-style:none;
     margin:0 !important;
     padding:0;
@@ -471,7 +475,7 @@ ul.tabs {
 }
 
 /* single tab */
-ul.tabs li {
+ul.controlbox-tabs li {
     float:left;
     text-indent:0;
     padding:0;
@@ -480,7 +484,7 @@ ul.tabs li {
 }
 
 /* link inside the tab. uses a background image */
-ul.tabs a {
+ul.controlbox-tabs a {
     font-size:12px;
     display:block;
     height: 30px;
@@ -494,7 +498,7 @@ ul.tabs a {
     position:relative;
 }
 
-ul.tabs li a {
+ul.controlbox-tabs li a {
     border: 1px solid #999;
     -webkit-border-top-right-radius: 0.5em;
     -webkit-border-top-left-radius: 0.5em;
@@ -504,16 +508,16 @@ ul.tabs li a {
     background-color:#EEE;
 }
 
-ul.tabs a:active {
+ul.controlbox-tabs a:active {
     outline:none;
 }
 
 /* when mouse enters the tab move the background image */
-ul.tabs a:hover {
+ul.controlbox-tabs a:hover {
 }
 
 /* active tab uses a class name "current". its highlight is also done by moving the background image. */
-ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+ul.controlbox-tabs a.current, ul.controlbox-tabs a.current:hover, ul.controlbox-tabs li.current a {
     cursor:default !important;
     color:#000 !important;
     font-weight: bold;
@@ -522,16 +526,25 @@ ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
     height: 31px;
 }
 
-.panes div#users,
-.panes div#chatrooms,
-.panes div#settings {
+.panes {
+    width: 199px;
     border: 1px solid #999;
-    font-size: 14px;
-    background-color: white;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+    background-color: white;
+}
+
+.panes div#users,
+.panes div#chatrooms,
+.panes div#settings {
+    border: 0;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    font-size: 14px;
     width: 199px;
 }
 

@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
-    <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.js"
-        insert-after="++resource++collective.xmpp.core.ui.js"
-        />
+    <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.js"/>
 
     <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.string/lib/underscore.string.js"
         insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
