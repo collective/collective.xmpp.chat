@@ -3,10 +3,10 @@
 }
 
 #chatpanel {
-	z-index: 3; /*--Keeps the panel on top of all other elements--*/
+	z-index: 4; /*--Keeps the panel on top of all other elements--*/
 	position: fixed;
 	bottom: 0; right: 0;
-    height: 331px;
+    height: 332px;
     width: auto;
 }
 
@@ -15,10 +15,8 @@
     font-size: 80%;
 	bottom: 0; 
     right: 0;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
 	background: #e3e2e2;
 	border: 1px solid #c3c3c3;
 	border-bottom: none;
@@ -31,10 +29,8 @@
 	color: #ffffff;
     margin: 0;
 	font-size: 100%;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
 	padding: 3px 0 3px 7px;
 }
 
@@ -65,8 +61,8 @@
     overflow: auto;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
-    -webkit-border-bottom-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .participants ul.participant-list li {
@@ -233,10 +229,12 @@ div.add-xmpp-contact {
 }
 
 div.add-xmpp-contact a.add-xmpp-contact {
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
     padding-left: 1.5em;
 }
 
 #fancy-xmpp-status-select a.change-xmpp-status-message {
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
     background: url('/pencil_icon.png') no-repeat right top;
     float: right;
     clear: right;
@@ -245,6 +243,7 @@ div.add-xmpp-contact a.add-xmpp-contact {
 }
 
 #fancy-xmpp-status-select a.choose-xmpp-status {
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
     padding-left: 1.5em;
     width: 140px;
     display: block;
@@ -270,13 +269,11 @@ form.search-xmpp-contact input {
 .oc-chat-head {
     margin: 0;
 	color: #FFF;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    border-top-left-radius: 0.5em;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     height: 31px;
     width: 201px;
-    clear right;
+    clear: right;
     background-color: #5390C8;
 	padding: 3px 0 0 0;
 }
@@ -362,6 +359,7 @@ form.search-xmpp-contact input {
 
 #xmppchat-roster dd a {
     margin-left: 2em;
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
 }
 
 .remove-xmpp-contact-dialog .ui-dialog-buttonpane {
@@ -381,11 +379,13 @@ form.search-xmpp-contact input {
 
 #available-chatrooms dt,
 #xmppchat-roster dt {
+    font-weight: normal;
     display: none;
     font-size: 13px;
     color: #666;
     border: none;
     padding: 0.3em 0.5em 0.3em 0.5em;
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
 }
 
 #available-chatrooms dt {
@@ -402,7 +402,9 @@ dd.chatroom,
     font-weight: bold;
     border: none;
     display: block;
-    padding: 0em 0.5em 0 0.5em;
+    padding: 0 0.5em 0 0.5em;
+	color: #3f3f3f;
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
 }
 
 #xmppchat-roster dd a.remove-xmpp-contact {
@@ -412,7 +414,8 @@ dd.chatroom,
     margin: 0;
 }
 
-div.chatbox {
+.chatbox {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
 	display:none;
     float: right;
 	width: 200px;
@@ -421,7 +424,8 @@ div.chatbox {
     margin-right: 15px;
 }
 
-div.chatroom {
+.chatroom {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
 	display:none;
     float: right;
 	width: 300px;
@@ -451,8 +455,14 @@ div.chatroom {
     background-color: #DCEAC5;
 }
 
-.oc-chat-content {
+div.panes {
     background-color: #f9f9f9;
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* IE10+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Opera 11.10+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* W3C */
 }
 
 form.set-xmpp-status,
@@ -465,63 +475,57 @@ select#select-xmpp-status {
     margin-right: 0.5em;
 }
 
-/* root element for.controlbox-tabs  */
-ul.controlbox-tabs {
-    list-style:none;
-    margin:0 !important;
-    padding:0;
-    height:30px;
-    float: left;
+/* @group Tabs */
+
+.chat-head .controlbox-tabs {
+	text-align: center;
+	display: inline;
+	overflow: hidden;
+	font-size: 12px;
+	list-style-type: none;
 }
 
 /* single tab */
-ul.controlbox-tabs li {
+.chat-head .controlbox-tabs li {
+	width: 40%;
     float:left;
-    text-indent:0;
-    padding:0;
-    margin:0 !important;
-    list-style-image:none !important;
-}
-
-/* link inside the tab. uses a background image */
-ul.controlbox-tabs a {
-    font-size:12px;
-    display:block;
-    height: 30px;
-    line-height:30px;
-    text-align:center;
-    text-decoration:none;
-    color:#333;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin:0;
-    position:relative;
+	text-shadow: white 0 1px 0;
 }
 
 ul.controlbox-tabs li a {
+    display:block;
+    font-size:12px;
+    height: 30px;
+    line-height:30px;
+    margin:0;
+    text-align:center;
+    text-decoration:none;
     border: 1px solid #999;
-    -webkit-border-top-right-radius: 0.5em;
-    -webkit-border-top-left-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     color:#666;
     background-color:#EEE;
+	background: -moz-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%); /* IE10+ */
+	background: -o-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(245,245,245,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(top, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%); /* W3C */
+	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
 }
 
-ul.controlbox-tabs a:active {
-    outline:none;
+.chat-head .controlbox-tabs li a:hover {
+	color: black;
 }
 
-/* when mouse enters the tab move the background image */
-ul.controlbox-tabs a:hover {
+.chat-head .controlbox-tabs li a {
+	background-color: rgba(240,240,240,1);
+	box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
 }
 
-/* active tab uses a class name "current". its highlight is also done by moving the background image. */
-ul.controlbox-tabs a.current, ul.controlbox-tabs a.current:hover, ul.controlbox-tabs li.current a {
-    cursor:default !important;
-    color:#000 !important;
-    font-weight: bold;
-    background-color: #FFF;
+ul.controlbox-tabs a.current, ul.controlbox-tabs a.current:hover {
+	box-shadow: none; 
+    color: #000; 
     border-bottom: 0;
     height: 31px;
 }
@@ -529,10 +533,8 @@ ul.controlbox-tabs a.current, ul.controlbox-tabs a.current:hover, ul.controlbox-
 .panes {
     width: 199px;
     border: 1px solid #999;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
     background-color: white;
 }
 
@@ -540,10 +542,6 @@ ul.controlbox-tabs a.current, ul.controlbox-tabs a.current:hover, ul.controlbox-
 .panes div#chatrooms,
 .panes div#settings {
     border: 0;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
     font-size: 14px;
     width: 199px;
 }
@@ -554,6 +552,12 @@ form.sendXMPPMessage {
     padding:0.5em;
     margin: 0;
     position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     -webkit-border-top-right-radius: 0;
     -webkit-border-top-left-radius: 0;
     border-top-left-radius: 0;
