@@ -455,14 +455,18 @@ dd.chatroom,
     background-color: #DCEAC5;
 }
 
-div.panes {
-    background-color: #f9f9f9;
+div#controlbox-panes {
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%); /* FF3.6+ */
 	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* IE10+ */
 	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Opera 11.10+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
 	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* W3C */
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #999;
+    width: 199px;
 }
 
 form.set-xmpp-status,
@@ -477,7 +481,7 @@ select#select-xmpp-status {
 
 /* @group Tabs */
 
-.chat-head .controlbox-tabs {
+.chat-head #controlbox-tabs {
 	text-align: center;
 	display: inline;
 	overflow: hidden;
@@ -486,13 +490,13 @@ select#select-xmpp-status {
 }
 
 /* single tab */
-.chat-head .controlbox-tabs li {
+.chat-head #controlbox-tabs li {
 	width: 40%;
     float:left;
 	text-shadow: white 0 1px 0;
 }
 
-ul.controlbox-tabs li a {
+ul#controlbox-tabs li a {
     display:block;
     font-size:12px;
     height: 30px;
@@ -514,33 +518,25 @@ ul.controlbox-tabs li a {
 	text-shadow: 0 1px 0 rgba(250, 250, 250, 1);
 }
 
-.chat-head .controlbox-tabs li a:hover {
+.chat-head #controlbox-tabs li a:hover {
 	color: black;
 }
 
-.chat-head .controlbox-tabs li a {
+.chat-head #controlbox-tabs li a {
 	background-color: rgba(240,240,240,1);
 	box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
 }
 
-ul.controlbox-tabs a.current, ul.controlbox-tabs a.current:hover {
+ul#controlbox-tabs a.current, ul#controlbox-tabs a.current:hover {
 	box-shadow: none; 
     color: #000; 
     border-bottom: 0;
     height: 31px;
 }
 
-.panes {
-    width: 199px;
-    border: 1px solid #999;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    background-color: white;
-}
-
-.panes div#users,
-.panes div#chatrooms,
-.panes div#settings {
+div#users,
+div#chatrooms,
+div#settings {
     border: 0;
     font-size: 14px;
     width: 199px;
