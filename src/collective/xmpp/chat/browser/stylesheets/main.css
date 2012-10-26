@@ -35,7 +35,8 @@
 }
 
 .chat-head-chatbox {
-	background-color: #4B7003;
+	background-color: rgb(89, 106, 114);
+	background-color: rgba(89, 106, 114, 1);
 }
 
 .chat-head-chatroom {
@@ -93,7 +94,7 @@ input.new-chatroom-name {
     padding: 0.3em;
 	font-size: 13px;
 	color: #333333;
-	height:194px;
+	height:193px;
 	overflow-y:auto;
 	overflow-x:auto;
 	border:1px solid #999;
@@ -271,8 +272,7 @@ form.search-xmpp-contact input {
 	color: #FFF;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-    height: 31px;
-    width: 201px;
+    height: 35px;
     clear: right;
     background-color: #5390C8;
 	padding: 3px 0 0 0;
@@ -414,28 +414,27 @@ dd.chatroom,
     margin: 0;
 }
 
-.chatbox {
-	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+.chatbox,
+.chatroom {
+	box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.4);
 	display:none;
     float: right;
-	width: 200px;
-    z-index: 3; /* So that it's higher than the content actions */
-    height: 311px;
     margin-right: 15px;
+    z-index: 3; /* So that it's higher than the content actions */
+    border-radius: 4px;
+}
+
+.chatbox {
+	width: 200px;
 }
 
 .chatroom {
-	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-	display:none;
-    float: right;
 	width: 300px;
-    z-index: 3; /* So that it's higher than the content actions */
     height: 311px;
-    margin-right: 15px;
 }
 
 .oc-chat-content {
-	height:276px !important;
+	height:272px; 
     width: 199px;
     padding: 0;
 }
@@ -499,9 +498,9 @@ select#select-xmpp-status {
 ul#controlbox-tabs li a {
     display:block;
     font-size:12px;
-    height: 30px;
-    line-height:30px;
-    margin:0;
+    height: 34px;
+    line-height:34px;
+    margin: 0;
     text-align:center;
     text-decoration:none;
     border: 1px solid #999;
@@ -531,7 +530,7 @@ ul#controlbox-tabs a.current, ul#controlbox-tabs a.current:hover {
 	box-shadow: none; 
     color: #000; 
     border-bottom: 0;
-    height: 31px;
+    height: 35px;
 }
 
 div#users,
@@ -554,8 +553,6 @@ form.sendXMPPMessage {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    -webkit-border-top-right-radius: 0;
-    -webkit-border-top-left-radius: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
