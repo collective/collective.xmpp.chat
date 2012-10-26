@@ -416,7 +416,7 @@ dd.chatroom,
 
 .chatbox,
 .chatroom {
-	box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
 	display:none;
     float: right;
     margin-right: 15px;
