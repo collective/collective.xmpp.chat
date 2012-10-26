@@ -57,13 +57,12 @@
 .chatroom .participants {
     float: left;
     width: 99px;
-    height: 271px;
+    height: 272px;
     background-color: white;
     overflow: auto;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
     border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
 }
 
 .participants ul.participant-list li {
@@ -278,8 +277,8 @@ form.search-xmpp-contact input {
 	padding: 3px 0 0 0;
 }
 
-.chatbox-button,
-.oc-chat-head .close-controlbox-button {
+.close-chatbox-button {
+    cursor: pointer;
     float: right;
     margin-top: 0.2em;
     margin-right: 0.5em;
@@ -304,16 +303,14 @@ form.search-xmpp-contact input {
     text-shadow:1px 1px 0 #ffffff;
 }
 
-.chatbox-button:hover,
-.oc-chat-head .close-controlbox-button:hover {
+.close-chatbox-button:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff) );
     background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
     background-color:#f6f6f6;
 }
 
-.chatbox-button:active,
-.oc-chat-head .close-controlbox-button:active {
+.close-chatbox-button:active {
     position:relative;
     top:1px;
 }
@@ -397,7 +394,7 @@ form.search-xmpp-contact input {
 }
 
 
-dd.chatroom,
+dd.available-chatroom,
 #xmppchat-roster dd {
     font-weight: bold;
     border: none;
