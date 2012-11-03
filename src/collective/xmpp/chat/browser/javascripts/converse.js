@@ -56,7 +56,7 @@
                     evaluate : /\{\[([\s\S]+?)\]\}/g,
                     interpolate : /\{\{([\s\S]+?)\}\}/g
                 };
-                return factory(jarnxmpp, jQuery, store, _, console);
+                return factory(jQuery, store, _, console);
             }
         );
     } else { 
@@ -66,11 +66,11 @@
             evaluate : /\{\[([\s\S]+?)\]\}/g,
             interpolate : /\{\{([\s\S]+?)\}\}/g
         };
-        root.xmppchat = factory(jarnxmpp, jQuery, store, _, console || {log: function(){}});
+        root.xmppchat = factory(jQuery, store, _, console || {log: function(){}});
     }
-}(this, function (jarnxmpp, $, store, _, console) {
+}(this, function ($, store, _, console) {
 
-    var xmppchat = jarnxmpp;
+    var xmppchat = {};
 
     xmppchat.collections = {
         /* FIXME: XEP-0136 specifies 'urn:xmpp:archive' but the mod_archive_odbc 
@@ -1623,12 +1623,13 @@
             model: new xmppchat.ControlBox({'id':'controlbox', 'jid':'controlbox'})
         }).render();
 
-        $(document).bind('jarnxmpp.connected', $.proxy(function (ev, conn) {
+        $(document).bind('xmpp.connected', $.proxy(function (ev, conn) {
             alert("Connection Failed :(");
         }, this));
 
-        $(document).unbind('jarnxmpp.connected');
-        $(document).bind('jarnxmpp.connected', $.proxy(function () {
+        $(document).unbind('xmpp.connected');
+        $(document).bind('xmpp.connected', $.proxy(function (ev, connection) {
+            this.connection = connection
             this.connection.xmlInput = function (body) { console.log(body); };
             this.connection.xmlOutput = function (body) { console.log(body); };
             this.connection.bare_jid = Strophe.getBareJidFromJid(this.connection.jid);
