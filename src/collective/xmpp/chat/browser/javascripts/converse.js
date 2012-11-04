@@ -42,7 +42,7 @@
 
         define([
             "Libraries/burry.js/burry",
-            "Libraries/underscore",
+            "Libraries/underscore.string",
             "Libraries/sjcl",
             "Libraries/backbone",
             "Libraries/strophe.muc",
@@ -1040,7 +1040,7 @@
                 }
             }, this);
             this.views = {};
-            // Add the controlbox view and the panels.
+            // Add the controlbox view and the panels
             this.views.controlbox = xmppchat.controlbox;
             this.views.controlbox.$el.appendTo(this.$el);
             this.views.controlbox.contactspanel = new xmppchat.ContactsPanel().render();
@@ -1658,8 +1658,8 @@
             model: new xmppchat.ControlBox({'id':'controlbox', 'jid':'controlbox'})
         }).render();
 
-        $(document).bind('xmpp.connected', $.proxy(function (ev, conn) {
-            alert("Connection Failed :(");
+        $(document).bind('xmpp.disconnected', $.proxy(function (ev, conn) {
+            console.log("Connection Failed :(");
         }, this));
 
         $(document).unbind('xmpp.connected');
