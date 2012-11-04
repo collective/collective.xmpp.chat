@@ -19,10 +19,9 @@
     border-top-left-radius: 4px;
 	background: #e3e2e2;
 	border: 1px solid #c3c3c3;
-	border-bottom: none;
     padding: 0.25em 0.5em;
     margin-right: 1em;
-    height: 1.1em;
+    height: 1.0em;
 }
 
 .chat-head {
