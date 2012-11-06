@@ -2,6 +2,7 @@ from zope.component import getUtility
 from plone.registry.interfaces import IRegistry
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
+from collective.xmpp.core.interfaces import IXMPPSettings
 
 
 class ChatData(ViewletBase):
@@ -15,4 +16,5 @@ class ChatData(ViewletBase):
         info = pm.getMemberInfo(self.username)
         self.fullname = info.get('fullname') or self.username
         registry = getUtility(IRegistry)
-        self.auto_subscribe = registry['collective.xmpp.autoSubscribe']
+        settings = registry.forInterface(IXMPPSettings, check=False)
+        self.auto_subscribe = settings.auto_subscribe 
