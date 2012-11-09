@@ -1,7 +1,16 @@
 Changelog
 =========
 
-0.1dev (unreleased)
--------------------
+------------------
+0.2a1 (unreleased)
+------------------
 
-- Initial release [jcbrand]
+- Add support for chatting with having multiple tabs open. [jcbrand]
+- Chatboxes now show the user's profile photo and a link to their profile.
+  [jcbrand]
+- Some CSS and JS fixes. [jcbrand]
+
+0.1 (2012-10-18)
+----------------
+
+- Initial release. (Please consider this an alpha release). [jcbrand]
