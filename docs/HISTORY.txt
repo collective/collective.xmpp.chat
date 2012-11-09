@@ -3,7 +3,7 @@ Changelog
 =========
 
 ------------------
-0.2a1 (2012-11-09)
+0.2a2 (2012-11-09)
 ------------------
 
 - Add support for chatting with having multiple tabs open. [jcbrand]
