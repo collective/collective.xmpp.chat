@@ -1664,12 +1664,12 @@
             model: new xmppchat.ControlBox({'id':'controlbox', 'jid':'controlbox'})
         }).render();
 
-        $(document).bind('xmpp.disconnected', $.proxy(function (ev, conn) {
+        $(document).bind('jarnxmpp.disconnected', $.proxy(function (ev, conn) {
             console.log("Connection Failed :(");
         }, this));
 
-        $(document).unbind('xmpp.connected');
-        $(document).bind('xmpp.connected', $.proxy(function (ev, connection) {
+        $(document).unbind('jarnxmpp.connected');
+        $(document).bind('jarnxmpp.connected', $.proxy(function (ev, connection) {
             this.connection = connection
             this.connection.xmlInput = function (body) { console.log(body); };
             this.connection.xmlOutput = function (body) { console.log(body); };
