@@ -935,7 +935,7 @@
         createChatBox: function (jid, data) {
             var box, view;
             if (this.isChatRoom(jid)) {
-                box = new xmppchat.ChatRoom(jid, xmppchat.fullname.split(' ')[0]);
+                box = new xmppchat.ChatRoom(jid, xmppchat.fullname);
                 view = new xmppchat.ChatRoomView({
                     'model': box
                 });
