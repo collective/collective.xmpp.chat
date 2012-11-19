@@ -1,14 +1,8 @@
-# Translations template for collective.xmpp.chat.
-# Copyright (C) 2012 ORGANIZATION
-# This file is distributed under the same license as the
-# collective.xmpp.chat project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: collective.xmpp.chat\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2012-11-19 20:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +12,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.xmpp.chat\n"
+"Domain: DOMAIN\n"
 
 #: ./browser/templates/chatpanel.pt:11
 msgid "Online Users"
