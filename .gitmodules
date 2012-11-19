@@ -1,0 +1,3 @@
+[submodule "src/collective/xmpp/chat/browser/resources"]
+	path = src/collective/xmpp/chat/browser/resources
+	url = git@github.com:jcbrand/converse.js.git
