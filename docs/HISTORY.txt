@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2a3 (unreleased)
+0.2a3 (2012-11-19)
 ------------------
 
 - Bugfix. Unable to join chatroom when user with same first name already
