@@ -6,8 +6,9 @@ Changelog
 0.2a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Bugfix. Unable to join chatroom when user with same first name already
+  joined.
+  [jcbrand]
 
 0.2a2 (2012-11-09)
 ------------------
@@ -16,7 +17,6 @@ Changelog
 - Chatboxes now show the user's profile photo and a link to their profile.
   [jcbrand]
 - Some CSS and JS fixes. [jcbrand]
-
 
 0.1 (2012-10-18)
 ----------------
