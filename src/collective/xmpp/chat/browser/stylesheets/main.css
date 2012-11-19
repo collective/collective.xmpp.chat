@@ -67,6 +67,10 @@
 .participants ul.participant-list li {
     padding: 0.5em 0 0 0.5em;
     display: block;
+    font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .chatroom form.sendXMPPMessage {
