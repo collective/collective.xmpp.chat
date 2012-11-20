@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.xmpp.chat">
+
+  <genericsetup:upgradeSteps
+    source="1"
+    destination="2"
+    profile="collective.xmpp.chat:default">
+
+    <genericsetup:upgradeStep
+      title="Javascript files are now in a different directory"
+      description="They have been moved to the 'resources' dir, which is a git submodule"
+      handler=".v0.updateJSRegistry"
+      />
+
+    <genericsetup:upgradeStep
+      title="Stylesheets are now in a different directory"
+      description="They have been moved to the 'resources' dir, which is a git submodule"
+      handler=".v0.updateCSSRegistry"
+      />
+
+  </genericsetup:upgradeSteps>
+
+</configure>
