@@ -5,14 +5,8 @@
     i18n_domain="collective.xmpp.chat">
 
     <browser:resourceDirectory
-        name="collective.xmpp.chat.stylesheets"
-        directory="stylesheets"
-        layer=".interfaces.IXMPPChatLayer"
-        />
-
-    <browser:resourceDirectory
-        name="collective.xmpp.chat.javascripts"
-        directory="javascripts"
+        name="collective.xmpp.chat.resources"
+        directory="resources"
         layer=".interfaces.IXMPPChatLayer"
         />
 

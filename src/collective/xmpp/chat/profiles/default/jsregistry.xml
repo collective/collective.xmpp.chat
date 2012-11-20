@@ -1,43 +1,43 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
-    <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.js"/>
+    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"/>
 
-    <javascript id="++resource++collective.xmpp.chat.javascripts/underscore.string/lib/underscore.string.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.js"
+    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.string.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
         />
 
-    <javascript id="++resource++collective.xmpp.chat.javascripts/backbone.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/underscore.string/lib/underscore.string.js"
+    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/backbone.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.string.js"
         />
  
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/burry.js/burry.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/backbone.js"
+        id="++resource++collective.xmpp.chat.resources/Libraries/burry.js/burry.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/backbone.js"
         authenticated="True" 
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/sjcl/sjcl.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/burry.js/burry.js"
+        id="++resource++collective.xmpp.chat.resources/Libraries/sjcl.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/burry.js/burry.js"
         authenticated="True" 
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/strophe.roster.js"
+        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
         insert-after="++resource++collective.xmpp.core.js/strophe.js"
         authenticated="True" 
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/strophe.muc.js"
-        insert-after="++resource++collective.xmpp.core.js/strophe.js"
+        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
+        insert-before="++resource++collective.xmpp.core.js/strophe.js"
         authenticated="True" 
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.javascripts/converse.js"
-        insert-after="++resource++collective.xmpp.chat.javascripts/burry.js/burry.js"
+        id="++resource++collective.xmpp.chat.resources/converse.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/burry.js/burry.js"
         authenticated="True" 
         />
 

@@ -3,7 +3,7 @@
 
     <stylesheet 
         title=""
-        id="++resource++collective.xmpp.chat.stylesheets/main.css"
+        id="++resource++collective.xmpp.chat.resources/converse.css"
         media="screen" 
         rel="stylesheet" 
         rendering="import"
