@@ -57,6 +57,21 @@ rosters (i.e subscribing and unsubscribing to one another) and would rather
 have everyone subscribe to everyone else. Be careful however, this might cause
 a lot of overhead (and therefore be quite slow) on sites with large userbases.
 
+Important details for developers
+================================
+
+Since  `a recent commit`_ this package now makes
+use of a git submodule (specifically the the ./browser/resources dir).
+
+Once you have cloned this repo, you need to run two commands:
+
+  :: 
+
+    git submodule init
+    git submodule update 
+
+For more information on submodules and how to work with them, `refer to the git book`_.
+
 
 .. _XEP-0045: http://xmpp.org/extensions/xep-0045.html
 .. _XEP-0071: http://xmpp.org/extensions/xep-0071.html
@@ -68,3 +83,5 @@ a lot of overhead (and therefore be quite slow) on sites with large userbases.
 .. _Plone: http://plone.org
 .. _XMPP: http://xmpp.org
 .. _ejabberd: ejabberd.im
+.. _a recent commit: https://github.com/collective/collective.xmpp.chat/commit/a6f41258b55709fd734d5f432d42d6f04d61d538
+.. _refer to the git book: http://git-scm.com/book/en/Git-Tools-Submodules
