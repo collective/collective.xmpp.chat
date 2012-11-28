@@ -31,7 +31,7 @@
 
     <javascript 
         id="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
-        insert-before="++resource++collective.xmpp.core.js/strophe.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
         authenticated="True" 
         />
 

@@ -7,10 +7,10 @@ Changelog
 
 - Added Spanish translation.
   [macagua]
-
 - Added improvements about i18n support.
   [macagua]
-
+- Fixed JS resources order, otherwise the users were "Unable to pre-bind ..."
+  [alecghica]
 
 0.2a3 (2012-11-19)
 ------------------
