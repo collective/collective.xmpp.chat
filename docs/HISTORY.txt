@@ -11,6 +11,9 @@ Changelog
   [macagua]
 - Fixed JS resources order, otherwise the users were "Unable to pre-bind ..."
   [alecghica]
+- Remove javascript and stylesheets dirs and replace with 'resources' dir which
+  is a git submodule pointing to the converse.js repo.
+  [jcbrand]
 
 0.2a3 (2012-11-19)
 ------------------
