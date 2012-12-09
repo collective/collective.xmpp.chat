@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
-    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"/>
+    <javascript 
+        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
+        insert-after="++resource++collective.xmpp.core.js/strophe.js"
+        authenticated="True" 
+        />
+
+    <javascript 
+        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
+        authenticated="True" 
+        />
+        
+    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
+        insert-after="++resource++collective.xmpp.core.js/strophe.muc.js"/>
 
     <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.string.js"
         insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
@@ -24,20 +37,14 @@
         />
 
     <javascript 
-        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
-        insert-after="++resource++collective.xmpp.core.js/strophe.js"
-        authenticated="True" 
-        />
-
-    <javascript 
-        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
+        id="++resource++collective.xmpp.chat.resources/Libraries/jquery.tinysort.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/sjcl.js"
         authenticated="True" 
         />
 
     <javascript 
         id="++resource++collective.xmpp.chat.resources/converse.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/burry.js/burry.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/jquery.tinysort.js"
         authenticated="True" 
         />
 
