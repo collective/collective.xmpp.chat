@@ -1,3 +1,4 @@
+=========
 Changelog
 =========
 
@@ -22,25 +23,27 @@ Changelog
 - Fixes for IE8
   [jcbrand]
 
+------------------
 0.2a3 (2012-11-19)
 ------------------
 
-- Bugfix. Unable to join chatroom when user with same first name already
-  joined.
+- Bugfix. Unable to join chatroom when user with same first name already joined.
   [jcbrand]
 
+------------------
 0.2a2 (2012-11-09)
 ------------------
 
-- Add support for chatting with having multiple tabs open. 
+- Add support for chatting with having multiple tabs open.
   [jcbrand]
-- Chatboxes now show the user's profile photo and a link to their profile. 
+- Chatboxes now show the user's profile photo and a link to their profile.
   [jcbrand]
-- Some CSS and JS fixes. 
+- Some CSS and JS fixes.
   [jcbrand]
 
+----------------
 0.1 (2012-10-18)
 ----------------
 
-- Initial release. (Please consider this an alpha release). 
+- Initial release. (Please consider this an alpha release).
   [jcbrand]
