@@ -5,7 +5,4 @@ recursive-include src/collective/xmpp/chat/locales *.po
 graft docs
 prune docs/.build
 graft src/collective/xmpp/chat/profiles
-graft src/collective/xmpp/chat/browser/css
-graft src/collective/xmpp/chat/browser/gritter
-graft src/collective/xmpp/chat/browser/images
-graft src/collective/xmpp/chat/browser/js
+graft src/collective/xmpp/chat/browser/resources/
