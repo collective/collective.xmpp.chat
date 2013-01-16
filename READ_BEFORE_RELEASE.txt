@@ -1,0 +1,12 @@
+zest.releaser doesn't seem to be compatible with git submodules. It makes a
+fresh checkout of a tag, and then uploads a zip file of that, but in doing so
+fails to run the commands required to initialize and update the submodules.
+
+    git submodule init
+    git submodule update 
+
+I therefore instead, make sure the submodule is initialized and then run the
+uploads manually.
+
+python setup.py sdist --formats=zip upload -r plone
+python setup.py sdist --formats=zip upload -r pypi
