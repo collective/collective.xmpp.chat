@@ -3,7 +3,7 @@ Changelog
 =========
 
 ------------------
-0.2a4 (unreleased)
+0.2b1 (2013-01-16)
 ------------------
 
 - Added Spanish translation.
