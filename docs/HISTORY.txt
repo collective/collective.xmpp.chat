@@ -3,7 +3,7 @@ Changelog
 =========
 
 ------------------
-0.2b1 (Unreleased)
+0.2b2 (Unreleased)
 ------------------
 
 - Fixed MANIFEST.in to include the resources dir. 
