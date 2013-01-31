@@ -3,7 +3,13 @@ Changelog
 =========
 
 ------------------
-0.2b2 (Unreleased)
+0.2b3 (Unreleased)
+------------------
+
+- Bugfix: updated HISTORY.txt format remained unchanged after last egg release
+  [alecghica]
+
+0.2b2 (2013-01-16)
 ------------------
 
 - Fixed MANIFEST.in to include the resources dir. 
