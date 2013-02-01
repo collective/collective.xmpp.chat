@@ -8,6 +8,8 @@ Changelog
 
 - Bugfix: updated HISTORY.txt format remained unchanged after last egg release
   [alecghica]
+- Bugfix: resources submodule dir was still not being included
+  [jcbrand]
 
 0.2b2 (2013-01-16)
 ------------------
