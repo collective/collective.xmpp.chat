@@ -3,7 +3,7 @@ Changelog
 =========
 
 ------------------
-0.2b4 (Unreleased)
+0.2b4 (2013-02-02)
 ------------------
 
 - Use package_data in setup.py to specify resource dir
