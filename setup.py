@@ -1,6 +1,8 @@
+from distribute_setup import use_setuptools
 from setuptools import setup, find_packages
 import os
 
+use_setuptools()
 version = '0.2b3'
 
 setup(name='collective.xmpp.chat',
@@ -24,11 +26,20 @@ setup(name='collective.xmpp.chat',
       namespace_packages=['collective', 'collective.xmpp'],
       package_data={
         'collective.xmpp.chat': [
-            'browser/resources/*.*'
-            'browser/resources/images/*.*'
-            'browser/resources/Libraries/*.*'
-            'browser/resources/Libraries/css/*.*'
+            'browser/resources/*.*',
+            'browser/resources/images/*.*',
+            'browser/resources/Libraries/*.*',
+            'browser/resources/Libraries/burry.js/burry.js',
+            'browser/resources/Libraries/css/jquery-ui-1.9.1.custom/ui-lightness/*.css',
+            'browser/resources/Libraries/css/jquery-ui-1.9.1.custom/ui-lightness/images/*.*'
         ]
+      },
+      exclude_package_data={
+        'collective.xmpp.chat': [
+            'browser/resources/Libraries/jasmine-1.3.1',
+            'browser/resources/Libraries/burry.js',
+            'browser/resources/Libraries/spec',
+        ],
       },
       zip_safe=False,
       install_requires=[
