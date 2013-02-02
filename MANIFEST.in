@@ -1,3 +1,5 @@
+exclude *~
+exclude *.sw?
 include *.rst
 recursive-include src/collective/xmpp/chat *.zcml
 recursive-include src/collective/xmpp/chat/locales *.mo
