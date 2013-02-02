@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 
 use_setuptools()
-version = '0.2b3'
+version = '0.2b3opkode1'
 
 setup(name='collective.xmpp.chat',
       version=version,
@@ -26,6 +26,7 @@ setup(name='collective.xmpp.chat',
       namespace_packages=['collective', 'collective.xmpp'],
       package_data={
         'collective.xmpp.chat': [
+            'profiles/default/*.*',
             'browser/resources/*.*',
             'browser/resources/images/*.*',
             'browser/resources/Libraries/*.*',
