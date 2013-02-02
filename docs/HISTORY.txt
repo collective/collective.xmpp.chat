@@ -3,8 +3,15 @@ Changelog
 =========
 
 ------------------
-0.2b3 (2013-02-01)
+0.2b4 (Unreleased)
 ------------------
+
+- Use package_data in setup.py to specify resource dir
+  Fixes: https://github.com/collective/collective.xmpp.chat/issues/8
+  [jcbrand]
+
+------------------
+0.2b3 (2013-02-01)
 
 - Bugfix: updated HISTORY.txt format remained unchanged after last egg release
   [alecghica]

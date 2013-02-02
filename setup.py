@@ -22,7 +22,14 @@ setup(name='collective.xmpp.chat',
       packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'': 'src'},
       namespace_packages=['collective', 'collective.xmpp'],
-      include_package_data=True,
+      package_data={
+        'collective.xmpp.chat': [
+            'browser/resources/*.*'
+            'browser/resources/images/*.*'
+            'browser/resources/Libraries/*.*'
+            'browser/resources/Libraries/css/*.*'
+        ]
+      },
       zip_safe=False,
       install_requires=[
             'setuptools',
