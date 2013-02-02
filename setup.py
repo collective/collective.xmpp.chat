@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 
 use_setuptools()
-version = '0.2b4dev0'
+version = '0.2b4dev2'
 
 setup(name='collective.xmpp.chat',
       version=version,
@@ -24,24 +24,7 @@ setup(name='collective.xmpp.chat',
       packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'': 'src'},
       namespace_packages=['collective', 'collective.xmpp'],
-      package_data={
-        'collective.xmpp.chat': [
-            'profiles/default/*.*',
-            'browser/resources/*.*',
-            'browser/resources/images/*.*',
-            'browser/resources/Libraries/*.*',
-            'browser/resources/Libraries/burry.js/burry.js',
-            'browser/resources/Libraries/css/jquery-ui-1.9.1.custom/ui-lightness/*.css',
-            'browser/resources/Libraries/css/jquery-ui-1.9.1.custom/ui-lightness/images/*.*'
-        ]
-      },
-      exclude_package_data={
-        'collective.xmpp.chat': [
-            'browser/resources/Libraries/jasmine-1.3.1',
-            'browser/resources/Libraries/burry.js',
-            'browser/resources/Libraries/spec',
-        ],
-      },
+      include_package_data=True,
       zip_safe=False,
       install_requires=[
             'setuptools',
@@ -61,6 +44,6 @@ setup(name='collective.xmpp.chat',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
+      setup_requires=["PasteScript", "setuptools_git >= 0.3"],
       paster_plugins=["ZopeSkel"],
       )
