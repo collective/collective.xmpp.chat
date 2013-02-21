@@ -70,6 +70,19 @@ Once you have cloned this repo, you need to run two commands:
     git submodule init
     git submodule update
 
+If you need to make changes under the submodule (aka ./browser/resources dir)
+best practice will be to fork https://github.com/jcbrand/converse.js under
+your account then:
+
+  ::
+
+   cd ./browser/resources
+   git remote set-url origin git@github.com:MYACCOUNT/converse.js.git
+   git commit -a
+   git push
+
+After this you can send a pull request with your changes.
+
 For more information on submodules and how to work with them, `refer to the git book`_.
 
 
