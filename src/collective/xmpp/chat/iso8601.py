@@ -1,5 +1,5 @@
 # Copyright (c) 2007 Michael Twomey
-# 
+#
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the
 # "Software"), to deal in the Software without restriction, including
@@ -7,10 +7,10 @@
 # distribute, sublicense, and/or sell copies of the Software, and to
 # permit persons to whom the Software is furnished to do so, subject to
 # the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included
 # in all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 # OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -49,7 +49,7 @@ class ParseError(Exception):
 ZERO = timedelta(0)
 class Utc(tzinfo):
     """UTC
-    
+
     """
     def utcoffset(self, dt):
         return ZERO
@@ -77,13 +77,13 @@ class FixedOffset(tzinfo):
 
     def dst(self, dt):
         return ZERO
-    
+
     def __repr__(self):
         return "<FixedOffset %r>" % self.__name
 
 def parse_timezone(tzstring, default_timezone=UTC):
     """Parses ISO 8601 time zone specs into tzinfo offsets
-    
+
     """
     if tzstring == "Z":
         return default_timezone
@@ -102,7 +102,7 @@ def parse_timezone(tzstring, default_timezone=UTC):
 
 def parse_date(datestring, default_timezone=UTC):
     """Parses ISO 8601 dates into datetime objects
-    
+
     The timezone is parsed from the date string. However it is quite common to
     have dates without a timezone (not strictly correct). In this case the
     default timezone specified in default_timezone is used. This is UTC by

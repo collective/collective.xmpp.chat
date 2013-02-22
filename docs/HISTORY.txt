@@ -11,6 +11,9 @@ Changelog
 - Feature: added spining image and "Connecting to chat ..." info under chat panel
   when the user is not (yet) binded to the jabber server
   [alecghica]
+- Bugfix: cleaned up unnecessary spaces, replaced tabs with spaces and
+  fixed line terminators
+  [alecghica]
 
 0.2b4 (2013-02-02)
 ------------------
