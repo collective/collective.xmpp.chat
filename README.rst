@@ -1,13 +1,13 @@
 Introduction
 ============
 
-``collective.chat.xmpp`` provides instant messaging for Plone_. It uses the 
+``collective.chat.xmpp`` provides instant messaging for Plone_. It uses the
 XMPP_ protocol and requires an XMPP server (such as ejabberd_) for the message handling.
 
 Features
 ========
 
-* Manually or automically subscribe to other users. 
+* Manually or automically subscribe to other users.
 * With manual roster subscriptions, you can accept or decline contact requests.
 * Chat statuses (online, busy, away, offline)
 * Custom status message
@@ -19,7 +19,7 @@ Features
 
 Installation
 ============
- 
+
 XMPP integration with Plone is provided by the `collective.xmpp.core`_ package.
 Please refer to its README on how to set it up.
 
@@ -27,8 +27,8 @@ You can use the buildout at `collective.xmpp.buildout`_.
 
 The buildout in this egg is used for development purposes.
 
-You'll need to have a working XMPP server and access to the 
-administration account on the server. 
+You'll need to have a working XMPP server and access to the
+administration account on the server.
 
 Your XMPP server will have to support the following extensions
 
@@ -65,10 +65,23 @@ use of a git submodule (specifically the the ./browser/resources dir).
 
 Once you have cloned this repo, you need to run two commands:
 
-  :: 
+  ::
 
     git submodule init
-    git submodule update 
+    git submodule update
+
+If you need to make changes under the submodule (aka ./browser/resources dir)
+best practice will be to fork https://github.com/jcbrand/converse.js under
+your account then:
+
+  ::
+
+   cd ./browser/resources
+   git remote set-url origin git@github.com:MYACCOUNT/converse.js.git
+   git commit -a
+   git push
+
+After this you can send a pull request with your changes.
 
 For more information on submodules and how to work with them, `refer to the git book`_.
 

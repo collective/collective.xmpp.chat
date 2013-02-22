@@ -18,5 +18,5 @@
         description="Installs the collective.xmpp.chat package"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
-  
+
 </configure>

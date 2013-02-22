@@ -7,11 +7,11 @@ ejabberd: Module could not be loaded
 Sometimes after running buildout you might get errors like the following: ::
 
     ERROR REPORT==== 21-Jun-2012::11:05:25 ===
-    ** State machine <0.380.0> terminating 
+    ** State machine <0.380.0> terminating
     ** Last event in was connect
     ** When State == connecting
     **      Data  == {state,undefined,mysql,30000,"localhost",undefined,{0,{[],[]}}}
-    ** Reason for termination = 
+    ** Reason for termination =
     ** {'module could not be loaded',
         [{mysql_conn,start,
                 ["localhost",3306,"sqluser","sqlpassword","ejabberd",
@@ -27,7 +27,7 @@ to see what exactly is missing. If it's mysql related the you need to copy over 
 
 See :ref:`enable-mysql-support-for-ejabberd` .
 
-If the message is *Problem starting the module mod_archive_odbc* then you know it's the beam files 
+If the message is *Problem starting the module mod_archive_odbc* then you know it's the beam files
 for mod_archive.
 
 See :ref:`enable-mod_archive-support-for-ejabberd` .

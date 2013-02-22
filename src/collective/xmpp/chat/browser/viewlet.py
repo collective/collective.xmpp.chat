@@ -17,4 +17,4 @@ class ChatData(ViewletBase):
         self.fullname = info.get('fullname') or self.username
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IXMPPSettings, check=False)
-        self.auto_subscribe = settings.auto_subscribe 
+        self.auto_subscribe = settings.auto_subscribe

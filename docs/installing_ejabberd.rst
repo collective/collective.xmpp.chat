@@ -31,7 +31,7 @@ Quick  instructions:
 Installing mod_archive for server side message storing
 ------------------------------------------------------
 
-To enable server side archiving of chat messages (required for later retrievel, 
+To enable server side archiving of chat messages (required for later retrievel,
 such as on a page reload), we need to install the mod_archive_ (implementing XEP-0136_)
 add-on module for ejabberd.
 
@@ -39,33 +39,33 @@ add-on module for ejabberd.
 
     svn co https://svn.process-one.net/ejabberd-modules
 
-   Note: If you are using a source checkout of collective.xmpp.chat, you can use 
+   Note: If you are using a source checkout of collective.xmpp.chat, you can use
    mr.developer_ to check it out for you::
 
     ./bin/develop checkout ejabberd-modules
 
 2. Now navigate to the directory of the mod_archive module. If you used mr.developer, it will be in the *src* directory inside your buildout directory::
-    
+
     cd ./src/ejabberd-modules/mod_archive/trunk/
 
 3. Now compile the module:
 
    - On GNU/Linux, \*BSD, etc.::
        ./build.sh
-   
+
    - On Windows:::
        build.bat
-   
+
    - If you use an ejabberd binary installer, place the module source file in bin/ and run:::
        erlc -I includes/ejabberd/include mod_archive.erl
 
 4. Now copy the generated *.beam* files from the *ebin* directory to where youre ejabberd *.beam* files are.
    For example, if you are using the supplied *buildout.cfg* file:::
-    
+
     cp ./src/ejabberd-modules/mod_archive/trunk/ebin/mod_archive_odbc.beam ./parts/ejabberd/lib/ejabberd/ebin/
     cp ./src/ejabberd-modules/mod_archive/trunk/ebin/mod_archive_webview.beam ./parts/ejabberd/lib/ejabberd/ebin/
 
-5. Edit *ejabberd.cfg* and add the HTTP and module definitions {["archive"], mod_archive_webview} to 
+5. Edit *ejabberd.cfg* and add the HTTP and module definitions {["archive"], mod_archive_webview} to
    the list of request handlers: ::
         listen, [
             {5280, ejabberd_http, [

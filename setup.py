@@ -35,8 +35,8 @@ setup(name='collective.xmpp.chat',
         "sphinx": [ "Sphinx >=1.0",
                     "repoze.sphinx.autointerface",
                   ],
-        "test_act": [ 
-                    "decorator", 
+        "test_act": [
+                    "decorator",
                     "selenium",
                   ],
       },

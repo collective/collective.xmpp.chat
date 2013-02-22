@@ -3,6 +3,18 @@ Changelog
 =========
 
 ------------------
+0.2b5 (unreleased)
+------------------
+
+- Bugfix: updated HISTORY.txt format remained unchanged after last egg release
+  [alecghica]
+- Feature: added spining image and "Connecting to chat ..." info under chat panel
+  when the user is not (yet) binded to the jabber server
+  [alecghica]
+- Bugfix: cleaned up unnecessary spaces, replaced tabs with spaces and
+  fixed line terminators
+  [alecghica]
+
 0.2b4 (2013-02-02)
 ------------------
 
@@ -21,7 +33,7 @@ Changelog
 0.2b2 (2013-01-16)
 ------------------
 
-- Fixed MANIFEST.in to include the resources dir. 
+- Fixed MANIFEST.in to include the resources dir.
   [jcbrand]
 
 0.2b1 (2013-01-16)

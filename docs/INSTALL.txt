@@ -11,7 +11,7 @@ to manage your project, you can do this:
     eggs =
         ...
         collective.xmpp.chat
-       
+
 * Re-run buildout, e.g. with:
 
     $ ./bin/buildout

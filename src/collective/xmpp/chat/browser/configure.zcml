@@ -27,11 +27,11 @@
         permission="zope2.View"
         />
 
-    <browser:viewlet  
+    <browser:viewlet
         name="collective.xmpp.chat.onlineusers"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlet.ChatData"
-        permission="zope2.View" 
+        permission="zope2.View"
         template="./templates/chatpanel.pt"
         layer=".interfaces.IXMPPChatLayer"
         />
