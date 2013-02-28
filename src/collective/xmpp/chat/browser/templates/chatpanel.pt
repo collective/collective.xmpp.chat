@@ -1,8 +1,8 @@
 <div id="chatpanel" i18n:domain="collective.xmpp.chat"
     tal:condition="not: context/portal_membership/isAnonymousUser">
-    <div id="collective-xmpp-chat-data" 
+    <div id="collective-xmpp-chat-data"
         tal:attributes="
-                username view/username; 
+                username view/username;
                 fullname view/fullname;
                 auto_subscribe view/auto_subscribe;"></div>
 
@@ -10,5 +10,6 @@
         <a href="#" class="chat" id="toggle-online-users">
             <span i18n:translate="">Online Users</span> (<strong id="online-count">0</strong>)
         </a>
+        <span id="connecting-to-chat" i18n:translate="">Connecting to chat ...</span>
     </div>
 </div>

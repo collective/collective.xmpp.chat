@@ -2,7 +2,7 @@
   tal:define="user_id view/user_id;
               fullname view/fullname;
               portal_url context/portal_url">
-    <li tal:condition="not: view/isSelf" 
+    <li tal:condition="not: view/isSelf"
         tal:attributes="id string:online-users-${user_id};
                         data-userid user_id">
         <a href="#" class="user-details-toggle"
