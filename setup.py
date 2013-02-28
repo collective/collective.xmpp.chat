@@ -35,10 +35,7 @@ setup(name='collective.xmpp.chat',
         "sphinx": [ "Sphinx >=1.0",
                     "repoze.sphinx.autointerface",
                   ],
-        "test_act": [ 
-                    "decorator", 
-                    "selenium",
-                  ],
+        "test": ['plone.app.testing[robot]'],
       },
       entry_points="""
       [z3c.autoinclude.plugin]
