@@ -1,13 +1,13 @@
 Introduction
 ============
 
-``collective.chat.xmpp`` provides instant messaging for Plone_. It uses the
-XMPP_ protocol and requires an XMPP server (such as ejabberd_) for the message handling.
+``collective.chat.xmpp`` provides instant messaging for `Plone`_. It uses the
+`XMPP`_ protocol and requires an XMPP server (such as `ejabberd`_) for the message handling.
 
 Features
 ========
 
-* Manually or automically subscribe to other users.
+* Manually or automatically subscribe to other users.
 * With manual roster subscriptions, you can accept or decline contact requests.
 * Chat statuses (online, busy, away, offline)
 * Custom status message
@@ -82,19 +82,17 @@ your account then:
    git push
 
 After this you can send a pull request with your changes.
-
 For more information on submodules and how to work with them, `refer to the git book`_.
 
-
-.. _XEP-0045: http://xmpp.org/extensions/xep-0045.html
-.. _XEP-0071: http://xmpp.org/extensions/xep-0071.html
-.. _XEP-0144: http://xmpp.org/extensions/xep-0144.html
-.. _XEP-0124: http://xmpp.org/extensions/xep-0124.html
-.. _XEP-0206: http://xmpp.org/extensions/xep-0206.html
-.. _collective.xmpp.core: http://github.com/collective/collective.xmpp.core
-.. _collective.xmpp.buildout: http://github.com/collective/collective.xmpp.buildout
-.. _Plone: http://plone.org
-.. _XMPP: http://xmpp.org
-.. _ejabberd: ejabberd.im
-.. _a recent commit: https://github.com/collective/collective.xmpp.chat/commit/a6f41258b55709fd734d5f432d42d6f04d61d538
-.. _refer to the git book: http://git-scm.com/book/en/Git-Tools-Submodules
+.. _`XEP-0045`: http://xmpp.org/extensions/xep-0045.html
+.. _`XEP-0071`: http://xmpp.org/extensions/xep-0071.html
+.. _`XEP-0144`: http://xmpp.org/extensions/xep-0144.html
+.. _`XEP-0124`: http://xmpp.org/extensions/xep-0124.html
+.. _`XEP-0206`: http://xmpp.org/extensions/xep-0206.html
+.. _`collective.xmpp.core`: http://github.com/collective/collective.xmpp.core
+.. _`collective.xmpp.buildout`: http://github.com/collective/collective.xmpp.buildout
+.. _`a recent commit`: https://github.com/collective/collective.xmpp.chat/commit/a6f41258b55709fd734d5f432d42d6f04d61d538
+.. _`refer to the git book`: http://git-scm.com/book/en/Git-Tools-Submodules
+.. _`Plone`: http://plone.org
+.. _`XMPP`: http://xmpp.org
+.. _`ejabberd`: http://ejabberd.im
