@@ -2,7 +2,7 @@
 Changelog
 =========
 
-0.2b5 (unreleased)
+0.2b5 (2013-02-04)
 ------------------
 
 - Bugfix: updated HISTORY.txt format remained unchanged after last egg release
