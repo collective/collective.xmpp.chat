@@ -8,7 +8,7 @@ version = '0.2b4'
 setup(name='collective.xmpp.chat',
       version=version,
       description="XMPP-based instant Messaging for Plone",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
