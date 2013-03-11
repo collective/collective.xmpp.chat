@@ -13,15 +13,17 @@
         authenticated="True"
         />
 
-    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
-        insert-after="++resource++collective.xmpp.core.js/strophe.muc.js"/>
-
-    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.string.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.vcard.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
+        authenticated="True"
         />
 
+    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
+        insert-after="++resource++collective.xmpp.core.js/strophe.vcard.js"/>
+
     <javascript id="++resource++collective.xmpp.chat.resources/Libraries/backbone.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.string.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
         />
 
     <javascript
