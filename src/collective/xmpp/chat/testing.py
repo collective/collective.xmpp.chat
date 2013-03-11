@@ -32,4 +32,4 @@ XMPPCHAT_FIXTURE = XMPPChatFixture()
 XMPPCHAT_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(XMPPCHAT_FIXTURE, z2.ZSERVER_FIXTURE),
     name="collective.xmpp.chatLayer:Functional"
-    )
+)
