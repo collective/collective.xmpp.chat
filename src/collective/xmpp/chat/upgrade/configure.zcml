@@ -25,7 +25,7 @@
     profile="collective.xmpp.chat:default">
     <genericsetup:upgradeStep
       title="Update Javascript files"
-      description="Remove underscore.string, add Strophe.vCard"
+      description="Remove underscore.string, add Strophe.vCard and backbone.localStorage"
       handler=".v3.updateJSRegistry"
       />
   </genericsetup:upgradeSteps>
