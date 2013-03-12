@@ -4,6 +4,5 @@
     <version>3</version>
     <dependencies>
         <dependency>profile-collective.xmpp.core:default</dependency>
-        <dependency>profile-collective.js.jqueryui:default</dependency>
     </dependencies>
 </metadata>
