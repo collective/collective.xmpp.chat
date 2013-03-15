@@ -29,7 +29,7 @@ setup(name='collective.xmpp.chat',
       install_requires=[
             'setuptools',
             'collective.xmpp.core',
-            'collective.js.jqueryui'
+            'collective.js.jqueryui == 1.8.16.9'
       ],
       extras_require = {
         "sphinx": [ "Sphinx >=1.0",
