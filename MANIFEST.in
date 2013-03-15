@@ -1,6 +1,8 @@
 exclude *~
 exclude *.sw?
 include *.rst
+include *.txt
+recursive-include src *.pt
 recursive-include src/collective/xmpp/chat *.zcml
 recursive-include src/collective/xmpp/chat/locales *.mo
 recursive-include src/collective/xmpp/chat/locales *.po
