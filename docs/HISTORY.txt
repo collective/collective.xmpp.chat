@@ -2,7 +2,7 @@
 Changelog
 =========
 
-0.2 (Unreleased)
+0.2 (2013-03-15)
 ----------------
 
 - Bugfix: Contact roster heading not cleared when last contact removed.
