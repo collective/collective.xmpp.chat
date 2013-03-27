@@ -28,6 +28,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'Products.CMFPlone>=4.3rc1',
         'setuptools',
         'collective.xmpp.core',
     ],
@@ -42,6 +43,6 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     """,
-    setup_requires=["PasteScript", "setuptools_git >= 0.3"],
+    setup_requires=["PasteScript", "setuptools_git>=0.3"],
     paster_plugins=["ZopeSkel"],
 )
