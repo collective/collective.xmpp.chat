@@ -2,8 +2,8 @@
     tal:condition="not: context/portal_membership/isAnonymousUser">
     <div id="collective-xmpp-chat-data"
         tal:attributes="
-                username view/username;
                 fullname view/fullname;
+                prebind python:True;
                 auto_subscribe view/auto_subscribe;"></div>
 
     <div id="toggle-controlbox">
