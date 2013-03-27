@@ -35,14 +35,8 @@
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/burry.js/burry.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/backbone.localStorage.js"
-        authenticated="True"
-        />
-
-    <javascript
         id="++resource++collective.xmpp.chat.resources/Libraries/sjcl.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/burry.js/burry.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/backbone.localStorage.js"
         authenticated="True"
         />
 
