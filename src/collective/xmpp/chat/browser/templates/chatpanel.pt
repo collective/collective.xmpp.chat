@@ -5,7 +5,6 @@
                 fullname view/fullname;
                 prebind python:True;
                 auto_subscribe view/auto_subscribe;"></div>
-
     <div id="toggle-controlbox">
         <a href="#" class="chat" id="toggle-online-users">
             <span i18n:translate="">Online Users</span> (<strong id="online-count">0</strong>)
