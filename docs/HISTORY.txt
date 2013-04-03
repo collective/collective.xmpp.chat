@@ -2,10 +2,24 @@
 Changelog
 =========
 
-0.2 (Unreleased)
+0.3 (unreleased)
 ----------------
 
-- No changes yet.
+- Nothing changed yet.
+
+
+0.2 (2013-03-15)
+----------------
+
+- Bugfix: Contact roster heading not cleared when last contact removed.
+  [jcbrand]
+- Bugfix: Buddy wasn't being removed from the roster if they unsubscribed.
+  [jcbrand]
+- Bugfix: When a user has no contacts, a subscribing contact doesn't appear.
+  [jcbrand]
+- Bugfix: Remove contact dialog not appearing (fixed by pinning
+  collective.js.jqueryui)
+  [jcbrand]
 
 0.2b5 (2013-02-04)
 ------------------
