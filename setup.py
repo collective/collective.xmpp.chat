@@ -28,7 +28,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Products.CMFPlone>=4.3rc1',
+        'plone.app.jquery>=1.7.2',
         'setuptools',
         'collective.xmpp.core',
     ],
