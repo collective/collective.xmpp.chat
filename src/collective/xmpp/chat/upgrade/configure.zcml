@@ -7,19 +7,27 @@
     source="1"
     destination="2"
     profile="collective.xmpp.chat:default">
-
     <genericsetup:upgradeStep
       title="Javascript files are now in a different directory"
       description="They have been moved to the 'resources' dir, which is a git submodule"
-      handler=".v0.updateJSRegistry"
+      handler=".v2.updateJSRegistry"
       />
-
     <genericsetup:upgradeStep
       title="Stylesheets are now in a different directory"
       description="They have been moved to the 'resources' dir, which is a git submodule"
-      handler=".v0.updateCSSRegistry"
+      handler=".v2.updateCSSRegistry"
       />
+  </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="2"
+    destination="3"
+    profile="collective.xmpp.chat:default">
+    <genericsetup:upgradeStep
+      title="Update Javascript files"
+      description="Remove underscore.string, add Strophe.vCard and backbone.localStorage"
+      handler=".v3.updateJSRegistry"
+      />
   </genericsetup:upgradeSteps>
 
 </configure>

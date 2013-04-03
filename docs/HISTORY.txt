@@ -2,11 +2,18 @@
 Changelog
 =========
 
-0.3 (unreleased)
+1.0 (unreleased)
 ----------------
 
-- Nothing changed yet.
+NB: This version depends on plone.app.jquery >= 1.7.2. Plone sites older than
+version 4.3 might experience minor incompatibility errors with any jquery
+version higher than 1.4.
 
+- Use the newest version of converse.js, which adds better caching via
+  backbone.localStorage as well as vCard support.
+  [jcbrand]
+- Remove dependency on JQueryUI
+  [jcbrand]
 
 0.2 (2013-03-15)
 ----------------
