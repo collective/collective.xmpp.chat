@@ -10,6 +10,12 @@
         layer=".interfaces.IXMPPChatLayer"
         />
 
+    <browser:resourceDirectory
+        name="collective.xmpp.chat.javascript"
+        directory="javascript"
+        layer=".interfaces.IXMPPChatLayer"
+        />
+
     <browser:page
         for="*"
         name="search-users"

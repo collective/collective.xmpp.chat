@@ -30,4 +30,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="3"
+    destination="4"
+    profile="collective.xmpp.chat:default">
+    <genericsetup:upgradeStep
+      title="Update Javascript files"
+      description="Add init.js and strophe.disco.js"
+      handler=".v4.updateJSRegistry"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

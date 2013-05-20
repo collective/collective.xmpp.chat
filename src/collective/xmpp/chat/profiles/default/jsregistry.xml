@@ -19,6 +19,12 @@
         authenticated="True"
         />
 
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.disco.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.vcard.js"
+        authenticated="True"
+        />
+
     <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
         insert-after="++resource++collective.xmpp.core.js/strophe.vcard.js"
         authenticated="True"
@@ -49,6 +55,12 @@
     <javascript
         id="++resource++collective.xmpp.chat.resources/converse.js"
         insert-after="++resource++collective.xmpp.chat.resources/Libraries/jquery.tinysort.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/init.js"
+        insert-after="++resource++collective.xmpp.chat.resources/converse.js"
         authenticated="True"
         />
 
