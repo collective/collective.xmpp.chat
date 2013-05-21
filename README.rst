@@ -1,8 +1,12 @@
 Introduction
 ============
 
-``collective.chat.xmpp`` provides instant messaging for `Plone`_. It uses the
-`XMPP`_ protocol and requires an XMPP server (such as `ejabberd`_) for the message handling.
+``collective.chat.xmpp`` provides instant messaging for `Plone`_.
+
+It provides a web-based chat client, by means of `Converse.js`_, a javascript
+library which makes use of the open and very popular `XMPP`_  messaging protocol.
+
+You will need an XMPP server (such as `ejabberd`_) for the message handling.
 
 Features
 ========
@@ -10,12 +14,13 @@ Features
 * Manually or automatically subscribe to other users.
 * With manual roster subscriptions, you can accept or decline contact requests.
 * Chat statuses (online, busy, away, offline)
-* Custom status message
+* Custom status messages
 * Typing notifications (i.e when the contact is typing)
 * Third person messages (/me )
 * Multi-user chat in chatrooms
+* Chatrooms can be configured (privacy, persistency etc.)
 * Topics can be set for chatrooms
-* Full name and profile picture support
+* Full name and profile picture support (via VCards)
 
 Installation
 ============
@@ -96,3 +101,4 @@ For more information on submodules and how to work with them, `refer to the git 
 .. _`Plone`: http://plone.org
 .. _`XMPP`: http://xmpp.org
 .. _`ejabberd`: http://ejabberd.im
+.. _`Converse.js`: http://conversejs.org 

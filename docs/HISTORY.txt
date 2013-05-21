@@ -5,14 +5,22 @@ Changelog
 1.0 (unreleased)
 ----------------
 
+Upgrade notes
+~~~~~~~~~~~~~
+
+This release updates the profile version to *4*. Please use the upgrade feature
+in Plone's ``control panel`` or in  ``portal_setup`` in the ZMI to upgrade the
+``collective.xmpp.chat:default`` profile to this version.
+
 **NB:** *This version depends on plone.app.jquery >= 1.7.2. Plone sites older than
 version 4.3 might experience minor incompatibility errors with any jquery
 version higher than 1.4.*
 
-- Use the newest version of converse.js, which adds better caching via
-  backbone.localStorage as well as vCard support.
+- Uses the newest version of converse.js (0.3), which includes many changes. Notably: 
+  better caching via backbone.localStorage, configuration of chatrooms as well
+  as vCard support.
   [jcbrand]
-- Remove dependency on JQueryUI
+- Remove dependencies on JQueryUI and Burry.js
   [jcbrand]
 
 0.2 (2013-03-15)
