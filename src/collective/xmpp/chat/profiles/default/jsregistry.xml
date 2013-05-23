@@ -59,7 +59,7 @@
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/init.js"
+        id="++resource++collective.xmpp.chat.javascript/init.js"
         insert-after="++resource++collective.xmpp.chat.resources/converse.js"
         authenticated="True"
         />
