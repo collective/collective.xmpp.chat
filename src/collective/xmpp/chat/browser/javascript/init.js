@@ -7,8 +7,8 @@ $('#chatpanel').ready(function () {
         auto_list_rooms: true,
         hide_muc_server: true
     });
-});
-
-$(document).on('jarnxmpp.connected', function (ev, connection) {
-    converse.onConnected(connection);
+    $(document).unbind('jarnxmpp.connected');
+    $(document).bind('jarnxmpp.connected', function (ev, connection) {
+        converse.onConnected(connection);
+    });
 });
