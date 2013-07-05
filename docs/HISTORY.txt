@@ -2,6 +2,13 @@
 Changelog
 =========
 
+0.2.1 (2013-07-5)
+------------------
+
+- Bugfix: Fixed unicodeDecodeError when searching for users while trying to add
+  a contact
+  [ichim-david]
+
 0.2 (2013-03-15)
 ----------------
 
