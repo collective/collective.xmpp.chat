@@ -30,5 +30,6 @@ class SearchUsers(BrowserView):
                         user_dict[field] = unicode(field_value, "ISO-8859-1")
                 except UnicodeDecodeError:
                     log.warn("Can't decode %s", user_dict[field])
+                    users.remove(user_dict)
 
         return json.dumps(users)
