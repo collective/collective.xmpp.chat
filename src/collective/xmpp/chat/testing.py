@@ -11,12 +11,9 @@ class XMPPChatFixture(PloneSandboxLayer):
     """ """
 
     def setUpZope(self, app, configurationContext):
-        import jarn.jsi18n
         import collective.xmpp.chat
         import Products.UserAndGroupSelectionWidget
         xmlconfig.file('configure.zcml', Products.UserAndGroupSelectionWidget,
-                       context=configurationContext)
-        xmlconfig.file('configure.zcml', jarn.jsi18n,
                        context=configurationContext)
         xmlconfig.file('configure.zcml', collective.xmpp.chat,
                        context=configurationContext)
