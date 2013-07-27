@@ -5,7 +5,8 @@ $('#chatpanel').ready(function () {
         xhr_user_search: true,
         auto_subscribe: $('#collective-xmpp-chat-data').attr('auto_subscribe'),
         auto_list_rooms: true,
-        hide_muc_server: true
+        hide_muc_server: true,
+        i18n: window.locales.en
     });
     $(document).unbind('jarnxmpp.connected');
     $(document).bind('jarnxmpp.connected', function (ev, connection) {

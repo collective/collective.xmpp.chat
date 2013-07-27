@@ -53,8 +53,44 @@
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/converse.js"
+        id="++resource++collective.xmpp.chat.resources/Libraries/jed.js"
         insert-after="++resource++collective.xmpp.chat.resources/Libraries/jquery.tinysort.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/locale/af/LC_MESSAGES/af.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/jed.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/locale/de/LC_MESSAGES/de.js"
+        insert-after="++resource++collective.xmpp.chat.resources/locale/af/LC_MESSAGES/af.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/locale/it/LC_MESSAGES/it.js"
+        insert-after="++resource++collective.xmpp.chat.resources/locale/de/LC_MESSAGES/de.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/locale/es/LC_MESSAGES/es.js"
+        insert-after="++resource++collective.xmpp.chat.resources/locale/it/LC_MESSAGES/it.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/locale/en/LC_MESSAGES/en.js"
+        insert-after="++resource++collective.xmpp.chat.resources/Libraries/jed.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.resources/converse.js"
+        insert-after="++resource++collective.xmpp.chat.resources/locale/en/LC_MESSAGES/en.js"
         authenticated="True"
         />
 

@@ -41,4 +41,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="4"
+    destination="5"
+    profile="collective.xmpp.chat:default">
+    <genericsetup:upgradeStep
+      title="Update Javascript files"
+      description="Add locales.js"
+      handler=".v4.updateJSRegistry"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>
