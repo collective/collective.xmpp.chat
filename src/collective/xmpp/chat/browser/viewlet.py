@@ -1,4 +1,4 @@
-from zope.component import getUtility
+from zope import component
 from plone.registry.interfaces import IRegistry
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
@@ -15,6 +15,9 @@ class ChatData(ViewletBase):
         self.username = member.getId()
         info = pm.getMemberInfo()
         self.fullname = info.get('fullname') or self.username
-        registry = getUtility(IRegistry)
+        registry = component.getUtility(IRegistry)
         settings = registry.forInterface(IXMPPSettings, check=False)
         self.auto_subscribe = settings.auto_subscribe
+        pstate = component.getMultiAdapter(
+            (context, request), name='plone_portal_state')
+        self.lang = pstate.language()

@@ -2,7 +2,7 @@
 Changelog
 =========
 
-1.0 (unreleased)
+0.3 (2013-08-01)
 ----------------
 
 Upgrade notes
@@ -16,10 +16,14 @@ in Plone's ``control panel`` or in  ``portal_setup`` in the ZMI to upgrade the
 version 4.3 might experience minor incompatibility errors with any jquery
 version higher than 1.4.*
 
-- Uses the newest version of converse.js (0.3), which includes many changes. Notably: 
-  better caching via backbone.localStorage, configuration of chatrooms as well
-  as vCard support.
-  [jcbrand]
+- Uses the newest version of converse.js (0.5), which includes many changes.
+- Better caching via backbone.localStorage.
+- More detailed configuration of chatrooms.
+- vCard support.
+- Multilingual support for converse.js, with translations in af, de, it, es and pt_BR.
+- Reconnnect automatically if the connection drops.
+- Remember custom status messages upon page reload.
+- Improve message counter to only increment with the window is not focused.
 - Remove dependencies on JQueryUI and Burry.js
   [jcbrand]
 
