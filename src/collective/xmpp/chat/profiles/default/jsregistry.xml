@@ -2,101 +2,101 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
+        id="++resource++collective.xmpp.chat.javascript/strophe.roster.js"
         insert-after="++resource++collective.xmpp.core.js/strophe.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.roster.js"
+        id="++resource++collective.xmpp.chat.javascript/strophe.muc.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/strophe.roster.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.vcard.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.muc.js"
+        id="++resource++collective.xmpp.chat.javascript/strophe.vcard.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/strophe.muc.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/strophe.disco.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/strophe.vcard.js"
+        id="++resource++collective.xmpp.chat.javascript/strophe.disco.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/strophe.vcard.js"
         authenticated="True"
         />
 
-    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
+    <javascript id="++resource++collective.xmpp.chat.javascript/underscore.js"
         insert-after="++resource++collective.xmpp.core.js/strophe.vcard.js"
         authenticated="True"
         />
 
-    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/backbone.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/underscore.js"
+    <javascript id="++resource++collective.xmpp.chat.javascript/backbone.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/underscore.js"
         authenticated="True"
         />
 
-    <javascript id="++resource++collective.xmpp.chat.resources/Libraries/backbone.localStorage.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/backbone.js"
-        authenticated="True"
-        />
-
-    <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/sjcl.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/backbone.localStorage.js"
+    <javascript id="++resource++collective.xmpp.chat.javascript/backbone.localStorage.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/backbone.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/jquery.tinysort.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/sjcl.js"
+        id="++resource++collective.xmpp.chat.javascript/sjcl.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/backbone.localStorage.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/Libraries/jed.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/jquery.tinysort.js"
+        id="++resource++collective.xmpp.chat.javascript/jquery.tinysort.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/sjcl.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/locale/af/LC_MESSAGES/af.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/jed.js"
+        id="++resource++collective.xmpp.chat.javascript/jed.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/jquery.tinysort.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/locale/de/LC_MESSAGES/de.js"
-        insert-after="++resource++collective.xmpp.chat.resources/locale/af/LC_MESSAGES/af.js"
+        id="++resource++collective.xmpp.chat.javascript/locale/af/LC_MESSAGES/af.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/jed.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/locale/it/LC_MESSAGES/it.js"
-        insert-after="++resource++collective.xmpp.chat.resources/locale/de/LC_MESSAGES/de.js"
+        id="++resource++collective.xmpp.chat.javascript/locale/de/LC_MESSAGES/de.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/af/LC_MESSAGES/af.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/locale/es/LC_MESSAGES/es.js"
-        insert-after="++resource++collective.xmpp.chat.resources/locale/it/LC_MESSAGES/it.js"
+        id="++resource++collective.xmpp.chat.javascript/locale/it/LC_MESSAGES/it.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/de/LC_MESSAGES/de.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/locale/en/LC_MESSAGES/en.js"
-        insert-after="++resource++collective.xmpp.chat.resources/Libraries/jed.js"
+        id="++resource++collective.xmpp.chat.javascript/locale/es/LC_MESSAGES/es.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/it/LC_MESSAGES/it.js"
         authenticated="True"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.resources/converse.js"
-        insert-after="++resource++collective.xmpp.chat.resources/locale/en/LC_MESSAGES/en.js"
+        id="++resource++collective.xmpp.chat.javascript/locale/en/LC_MESSAGES/en.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/jed.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/converse.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/en/LC_MESSAGES/en.js"
         authenticated="True"
         />
 
     <javascript
         id="++resource++collective.xmpp.chat.javascript/init.js"
-        insert-after="++resource++collective.xmpp.chat.resources/converse.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/converse.js"
         authenticated="True"
         />
 
