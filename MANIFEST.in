@@ -2,11 +2,16 @@ exclude *~
 exclude *.sw?
 include *.rst
 include *.txt
+include *.py
+recursive-include src *.css
+recursive-include src *.png
+recursive-include src *.gif
+recursive-include src *.po
+recursive-include src *.pot
 recursive-include src *.pt
+recursive-include src *.js
+recursive-include src *.json
 recursive-include src/collective/xmpp/chat *.zcml
-recursive-include src/collective/xmpp/chat/locales *.mo
-recursive-include src/collective/xmpp/chat/locales *.po
 graft docs
 prune docs/.build
 graft src/collective/xmpp/chat/profiles
-graft src/collective/xmpp/chat/browser/resources
