@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 
 use_setuptools()
-version = '1.0.dev0'
+version = '0.3b1'
 
 setup(
     name='collective.xmpp.chat',
