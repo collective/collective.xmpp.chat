@@ -62,32 +62,6 @@ rosters (i.e subscribing and unsubscribing to one another) and would rather
 have everyone subscribe to everyone else. Be careful however, this might cause
 a lot of overhead (and therefore be quite slow) on sites with large userbases.
 
-Important details for developers
-================================
-
-Since  `a recent commit`_ this package now makes
-use of a git submodule (specifically the the ./browser/resources dir).
-
-Once you have cloned this repo, you need to run two commands:
-
-  ::
-
-    git submodule init
-    git submodule update
-
-If you need to make changes under the submodule (aka ./browser/resources dir)
-best practice will be to fork https://github.com/jcbrand/converse.js under
-your account then:
-
-  ::
-
-   cd ./browser/resources
-   git remote set-url origin git@github.com:MYACCOUNT/converse.js.git
-   git commit -a
-   git push
-
-After this you can send a pull request with your changes.
-For more information on submodules and how to work with them, `refer to the git book`_.
 
 .. _`XEP-0045`: http://xmpp.org/extensions/xep-0045.html
 .. _`XEP-0071`: http://xmpp.org/extensions/xep-0071.html
@@ -96,9 +70,9 @@ For more information on submodules and how to work with them, `refer to the git 
 .. _`XEP-0206`: http://xmpp.org/extensions/xep-0206.html
 .. _`collective.xmpp.core`: http://github.com/collective/collective.xmpp.core
 .. _`collective.xmpp.buildout`: http://github.com/collective/collective.xmpp.buildout
-.. _`a recent commit`: https://github.com/collective/collective.xmpp.chat/commit/a6f41258b55709fd734d5f432d42d6f04d61d538
-.. _`refer to the git book`: http://git-scm.com/book/en/Git-Tools-Submodules
 .. _`Plone`: http://plone.org
 .. _`XMPP`: http://xmpp.org
 .. _`ejabberd`: http://ejabberd.im
 .. _`Converse.js`: http://conversejs.org 
+
+
