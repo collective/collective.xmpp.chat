@@ -8,9 +8,16 @@ Changelog
 Upgrade notes
 ~~~~~~~~~~~~~
 
-This release updates the profile version to *4*. Please use the upgrade feature
+This release updates the profile version to *5*. Please use the upgrade feature
 in Plone's ``control panel`` or in  ``portal_setup`` in the ZMI to upgrade the
 ``collective.xmpp.chat:default`` profile to this version.
+
+This release now uses vCards. If your users don't have XMPP vcards, you won't see
+their profile pictures and full names anymore.
+
+collective.xmpp.core >= 0.3 provides a way to bulk add/update vCards for all the
+users in your site. In Plone's control panel, go to ``XMPP Integration``, then
+``User Registration`` and then click ``Update ALL Users' vCards``.
 
 **NB:** *This version depends on plone.app.jquery >= 1.7.2. Plone sites older than
 version 4.3 might experience minor incompatibility errors with any jquery
