@@ -41,14 +41,8 @@
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/sjcl.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/backbone.localStorage.js"
-        authenticated="True"
-        />
-
-    <javascript
         id="++resource++collective.xmpp.chat.javascript/jquery.tinysort.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/sjcl.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/backbone.localStorage.js"
         authenticated="True"
         />
 
