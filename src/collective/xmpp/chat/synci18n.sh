@@ -16,7 +16,7 @@ CURRENT_PATH=`pwd`
 CATALOGNAME="collective.xmpp.chat"
 
 # List of languages
-LANGUAGES="en no el es"
+LANGUAGES="en no el es fr"
 
 # Create locales folder structure for languages
 install -d locales
