@@ -5,7 +5,10 @@ Changelog
 0.3b2 (unreleased)
 ------------------
 
-- Bugfix: Bugfix: Fixed unicodeDecodeError when searching for users while trying 
+- French translation.
+  [thomasdesvenain]
+
+- Bugfix: Bugfix: Fixed unicodeDecodeError when searching for users while trying
   to add a contact. This is a merge of logic from the 0.2.x branch
   [ichim-david]
 

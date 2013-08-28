@@ -12,6 +12,7 @@
             "af": "locale/af/LC_MESSAGES/af",
             "en": "locale/en/LC_MESSAGES/en",
             "es": "locale/es/LC_MESSAGES/es",
+            "fr": "locale/es/LC_MESSAGES/fr",
             "de": "locale/de/LC_MESSAGES/de",
             "it": "locale/it/LC_MESSAGES/it",
             "pt_BR": "locale/pt_BR/LC_MESSAGES/pt_BR"
@@ -23,14 +24,16 @@
         'af',
         'en',
         'es',
+        'fr',
         'de',
         "it",
         "pt_BR"
-        ], function (jed, af, en, es, de, it, pt_BR) {
+        ], function (jed, af, en, es, fr, de, it, pt_BR) {
             root.locales = {};
             root.locales.af = af;
             root.locales.en = en;
             root.locales.es = es;
+            root.locales.fr = fr;
             root.locales.de = de;
             root.locales.it = it;
             root.locales.pt_BR = pt_BR;

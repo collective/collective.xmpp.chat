@@ -6,9 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.xmpp.chat\n"
-"POT-Creation-Date: 2012-11-19 20:35+0000\n"
+"POT-Creation-Date: 2013-08-27 14:17+0000\n"
 "PO-Revision-Date: 2012-11-14 09:26-0430\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Leonardo J. Caballero G.\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +18,12 @@ msgstr ""
 "Language-Name: Español\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.xmpp.chat\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "Language: es\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 
-#: ./browser/templates/chatpanel.pt:11
-msgid "Online Users"
-msgstr "Usuarios conectados"
+#: ./browser/templates/chatpanel.pt:8
+msgid "Click here to chat"
+msgstr ""
 
