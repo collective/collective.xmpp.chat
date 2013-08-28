@@ -77,8 +77,8 @@
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/locale/es/LC_MESSAGES/fr.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/locale/it/LC_MESSAGES/fr.js"
+        id="++resource++collective.xmpp.chat.javascript/locale/fr/LC_MESSAGES/fr.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/es/LC_MESSAGES/es.js"
         authenticated="True"
         />
 
