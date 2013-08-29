@@ -52,4 +52,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="5"
+    destination="6"
+    profile="collective.xmpp.chat:default">
+    <genericsetup:upgradeStep
+      title="Update resource registries"
+      description="Add french locale js"
+      handler=".v6.updateJSRegistry"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>
