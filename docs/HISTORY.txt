@@ -5,8 +5,8 @@ Changelog
 0.3b2 (unreleased)
 ------------------
 
-- Fix images url in css.
-  [vincentfretin]
+- Bundle Converse 0.6.2.
+  See: https://github.com/jcbrand/converse.js/releases
 
 - French translation.
   [thomasdesvenain]
