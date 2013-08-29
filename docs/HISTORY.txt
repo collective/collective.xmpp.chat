@@ -5,6 +5,9 @@ Changelog
 0.3b2 (unreleased)
 ------------------
 
+- Fix images url in css.
+  [vincentfretin]
+
 - French translation.
   [thomasdesvenain]
 

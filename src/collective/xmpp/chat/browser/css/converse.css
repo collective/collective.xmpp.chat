@@ -11,12 +11,12 @@
 }
 
 .locked {
-    background: url(images/emblem-readonly.png) no-repeat right;
+    background: url(++resource++collective.xmpp.chat.css/images/emblem-readonly.png) no-repeat right;
     padding-right: 22px;
 }
 
 span.spinner {
-    background: url(images/spinner.gif) no-repeat center;
+    background: url(++resource++collective.xmpp.chat.css/images/spinner.gif) no-repeat center;
     width: 22px;
     height: 22px;
     padding: 0 2px 0 2px;
@@ -59,7 +59,7 @@ span.spinner.hor_centered {
 }
 
 #connecting-to-chat {
-    background: url(images/spinner.gif) no-repeat left;
+    background: url(++resource++collective.xmpp.chat.css/images/spinner.gif) no-repeat left;
     padding-left: 1.4em;
 }
 
@@ -311,7 +311,7 @@ dl.add-converse-contact {
 }
 
 #fancy-xmpp-status-select a.change-xmpp-status-message {
-    background: url('images/pencil_icon.png') no-repeat right 3px;
+    background: url('++resource++collective.xmpp.chat.css/images/pencil_icon.png') no-repeat right 3px;
     float: right;
     clear: right;
     height: 22px;
@@ -371,7 +371,7 @@ a.close-chatbox-button {
 
 a.configure-chatroom-button {
     padding:0 4px;
-    background: #ffffff url('images/preferences-system.png') no-repeat center center;
+    background: #ffffff url('++resource++collective.xmpp.chat.css/images/preferences-system.png') no-repeat center center;
 }
 
 .close-chatbox-button {
@@ -444,26 +444,26 @@ a.configure-chatroom-button {
 
 #converse-roster dd.current-xmpp-contact,
 #converse-roster dd.current-xmpp-contact:hover {
-    background: url(images/user_online_panel.png) no-repeat 5px 2px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_online_panel.png) no-repeat 5px 2px;
 }
 
 #converse-roster dd.current-xmpp-contact.offline:hover,
 #converse-roster dd.current-xmpp-contact.unavailable:hover,
 #converse-roster dd.current-xmpp-contact.offline,
 #converse-roster dd.current-xmpp-contact.unavailable {
-    background: url(images/user_offline_panel.png) no-repeat 5px 2px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_offline_panel.png) no-repeat 5px 2px;
 }
 
 #converse-roster dd.current-xmpp-contact.dnd,
 #converse-roster dd.current-xmpp-contact.dnd:hover {
-    background: url(images/user_busy_panel.png) no-repeat 5px 2px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_busy_panel.png) no-repeat 5px 2px;
 }
 
 #converse-roster dd.current-xmpp-contact.xa,
 #converse-roster dd.current-xmpp-contact.xa:hover,
 #converse-roster dd.current-xmpp-contact.away,
 #converse-roster dd.current-xmpp-contact.away:hover {
-    background: url(images/user_away_panel.png) no-repeat 5px 2px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_away_panel.png) no-repeat 5px 2px;
 }
 
 #converse-roster dd.requesting-xmpp-contact button{
@@ -558,7 +558,7 @@ p.room-info {
 }
 
 a.room-info {
-    background: url('images/information.png') no-repeat right top;
+    background: url('++resource++collective.xmpp.chat.css/images/information.png') no-repeat right top;
     width: 22px;
     height: 22px;
     float: right;
@@ -582,7 +582,7 @@ dd.available-chatroom:hover a.open-room {
 }
 
 #converse-roster dd a.remove-xmpp-contact {
-    background: url('images/delete_icon.png') no-repeat right top;
+    background: url('++resource++collective.xmpp.chat.css/images/delete_icon.png') no-repeat right top;
     padding: 0 0 1em 0;
     float: right;
     width: 22px;
@@ -837,23 +837,23 @@ form.add-xmpp-contact input {
 }
 
 .chatbox .dropdown a.toggle-xmpp-contact-form {
-    background: url('images/add_icon.png') no-repeat 4px 2px;
+    background: url('++resource++collective.xmpp.chat.css/images/add_icon.png') no-repeat 4px 2px;
 }
 
 .chatbox .dropdown a.online {
-    background: url(images/user_online_panel.png) no-repeat 3px 4px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_online_panel.png) no-repeat 3px 4px;
 }
 
 .chatbox .dropdown a.offline {
-    background: url(images/user_offline_panel.png) no-repeat 3px 4px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_offline_panel.png) no-repeat 3px 4px;
 }
 
 .chatbox .dropdown a.dnd {
-    background: url(images/user_busy_panel.png) no-repeat 3px 4px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_busy_panel.png) no-repeat 3px 4px;
 }
 
 .chatbox .dropdown a.away {
-    background: url(images/user_away_panel.png) no-repeat 3px 4px;
+    background: url(++resource++collective.xmpp.chat.css/images/user_away_panel.png) no-repeat 3px 4px;
 }
 
 .chatbox .dropdown dd ul a:hover {
