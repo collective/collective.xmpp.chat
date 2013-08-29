@@ -14,9 +14,8 @@
     if (typeof define === 'function' && define.amd) {
         define("converse", [
             "locales",
-            "localstorage",
-            "tinysort",
-            "sjcl",
+            "backbone.localStorage",
+            "jquery.tinysort",
             "strophe",
             "strophe.muc",
             "strophe.roster",
@@ -41,22 +40,52 @@
     }
 }(this, function ($, _, console) {
     var converse = {};
-    converse.initialize = function (settings) {
+    converse.initialize = function (settings, callback) {
         // Default values
         var converse = this;
         this.animate = true;
         this.auto_list_rooms = false;
         this.auto_subscribe = false;
-        this.bosh_service_url = ''; // The BOSH connection manager URL.
+        this.bosh_service_url = undefined; // The BOSH connection manager URL.
         this.debug = false;
         this.hide_muc_server = false;
         this.i18n = locales.en;
         this.prebind = false;
         this.show_controlbox_by_default = false;
         this.xhr_user_search = false;
-        _.extend(this, settings);
+        this.xhr_custom_status = false;
+        this.testing = false; // Exposes sensitive data for testing. Never set to true in production systems!
+        this.callback = callback || function () {};
+
+        // Allow only the whitelisted settings attributes to be overwritten,
+        // nothing else.
+        whitelist = [
+            'animate',
+            'auto_list_rooms',
+            'auto_subscribe',
+            'bosh_service_url',
+            'fullname',
+            'debug',
+            'hide_muc_server',
+            'i18n',
+            'prebind',
+            'show_controlbox_by_default',
+            'xhr_user_search',
+            'xhr_custom_status',
+            'connection',
+            'testing',
+            'jid',
+            'sid',
+            'rid'
+        ];
+        _.extend(this, _.pick(settings, whitelist));
 
         var __ = $.proxy(function (str) {
+            /* Translation factory
+             */
+            if (this.i18n === undefined) {
+                this.i18n = locales['en'];
+            }
             var t = this.i18n.translate(str);
             if (arguments.length>1) {
                 return t.fetch.apply(t, [].slice.call(arguments,1));
@@ -64,6 +93,18 @@
                 return t.fetch();
             }
         }, this);
+
+        var ___ = function (str) {
+            /* XXX: This is part of a hack to get gettext to scan strings to be
+             * translated. Strings we cannot send to the function above because
+             * they require variable interpolation and we don't yet have the
+             * variables at scan time.
+             *
+             * See actionInfoMessages
+             */
+            return str;
+        };
+
         this.msg_counter = 0;
         this.autoLink = function (text) {
             // Convert URLs into hyperlinks
@@ -99,12 +140,12 @@
             } else if (status === Strophe.Status.CONNECTING) {
                 converse.giveFeedback(__('Connecting'));
             } else if (status === Strophe.Status.CONNFAIL) {
-                if ($button) { $button.show().siblings('span').remove(); }
+                converse.chatboxesview.views.controlbox.trigger('connection-fail');
                 converse.giveFeedback(__('Connection Failed'), 'error');
             } else if (status === Strophe.Status.AUTHENTICATING) {
                 converse.giveFeedback(__('Authenticating'));
             } else if (status === Strophe.Status.AUTHFAIL) {
-                if ($button) { $button.show().siblings('span').remove(); }
+                converse.chatboxesview.views.controlbox.trigger('auth-fail');
                 converse.giveFeedback(__('Authentication Failed'), 'error');
             } else if (status === Strophe.Status.DISCONNECTING) {
                 converse.giveFeedback(__('Disconnecting'), 'error');
@@ -200,10 +241,10 @@
                         .t('1');
 
             converse.connection.sendIQ(iq,
-                        callback,
-                        function () {
-                            converse.log('Error while retrieving collections');
-                        });
+                callback,
+                function () {
+                    converse.log('Error while retrieving collections');
+                });
         };
 
         this.collections.getLastMessages = function (jid, callback) {
@@ -548,7 +589,7 @@
 
             template: _.template(
                 '<div class="chat-head chat-head-chatbox">' +
-                    '<a class="close-chatbox-button">X</a>' +
+                    '<a class="close-chatbox-button icon-close"></a>' +
                     '<a href="{{url}}" target="_blank" class="user">' +
                         '<div class="chat-title"> {{ fullname }} </div>' +
                     '</a>' +
@@ -567,7 +608,7 @@
                     return;
                 }
                 var img_src = 'data:'+this.model.get('image_type')+';base64,'+this.model.get('image'),
-                    canvas = $('<canvas height="35px" width="35px" class="avatar"></canvas>'),
+                    canvas = $('<canvas height="33px" width="33px" class="avatar"></canvas>'),
                     ctx = canvas.get(0).getContext('2d'),
                     img = new Image();   // Create new Image object
                 img.onload = function() {
@@ -648,7 +689,8 @@
                 '<dl class="add-converse-contact dropdown">' +
                     '<dt id="xmpp-contact-search" class="fancy-dropdown">' +
                         '<a class="toggle-xmpp-contact-form" href="#"'+
-                            'title="'+__('Click to add new chat contacts')+'">'+__('Add a contact')+'</a>' +
+                            'title="'+__('Click to add new chat contacts')+'">'+
+                        '<span class="icon-plus"></span>'+__('Add a contact')+'</a>' +
                     '</dt>' +
                     '<dd class="search-xmpp" style="display:none"><ul></ul></dd>' +
                 '</dl>'
@@ -774,11 +816,12 @@
             room_template: _.template(
                 '<dd class="available-chatroom">'+
                 '<a class="open-room" data-room-jid="{{jid}}"'+
-                'title="'+__('Click to open this room')+'" href="#">{{name}}</a>'+
-                '<a class="room-info" data-room-jid="{{jid}}"'+
-                'title="'+__('Show more information on this room')+'" href="#">&nbsp;</a>'+
+                    'title="'+__('Click to open this room')+'" href="#">{{name}}</a>'+
+                '<a class="room-info icon-room-info" data-room-jid="{{jid}}"'+
+                    'title="'+__('Show more information on this room')+'" href="#">&nbsp;</a>'+
                 '</dd>'),
 
+            // FIXME: check markup in mockup
             room_description_template: _.template(
                 '<div class="room-info">'+
                 '<p class="room-info"><strong>'+__('Description:')+'</strong> {{desc}}</p>' +
@@ -1051,7 +1094,7 @@
             template: _.template(
                 '<div class="chat-head oc-chat-head">'+
                     '<ul id="controlbox-tabs"></ul>'+
-                    '<a class="close-chatbox-button">X</a>'+
+                    '<a class="close-chatbox-button icon-close"></a>'+
                 '</div>'+
                 '<div id="controlbox-panes"></div>'
             ),
@@ -1080,7 +1123,7 @@
                 if ((!converse.prebind) && (!converse.connection)) {
                     // Add login panel if the user still has to authenticate
                     this.$el.html(this.template(this.model.toJSON()));
-                    this.loginpanel = new converse.LoginPanel({'$parent': this.$el.find('#controlbox-panes')});
+                    this.loginpanel = new converse.LoginPanel({'$parent': this.$el.find('#controlbox-panes'), 'model': this});
                     this.loginpanel.render();
                 } else if (!this.contactspanel) {
                     this.$el.html(this.template(this.model.toJSON()));
@@ -1151,8 +1194,8 @@
 
             template: _.template(
                 '<div class="chat-head chat-head-chatroom">' +
-                    '<a class="close-chatbox-button">X</a>' +
-                    '<a class="configure-chatroom-button" style="display:none">&nbsp;</a>' +
+                    '<a class="close-chatbox-button icon-close"></a>' +
+                    '<a class="configure-chatroom-button icon-wrench" style="display:none"></a>' +
                     '<div class="chat-title"> {{ name }} </div>' +
                     '<p class="chatroom-topic"><p/>' +
                 '</div>' +
@@ -1403,22 +1446,20 @@
             },
 
             actionInfoMessages: {
-                // # For translations: %1$s will be replaced with the user's nickname
-                // # Don't translate "strong"
-                // # Example: <strong>jcbrand</strong> has been banned
-                301: converse.i18n.translate('<strong>%1$s</strong> has been banned'),
-                // # For translations: %1$s will be replaced with the user's nickname
-                // # Don't translate "strong"
-                // # Example: <strong>jcbrand</strong> has been kicked out
-                307: converse.i18n.translate('<strong>%1$s</strong> has been kicked out'),
-                // # For translations: %1$s will be replaced with the user's nickname
-                // # Don't translate "strong"
-                // # Example: <strong>jcbrand</strong> has been removed because of an affiliasion change
-                321: converse.i18n.translate("<strong>%1$s</strong> has been removed because of an affiliation change"),
-                // # For translations: %1$s will be replaced with the user's nickname
-                // # Don't translate "strong"
-                // # Example: <strong>jcbrand</strong> has been removed for not being a member
-                322: converse.i18n.translate("<strong>%1$s</strong> has been removed for not being a member")
+                /* XXX: Note the triple underscore function and not double
+                 * underscore.
+                 *
+                 * This is a hack. We can't pass the strings to __ because we
+                 * don't yet know what the variable to interpolate is.
+                 *
+                 * Triple underscore will just return the string again, but we
+                 * can then at least tell gettext to scan for it so that these
+                 * strings are picked up by the translation machinery.
+                 */
+                301: ___("<strong>%1$s</strong> has been banned"),
+                307: ___("<strong>%1$s</strong> has been kicked out"),
+                321: ___("<strong>%1$s</strong> has been removed because of an affiliation change"),
+                322: ___("<strong>%1$s</strong> has been removed for not being a member")
             },
 
             disconnectMessages: {
@@ -1450,9 +1491,8 @@
                             info_msgs.push(this.infoMessages[stat]);
                         } else if (_.contains(_.keys(this.actionInfoMessages), stat)) {
                             action_msgs.push(
-                                this.actionInfoMessages[stat].fetch(
-                                    Strophe.unescapeNode(Strophe.getResourceFromJid($el.attr('from')))
-                            ));
+                                __(this.actionInfoMessages[stat], Strophe.unescapeNode(Strophe.getResourceFromJid($el.attr('from'))))
+                            );
                         }
                     }
                 }
@@ -1805,19 +1845,21 @@
             },
 
             template: _.template(
-                        '<a class="open-chat" title="'+__('Click to chat with this contact')+'" href="#">{{ fullname }}</a>' +
-                        '<a class="remove-xmpp-contact" title="'+__('Click to remove this contact')+'" href="#"></a>'),
+                '<a class="open-chat" title="'+__('Click to chat with this contact')+'" href="#">'+
+                    '<span class="icon-{{ chat_status }}" title="{{ status_desc }}"></span>{{ fullname }}'+
+                '</a>' +
+                '<a class="remove-xmpp-contact icon-remove" title="'+__('Click to remove this contact')+'" href="#"></a>'),
 
             pending_template: _.template(
-                        '<span>{{ fullname }}</span>' +
-                        '<a class="remove-xmpp-contact" title="'+__('Click to remove this contact')+'" href="#"></a>'),
+                '<span>{{ fullname }}</span>' +
+                '<a class="remove-xmpp-contact icon-remove" title="'+__('Click to remove this contact')+'" href="#"></a>'),
 
             request_template: _.template('<div>{{ fullname }}</div>' +
-                        '<button type="button" class="accept-xmpp-request">' +
-                        'Accept</button>' +
-                        '<button type="button" class="decline-xmpp-request">' +
-                        'Decline</button>' +
-                        ''),
+                '<button type="button" class="accept-xmpp-request">' +
+                'Accept</button>' +
+                '<button type="button" class="decline-xmpp-request">' +
+                'Decline</button>' +
+                ''),
 
             render: function () {
                 var item = this.model,
@@ -1833,8 +1875,22 @@
                     this.$el.html(this.request_template(item.toJSON()));
                     converse.showControlBox();
                 } else if (subscription === 'both' || subscription === 'to') {
+                    _.each(['pending-xmpp-contact', 'requesting-xmpp-contact'], 
+                        function (cls) {
+                            if (this.el.className.indexOf(cls) !== -1) {
+                                this.$el.removeClass(cls);
+                            }
+                        }, this);
                     this.$el.addClass('current-xmpp-contact');
-                    this.$el.html(this.template(item.toJSON()));
+                    var status_desc = {
+                        'dnd': 'This contact is busy',
+                        'online': 'This contact is online',
+                        'offline': 'This contact is offline',
+                        'away': 'This contact is away'
+                        }[item.get('chat_status')||'offline'];
+                    this.$el.html(this.template(
+                        _.extend(item.toJSON(), {'status_desc': status_desc})
+                        ));
                 }
                 return this;
             },
@@ -2192,7 +2248,8 @@
                 var $my_contacts = this.$el.find('#xmpp-contacts'),
                     $contact_requests = this.$el.find('#xmpp-contact-requests'),
                     $pending_contacts = this.$el.find('#pending-xmpp-contacts'),
-                    $count, presence_change;
+                    sorted = false,
+                    $count, changed_presence;
                 if (item) {
                     var jid = item.id,
                         view = this.rosteritemviews[item.id],
@@ -2207,44 +2264,37 @@
                         $contact_requests.after(view.render().el);
                         $contact_requests.after($contact_requests.siblings('dd.requesting-xmpp-contact').tsort(crit));
                     } else if (subscription === 'both' || subscription === 'to') {
-                        if (!item.get('sorted')) {
-                            // this attribute will be true only after all of the elements have been added on the page
-                            // at this point all offline
+                        if ($.contains(document.documentElement, view.el)) {
+                            view.render();
+                        } else {
                             $my_contacts.after(view.render().el);
                         }
-                        else {
-                            // just by calling render will be enough to change the icon of the existing item without
-                            // having to reinsert it and the sort will come from the presence change
-                            view.render();
+                    }
+                    changed_presence = view.model.changed.chat_status;
+                    if (changed_presence) {
+                        this.sortRoster(changed_presence)
+                        sorted = true;
+                    } 
+                    if (item.get('is_last')) {
+                        if (!sorted) {
+                            this.sortRoster(item.get('chat_status'));
                         }
-                    }
-                    presence_change = view.model.changed.chat_status;
-                    if (presence_change) {
-                        // resort all items only if the model has changed it's chat_status as this render
-                        // is also triggered when the resource is changed which always comes before the presence change
-                        // therefore we avoid resorting when the change doesn't affect the position of the item
-                        $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.offline').tsort('a', crit));
-                        $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.unavailable').tsort('a', crit));
-                        $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.away').tsort('a', crit));
-                        $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.dnd').tsort('a', crit));
-                        $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.online').tsort('a', crit));
-                    }
-
-                    if (item.get('is_last') && !item.get('sorted')) {
-                        // this will be true after all of the roster items have been added with the default
-                        // options where all of the items are offline and now we can show the rosterView
-                        item.set('sorted', true);
-                        this.initialSort();
-                        this.$el.show();
+                        if (!this.$el.is(':visible')) {
+                            // Once all initial roster items have been added, we
+                            // can show the roster.
+                            this.$el.show();
+                        }
                         converse.xmppstatus.sendPresence();
                     }
                 }
                 // Hide the headings if there are no contacts under them
                 _.each([$my_contacts, $contact_requests, $pending_contacts], function (h) {
                     if (h.nextUntil('dt').length) {
-                        h.show();
+                        if (!h.is(':visible')) {
+                            h.show();
+                        }
                     }
-                    else {
+                    else if (h.is(':visible')) {
                         h.hide();
                     }
                 });
@@ -2256,11 +2306,14 @@
                 return this;
             },
 
-            initialSort: function () {
-                var $my_contacts = this.$el.find('#xmpp-contacts'),
-                    crit = {order:'asc'};
-                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.offline').tsort('a', crit));
-                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.unavailable').tsort('a', crit));
+            sortRoster: function (chat_status) {
+                var $my_contacts = this.$el.find('#xmpp-contacts');
+                $my_contacts.siblings('dd.current-xmpp-contact.'+chat_status).tsort('a', {order:'asc'});
+                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.offline'));
+                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.unavailable'));
+                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.away'));
+                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.dnd'));
+                $my_contacts.after($my_contacts.siblings('dd.current-xmpp-contact.online'));
             }
         });
 
@@ -2318,6 +2371,13 @@
             setStatusMessage: function (status_message) {
                 converse.connection.send($pres().c('show').t(this.get('status')).up().c('status').t(status_message));
                 this.save({'status_message': status_message});
+                if (this.xhr_custom_status) {
+                    $.ajax({
+                        url: 'set-custom-status',
+                        type: 'POST',
+                        data: {'msg': status_message}
+                    });
+                }
             }
         });
 
@@ -2346,9 +2406,10 @@
             status_template: _.template(
                 '<div class="xmpp-status">' +
                     '<a class="choose-xmpp-status {{ chat_status }}" data-value="{{status_message}}" href="#" title="'+__('Click to change your chat status')+'">' +
+                        '<span class="icon-{{ chat_status }}"></span>'+
                         '{{ status_message }}' +
                     '</a>' +
-                    '<a class="change-xmpp-status-message" href="#" title="'+__('Click here to write a custom status message')+'"></a>' +
+                    '<a class="change-xmpp-status-message icon-pencil" href="#" title="'+__('Click here to write a custom status message')+'"></a>' +
                 '</div>'),
 
             renderStatusChangeForm: function (ev) {
@@ -2408,12 +2469,15 @@
             choose_template: _.template(
                 '<dl id="target" class="dropdown">' +
                     '<dt id="fancy-xmpp-status-select" class="fancy-dropdown"></dt>' +
-                    '<dd><ul></ul></dd>' +
+                    '<dd><ul class="xmpp-status-menu"></ul></dd>' +
                 '</dl>'),
 
             option_template: _.template(
                 '<li>' +
-                    '<a href="#" class="{{ value }}" data-value="{{ value }}">{{ text }}</a>' +
+                    '<a href="#" class="{{ value }}" data-value="{{ value }}">'+
+                        '<span class="icon-{{ value }}"></span>'+
+                        '{{ text }}'+
+                    '</a>' +
                 '</li>'),
 
             initialize: function () {
@@ -2517,18 +2581,26 @@
                 '<input type="text" id="bosh_service_url">'),
 
             connect: function ($form, jid, password) {
-                var button = null,
-                    connection = new Strophe.Connection(converse.bosh_service_url);
                 if ($form) {
-                    $button = $form.find('input[type=submit]');
-                    $button.hide().after('<span class="spinner login-submit"/>');
+                    $form.find('input[type=submit]').hide().after('<span class="spinner login-submit"/>');
                 }
-                connection.connect(jid, password, converse.onConnect);
+                converse.connection = new Strophe.Connection(converse.bosh_service_url);
+                converse.connection.connect(jid, password, converse.onConnect);
+            },
+
+            showConnectButton: function () {
+                var $form = this.$el.find('#converse-login');
+                var $button = $form.find('input[type=submit]')
+                if ($button.length) {
+                    $button.show().siblings('span').remove();
+                }
             },
 
             initialize: function (cfg) {
                 cfg.$parent.append(this.$el.html(this.template()));
                 this.$tabs = cfg.$parent.parent().find('#controlbox-tabs');
+                this.model.on('connection-fail', function () { this.showConnectButton(); }, this);
+                this.model.on('auth-fail', function () { this.showConnectButton(); }, this);
             },
 
             render: function () {
@@ -2621,13 +2693,12 @@
             this.rosterview = new this.RosterView({'model':this.roster});
         }
 
-        this.onConnected = function (callback) {
+        this.onConnected = function () {
             if (this.debug) {
                 this.connection.xmlInput = function (body) { console.log(body); };
                 this.connection.xmlOutput = function (body) { console.log(body); };
-                Strophe.log = function (level, msg) {
-                    console.log(level+' '+msg);
-                };
+                Strophe.log = function (level, msg) { console.log(level+' '+msg); };
+                Strophe.error = function (msg) { console.log('ERROR: '+msg); };
             }
             this.bare_jid = Strophe.getBareJidFromJid(this.connection.jid);
             this.domain = Strophe.getDomainFromJid(this.connection.jid);
@@ -2660,8 +2731,10 @@
                     this.windowState = e.type;
                 },this));
                 this.giveFeedback(__('Online Contacts'));
-                if (callback) {
-                    callback(this);
+                if (this.testing) {
+                    this.callback(this);
+                } else  {
+                    this.callback();
                 }
             }, this));
         };
@@ -2675,25 +2748,21 @@
                 e.preventDefault(); this.toggleControlBox();
             }, this)
         );
-        if (this.show_controlbox_by_default) {
-            this.toggleControlBox();
-        }
-        if (this.prebind) {
-            if (!this.connection) {
-                if ((!this.jid) || (!this.sid) || (!this.rid) || (!this.bosh_service_url)) {
-                    this.log('If you set prebind=true, you MUST supply JID, RID and SID values');
-                    return;
-                }
-                this.connection = new Strophe.Connection(this.bosh_service_url);
-                this.connection.attach(this.jid, this.sid, this.rid, this.onConnect);
-            } else {
-                this.onConnected();
+        if ((this.prebind) && (!this.connection)) {
+            if ((!this.jid) || (!this.sid) || (!this.rid) || (!this.bosh_service_url)) {
+                this.log('If you set prebind=true, you MUST supply JID, RID and SID values');
+                return;
             }
+            this.connection = new Strophe.Connection(this.bosh_service_url);
+            this.connection.attach(this.jid, this.sid, this.rid, this.onConnect);
+        } else if (this.connection) {
+            this.onConnected();
         }
+        if (this.show_controlbox_by_default) { this.showControlBox(); }
     };
     return {
-        'initialize': function (settings) {
-            converse.initialize(settings);
+        'initialize': function (settings, callback) {
+            converse.initialize(settings, callback);
         }
     };
 }));
