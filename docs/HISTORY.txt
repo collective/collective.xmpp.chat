@@ -2,7 +2,7 @@
 Changelog
 =========
 
-0.3b2 (unreleased)
+0.3b2 (2013-08-30)
 ------------------
 
 - Bundle Converse 0.6.2.
