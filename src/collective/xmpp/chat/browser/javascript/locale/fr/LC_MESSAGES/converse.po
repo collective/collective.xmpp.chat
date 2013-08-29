@@ -393,7 +393,7 @@ msgstr "Mes contacts"
 
 #: converse.js:2165
 msgid "Pending contacts"
-msgstr "Contacts en attentes"
+msgstr "Contacts en attente"
 
 #: converse.js:2317
 msgid "Custom status"

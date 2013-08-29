@@ -370,7 +370,7 @@
                  ],
                  "Pending contacts": [
                     null,
-                    "Contacts en attentes"
+                    "Contacts en attente"
                  ],
                  "Custom status": [
                     null,
