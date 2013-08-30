@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'Converse-js';
-	src:url('fonts/Converse-js.eot');
+    src: url("/++resource++collective.xmpp.chat.css/fonticons/fonts/Converse-js.eot");
 }
 @font-face {
 	font-family: 'Converse-js';
@@ -316,7 +316,7 @@ you can use the generic selector below, but it's slower:
 }
 
 span.spinner {
-    background: url(images/spinner.gif) no-repeat center;
+    background: url(/++resource++collective.xmpp.chat.css/images/spinner.gif) no-repeat center;
     width: 22px;
     height: 22px;
     padding: 0 2px 0 2px;
@@ -359,7 +359,7 @@ span.spinner.hor_centered {
 }
 
 #connecting-to-chat {
-    background: url(images/spinner.gif) no-repeat left;
+    background: url(/++resource++collective.xmpp.chat.css/images/spinner.gif) no-repeat left;
     padding-left: 1.4em;
 }
 
