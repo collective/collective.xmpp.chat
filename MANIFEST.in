@@ -15,4 +15,5 @@ recursive-include src/collective/xmpp/chat *.zcml
 graft docs
 prune docs/.build
 graft src/collective/xmpp/chat/profiles
-graft src/collective/xmpp/chat/browser/css/fonticons
+graft src/collective/xmpp/chat/browser/css
+graft src/collective/xmpp/chat/browser/javascript
