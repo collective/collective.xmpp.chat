@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.3b3 (unreleased)
-------------------
+0.3 (2013-09-02)
+----------------
 
 - Bugfix. Font-icons weren't showing when CSS files are minimized. [jcbrand]
 
