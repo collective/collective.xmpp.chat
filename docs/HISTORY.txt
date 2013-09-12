@@ -2,8 +2,8 @@
 Changelog
 =========
 
-0.3.1 (unreleased)
-----------------
+0.3.1 (2013-09-12)
+------------------
 
 - Update JS to converse.js 0.6.3 (includes important security fix). [jcbrand] 
 
