@@ -8,6 +8,9 @@
 
 // AMD/global registrations
 (function (root, factory) {
+    if(typeof console === "undefined") {
+        console = { log: function () {}, error: function () {} };
+    }
     if (console===undefined || console.log===undefined) {
         console = { log: function () {}, error: function () {} };
     }
@@ -1875,7 +1878,7 @@
                     this.$el.html(this.request_template(item.toJSON()));
                     converse.showControlBox();
                 } else if (subscription === 'both' || subscription === 'to') {
-                    _.each(['pending-xmpp-contact', 'requesting-xmpp-contact'], 
+                    _.each(['pending-xmpp-contact', 'requesting-xmpp-contact'],
                         function (cls) {
                             if (this.el.className.indexOf(cls) !== -1) {
                                 this.$el.removeClass(cls);
@@ -2274,7 +2277,7 @@
                     if (changed_presence) {
                         this.sortRoster(changed_presence)
                         sorted = true;
-                    } 
+                    }
                     if (item.get('is_last')) {
                         if (!sorted) {
                             this.sortRoster(item.get('chat_status'));
