@@ -63,4 +63,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="6"
+    destination="7"
+    profile="collective.xmpp.chat:default">
+    <genericsetup:upgradeStep
+      title="Update resource registries"
+      description="Add Hungarian, Russian and Dutch locales"
+      handler=".v6.updateJSRegistry"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

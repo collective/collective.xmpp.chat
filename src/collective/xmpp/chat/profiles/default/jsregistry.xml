@@ -83,6 +83,24 @@
         />
 
     <javascript
+        id="++resource++collective.xmpp.chat.javascript/locale/hu/LC_MESSAGES/hu.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/fr/LC_MESSAGES/fr.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/locale/ru/LC_MESSAGES/ru.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/hu/LC_MESSAGES/hu.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/locale/nl/LC_MESSAGES/nl.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/locale/ru/LC_MESSAGES/ru.js"
+        authenticated="True"
+        />
+
+    <javascript
         id="++resource++collective.xmpp.chat.javascript/locale/en/LC_MESSAGES/en.js"
         insert-after="++resource++collective.xmpp.chat.javascript/jed.js"
         authenticated="True"
