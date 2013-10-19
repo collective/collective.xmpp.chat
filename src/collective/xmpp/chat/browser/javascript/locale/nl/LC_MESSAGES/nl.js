@@ -6,133 +6,258 @@
                 "": {
                     "Project-Id-Version": "Converse.js 0.4",
                     "Report-Msgid-Bugs-To": "",
-                    "POT-Creation-Date": "2013-09-13 16:02+0200",
-                    "PO-Revision-Date": "2013-09-15 11:44+0200",
-                    "Last-Translator": "JC Brand <jc@opkode.com>",
-                    "Language-Team": "Afrikaans",
-                    "Language": "af",
+                    "POT-Creation-Date": "2013-09-15 21:55+0200",
+                    "PO-Revision-Date": "2013-09-15 22:03+0200",
+                    "Last-Translator": "Maarten Kling <maarten@fourdigits.nl>",
+                    "Language-Team": "Dutch",
+                    "Language": "nl",
                     "MIME-Version": "1.0",
-                    "Content-Type": "text/plain; charset=ASCII",
+                    "Content-Type": "text/plain; charset=UTF-8",
                     "Content-Transfer-Encoding": "8bit",
+                    "Plural-Forms": "nplurals=2; plural=(n != 1);",
                     "domain": "converse",
-                    "lang": "af",
+                    "lang": "nl",
                     "plural_forms": "nplurals=2; plural=(n != 1);"
                 },
+                "unencrypted": [
+                    null,
+                    "ongecodeerde"
+                ],
+                "unverified": [
+                    null,
+                    "niet geverifieerd"
+                ],
+                "verified": [
+                    null,
+                    "geverifieerd"
+                ],
+                "finished": [
+                    null,
+                    "klaar"
+                ],
                 "Disconnected": [
                     null,
-                    "Verbindung onderbreek"
+                    "Verbinding verbroken."
                 ],
                 "Error": [
                     null,
-                    "Fout"
+                    "Error"
                 ],
                 "Connecting": [
                     null,
-                    "Verbind tans"
+                    "Verbinden"
                 ],
                 "Connection Failed": [
                     null,
-                    "Verbinding het gefaal"
+                    "Verbinden mislukt"
                 ],
                 "Authenticating": [
                     null,
-                    "Besig om te bekragtig"
+                    "Authenticeren"
                 ],
                 "Authentication Failed": [
                     null,
-                    "Bekragtiging het gefaal"
+                    "Authenticeren mislukt"
                 ],
                 "Disconnecting": [
                     null,
-                    "Onderbreek verbinding"
+                    ""
                 ],
-                "me": [
+                "Re-establishing encrypted session": [
                     null,
-                    "ek"
+                    "Bezig versleutelde sessie te herstellen"
                 ],
-                "%1$s is typing": [
+                "Your browser needs to generate a private key, which will be used in your encrypted chat session. This can take up to 30 seconds during which your browser might freeze and become unresponsive.": [
                     null,
-                    "%1$s tik tans"
+                    ""
                 ],
-                "Show this menu": [
+                "Private key generated.": [
                     null,
-                    "Vertoon hierdie keuselys"
+                    "Private key gegenereerd."
                 ],
-                "Write in the third person": [
+                "Authentication request from %1$s\n\nYour buddy is attempting to verify your identity, by asking you the question below.\n\n%2$s": [
                     null,
-                    "Skryf in die derde persoon"
+                    ""
                 ],
-                "Remove messages": [
+                "Could not verify this user's identify.": [
                     null,
-                    "Verwyder boodskappe"
+                    "Niet kon de identiteit van deze gebruiker niet identificeren."
                 ],
                 "Personal message": [
                     null,
-                    "Persoonlike boodskap"
+                    "Persoonlijk bericht"
+                ],
+                "Start encrypted conversation": [
+                    null,
+                    "Start encrypted gesprek"
+                ],
+                "Refresh encrypted conversation": [
+                    null,
+                    "Ververs encrypted gesprek"
+                ],
+                "End encrypted conversation": [
+                    null,
+                    "Beeindig encrypted gesprek"
+                ],
+                "Verify with SMP": [
+                    null,
+                    ""
+                ],
+                "Verify with fingerprints": [
+                    null,
+                    ""
+                ],
+                "What's this?": [
+                    null,
+                    "Wat is dit?"
+                ],
+                "me": [
+                    null,
+                    "ikzelf"
+                ],
+                "Show this menu": [
+                    null,
+                    "Toon dit menu"
+                ],
+                "Write in the third person": [
+                    null,
+                    "Schrijf in de 3de persoon"
+                ],
+                "Remove messages": [
+                    null,
+                    "Verwijder bericht"
+                ],
+                "Your message could not be sent": [
+                    null,
+                    "Je bericht kon niet worden verzonden"
+                ],
+                "We received an unencrypted message": [
+                    null,
+                    "We ontvingen een unencrypted bericht "
+                ],
+                "We received an unreadable encrypted message": [
+                    null,
+                    "We ontvangen een onleesbaar unencrypted bericht"
+                ],
+                "This user has requested an encrypted session.": [
+                    null,
+                    "Deze gebruiker heeft een encrypted sessie aangevraagd."
+                ],
+                "Here are the fingerprints, please confirm them with %1$s, outside of this chat.\n\nFingerprint for you, %2$s: %3$s\n\nFingerprint for %1$s: %4$s\n\nIf you have confirmed that the fingerprints match, click OK, otherwise click Cancel.": [
+                    null,
+                    ""
+                ],
+                "You will be prompted to provide a security question and then an answer to that question.\n\nYour buddy will then be prompted the same question and if they type the exact same answer (case sensitive), their identity will have been verified.": [
+                    null,
+                    ""
+                ],
+                "What is your security question?": [
+                    null,
+                    "Wat is jou sericury vraag?"
+                ],
+                "What is the answer to the security question?": [
+                    null,
+                    "Wat is het antwoord op de security vraag?"
+                ],
+                "Invalid authentication scheme provided": [
+                    null,
+                    ""
+                ],
+                "Your messages are not encrypted anymore": [
+                    null,
+                    "Je berichten zijn niet meer encrypted"
+                ],
+                "Your messages are now encrypted but your buddy's identity has not been verified.": [
+                    null,
+                    ""
+                ],
+                "Your buddy's identify has been verified.": [
+                    null,
+                    "Jou contact is geverifieerd"
+                ],
+                "Your buddy has ended encryption on their end, you should do the same.": [
+                    null,
+                    "Jou contact heeft encryption aanstaan, je moet het zelfde doen."
+                ],
+                "Your messages are not encrypted. Click here to enable OTR encryption.": [
+                    null,
+                    "Jou bericht is niet encrypted. KLik hier om ORC encrytion aan te zetten."
+                ],
+                "Your messages are encrypted, but your buddy has not been verified.": [
+                    null,
+                    "Jou berichten zijn encrypted, maar je contact is niet geverifieerd."
+                ],
+                "Your messages are encrypted and your buddy verified.": [
+                    null,
+                    "Jou bericht is encrypted en jou contact is geverifieerd."
+                ],
+                "Your buddy has closed their end of the private session, you should do the same": [
+                    null,
+                    ""
                 ],
                 "Contacts": [
                     null,
-                    "Kontakte"
+                    "Contacten"
                 ],
                 "Online": [
                     null,
-                    "Aangemeld"
+                    "Online"
                 ],
                 "Busy": [
                     null,
-                    "Besig"
+                    "Bezet"
                 ],
                 "Away": [
                     null,
-                    "Afwesig"
+                    "Afwezig"
                 ],
                 "Offline": [
                     null,
-                    "Afgemeld"
+                    ""
                 ],
                 "Click to add new chat contacts": [
                     null,
-                    "Kliek om nuwe kletskontakte by te voeg"
+                    "Klik om nieuwe contacten toe te voegen"
                 ],
                 "Add a contact": [
                     null,
-                    "Voeg 'n kontak by"
+                    "Voeg contact toe"
                 ],
                 "Contact username": [
                     null,
-                    "Konak gebruikersnaam"
+                    "Contact gebruikernaam"
                 ],
                 "Add": [
                     null,
-                    "Voeg by"
+                    "Toevoegen"
                 ],
                 "Contact name": [
                     null,
-                    "Kontaknaam"
+                    "Contact naam"
                 ],
                 "Search": [
                     null,
-                    "Soek"
+                    "Zoeken"
                 ],
                 "No users found": [
                     null,
-                    "Geen gebruikers gevind"
+                    "Geen gebruikers gevonden"
                 ],
                 "Click to add as a chat contact": [
                     null,
-                    "Kliek om as kletskontak by te voeg"
+                    "Klik om contact toe te voegen"
                 ],
                 "Click to open this room": [
                     null,
-                    "Kliek om hierdie kletskamer te open"
+                    "Klik om room te openen"
                 ],
                 "Show more information on this room": [
                     null,
-                    "Wys meer inligting aangaande hierdie kletskamer"
+                    "Toon meer informatie over deze room"
                 ],
                 "Description:": [
                     null,
-                    "Beskrywing:"
+                    "Beschrijving"
                 ],
                 "Occupants:": [
                     null,
@@ -140,35 +265,35 @@
                 ],
                 "Features:": [
                     null,
-                    "Eienskappe:"
+                    "Functies:"
                 ],
                 "Requires authentication": [
                     null,
-                    "Benodig magtiging"
+                    "Verificatie vereist"
                 ],
                 "Hidden": [
                     null,
-                    "Verskuil"
+                    "Verborgen"
                 ],
                 "Requires an invitation": [
                     null,
-                    "Benodig 'n uitnodiging"
+                    "Veriest een uitnodiging"
                 ],
                 "Moderated": [
                     null,
-                    "Gemodereer"
+                    "Gemodereerd"
                 ],
                 "Non-anonymous": [
                     null,
-                    "Nie-anoniem"
+                    "Niet annoniem"
                 ],
                 "Open room": [
                     null,
-                    "Oop kletskamer"
+                    "Open room"
                 ],
                 "Permanent room": [
                     null,
-                    "Permanente kamer"
+                    "Blijvend room"
                 ],
                 "Public": [
                     null,
@@ -176,333 +301,337 @@
                 ],
                 "Semi-anonymous": [
                     null,
-                    "Deels anoniem"
+                    "Semi annoniem"
                 ],
                 "Temporary room": [
                     null,
-                    "Tydelike kamer"
+                    "Tijdelijke room"
                 ],
                 "Unmoderated": [
                     null,
-                    "Ongemodereer"
+                    "Niet gemodereerd"
                 ],
                 "Rooms": [
                     null,
-                    "Kamers"
+                    "Rooms"
                 ],
                 "Room name": [
                     null,
-                    "Kamer naam"
+                    "Room naam"
                 ],
                 "Nickname": [
                     null,
-                    "Bynaam"
+                    "Nickname"
                 ],
                 "Server": [
                     null,
-                    "Bediener"
+                    "Server"
                 ],
                 "Join": [
                     null,
-                    "Sluit aan"
+                    "Deelnemen"
                 ],
                 "Show rooms": [
                     null,
-                    "Wys kamers"
+                    "Toon rooms"
                 ],
                 "No rooms on %1$s": [
                     null,
-                    "Geen kamers op %1$s"
+                    "Geen room op %1$s"
                 ],
                 "Rooms on %1$s": [
                     null,
-                    "Kamers op %1$s"
+                    "Room op %1$s"
                 ],
                 "Set chatroom topic": [
                     null,
-                    "Stel kletskamer onderwerp"
+                    "Zet chatroom topic"
                 ],
                 "Kick user from chatroom": [
                     null,
-                    "Skop gebruiker uit die kletskamer"
+                    "Goei gebruiker uit chatroom"
                 ],
                 "Ban user from chatroom": [
                     null,
-                    "Verban gebruiker vanuit die kletskamer"
+                    "Ban gebruiker van chatroom"
                 ],
                 "Message": [
                     null,
-                    "Boodskap"
+                    "Bericht"
                 ],
                 "Save": [
                     null,
-                    "Stoor"
+                    "Opslaan"
                 ],
                 "Cancel": [
                     null,
-                    "Kanseleer"
+                    "Annuleren"
                 ],
                 "An error occurred while trying to save the form.": [
                     null,
-                    "A fout het voorgekom terwyl probeer is om die vorm te stoor."
+                    "Een error tijdens het opslaan van het formulier."
                 ],
                 "This chatroom requires a password": [
                     null,
-                    "Hiedie kletskamer benodig 'n wagwoord"
+                    "Chatroom heeft een wachtwoord"
                 ],
                 "Password: ": [
                     null,
-                    "Wagwoord:"
+                    "Wachtwoord: "
                 ],
                 "Submit": [
                     null,
-                    "Dien in"
+                    "Indienen"
                 ],
                 "This room is not anonymous": [
                     null,
-                    "Hierdie vertrek is nie anoniem nie"
+                    "Deze room is niet annoniem"
                 ],
                 "This room now shows unavailable members": [
                     null,
-                    "Hierdie vertrek wys nou onbeskikbare lede"
+                    ""
                 ],
                 "This room does not show unavailable members": [
                     null,
-                    "Hierdie vertrek wys nie onbeskikbare lede nie"
+                    ""
                 ],
                 "Non-privacy-related room configuration has changed": [
                     null,
-                    "Nie-privaatheidverwante kamer instellings het verander"
+                    ""
                 ],
                 "Room logging is now enabled": [
                     null,
-                    "Kamer log is nou aangeskakel"
+                    ""
                 ],
                 "Room logging is now disabled": [
                     null,
-                    "Kamer log is nou afgeskakel"
+                    ""
                 ],
                 "This room is now non-anonymous": [
                     null,
-                    "Hiedie kamer is nou nie anoniem nie"
+                    "Deze room is nu niet annoniem"
                 ],
                 "This room is now semi-anonymous": [
                     null,
-                    "Hierdie kamer is nou gedeeltelik anoniem"
+                    "Deze room is nu semie annoniem"
                 ],
                 "This room is now fully-anonymous": [
                     null,
-                    "Hierdie kamer is nou ten volle anoniem"
+                    "Deze room is nu volledig annoniem"
                 ],
                 "A new room has been created": [
                     null,
-                    "'n Nuwe kamer is geskep"
+                    "Een nieuwe room is gemaakt"
                 ],
                 "Your nickname has been changed": [
                     null,
-                    "Jou bynaam is verander"
+                    "Je nickname is veranderd"
                 ],
                 "<strong>%1$s</strong> has been banned": [
                     null,
-                    "<strong>%1$s</strong> is verban"
+                    "<strong>%1$s</strong> is verbannen"
                 ],
                 "<strong>%1$s</strong> has been kicked out": [
                     null,
-                    "<strong>%1$s</strong> is uitgeskop"
+                    "<strong>%1$s</strong> has been kicked out"
                 ],
                 "<strong>%1$s</strong> has been removed because of an affiliation change": [
                     null,
-                    "<strong>%1$s</strong> is verwyder a.g.v 'n verandering van affiliasie"
+                    ""
                 ],
                 "<strong>%1$s</strong> has been removed for not being a member": [
                     null,
-                    "<strong>%1$s</strong> is nie 'n lid nie, en dus verwyder"
+                    ""
                 ],
                 "You have been banned from this room": [
                     null,
-                    "Jy is uit die kamer verban"
+                    "Je bent verbannen uit deze room"
                 ],
                 "You have been kicked from this room": [
                     null,
-                    "Jy is uit die kamer geskop"
+                    "Je bent uit de room gegooid"
                 ],
                 "You have been removed from this room because of an affiliation change": [
                     null,
-                    "Jy is vanuit die kamer verwyder a.g.v 'n verandering van affiliasie"
+                    ""
                 ],
                 "You have been removed from this room because the room has changed to members-only and you're not a member": [
                     null,
-                    "Jy is vanuit die kamer verwyder omdat die kamer nou slegs tot lede beperk word en jy nie 'n lid is nie."
+                    ""
                 ],
                 "You have been removed from this room because the MUC (Multi-user chat) service is being shut down.": [
                     null,
-                    "Jy is van hierdie kamer verwyder aangesien die MUC (Multi-user chat) diens nou afgeskakel word."
+                    ""
                 ],
                 "You are not on the member list of this room": [
                     null,
-                    "Jy is nie op die ledelys van hierdie kamer nie"
+                    "Je bent niet een gebruiker van deze room"
                 ],
                 "No nickname was specified": [
                     null,
-                    "Geen bynaam verskaf nie"
+                    "Geen nickname ingegeven"
                 ],
                 "You are not allowed to create new rooms": [
                     null,
-                    "Jy word nie toegelaat om nog kamers te skep nie"
+                    "Je bent niet toegestaan nieuwe rooms te maken"
                 ],
                 "Your nickname doesn't conform to this room's policies": [
                     null,
-                    "Jou bynaam voldoen nie aan die kamer se beleid nie"
+                    "Je nickname is niet conform policy"
                 ],
                 "Your nickname is already taken": [
                     null,
-                    "Jou bynaam is reeds geneem"
+                    "Je nickname bestaat al"
                 ],
                 "This room does not (yet) exist": [
                     null,
-                    "Hierdie kamer bestaan tans (nog) nie"
+                    "Deze room bestaat niet"
                 ],
                 "This room has reached it's maximum number of occupants": [
                     null,
-                    "Hierdie kamer het sy maksimum aantal deelnemers bereik"
+                    "Deze room heeft het maximale aantal gebruikers"
                 ],
                 "Topic set by %1$s to: %2$s": [
                     null,
-                    "Onderwerp deur %1$s bygewerk na: %2$s"
+                    ""
                 ],
                 "This user is a moderator": [
                     null,
-                    "Hierdie gebruiker is 'n moderator"
+                    "Dit is een moderator"
                 ],
                 "This user can send messages in this room": [
                     null,
-                    "Hierdie gebruiker kan boodskappe na die kamer stuur"
+                    "Deze gebruiker kan berichten sturen in deze room"
                 ],
                 "This user can NOT send messages in this room": [
                     null,
-                    "Hierdie gebruiker kan NIE boodskappe na die kamer stuur nie"
+                    "Deze gebruiker kan NIET een bericht sturen in deze room"
                 ],
                 "Click to chat with this contact": [
                     null,
-                    "Kliek om met hierdie kontak te klets"
+                    "Klik om te chatten met contact"
                 ],
                 "Click to remove this contact": [
                     null,
-                    "Kliek om hierdie kontak te verwyder"
+                    "Klik om contact te verwijderen"
                 ],
                 "This contact is busy": [
                     null,
-                    "Hierdie persoon is besig"
+                    "Contact is bezet"
                 ],
                 "This contact is online": [
                     null,
-                    "Hierdie persoon is aanlyn"
+                    "Contact is online"
                 ],
                 "This contact is offline": [
                     null,
-                    "Hierdie persoon is aflyn"
+                    "Contact is offline"
                 ],
                 "This contact is unavailable": [
                     null,
-                    "Hierdie persoon is onbeskikbaar"
+                    "Contact is niet beschikbaar"
                 ],
                 "This contact is away for an extended period": [
                     null,
-                    "Hierdie persoon is vir lank afwesig"
+                    "Contact is afwezig voor lange periode"
                 ],
                 "This contact is away": [
                     null,
-                    "Hierdie persoon is afwesig"
+                    "Conact is afwezig"
                 ],
                 "Contact requests": [
                     null,
-                    "Kontak versoeke"
+                    "Contact uitnodiging"
                 ],
                 "My contacts": [
                     null,
-                    "My kontakte"
+                    "Mijn contacts"
                 ],
                 "Pending contacts": [
                     null,
-                    "Hangende kontakte"
+                    "Conacten in afwachting van"
                 ],
                 "Custom status": [
                     null,
-                    "Doelgemaakte status"
+                    ""
                 ],
                 "Click to change your chat status": [
                     null,
-                    "Kliek om jou klets-status te verander"
+                    "Klik hier om status te wijzigen"
                 ],
                 "Click here to write a custom status message": [
                     null,
-                    "Kliek hier om jou eie statusboodskap te skryf"
+                    "Klik hier om custom status bericht te maken"
                 ],
                 "online": [
                     null,
-                    "aangemeld"
+                    "online"
                 ],
                 "busy": [
                     null,
-                    "besig"
+                    "bezet"
                 ],
                 "away for long": [
                     null,
-                    "vir lank afwesig"
+                    "afwezig lange tijd"
                 ],
                 "away": [
                     null,
-                    "afwesig"
+                    "afwezig"
                 ],
                 "I am %1$s": [
                     null,
-                    "Ek is %1$s"
+                    "Ik ben %1$s"
                 ],
                 "Sign in": [
                     null,
-                    "Teken in"
+                    "Aanmelden"
                 ],
                 "XMPP/Jabber Username:": [
                     null,
-                    "XMPP/Jabber Gebruikersnaam:"
+                    "XMPP/Jabber Username:"
                 ],
                 "Password:": [
                     null,
-                    "Wagwoord"
+                    "Wachtwoord:"
                 ],
                 "Log In": [
                     null,
-                    "Meld aan"
+                    "Aanmelden"
                 ],
                 "BOSH Service URL:": [
                     null,
-                    "BOSH bediener URL"
+                    ""
                 ],
                 "Online Contacts": [
                     null,
-                    "Kontakte aangemeld"
+                    "Online Contacten"
+                ],
+                "%1$s is typing": [
+                    null,
+                    "%1$s is aan typen"
                 ],
                 "Connected": [
                     null,
-                    "Verbind"
+                    "Verbonden"
                 ],
                 "Attached": [
                     null,
-                    "Geheg"
+                    "Bijlage"
                 ]
             }
         }
     };
     if (typeof define === 'function' && define.amd) {
-        define("af", ['jed'], function () {
+        define("nl", ['jed'], function () {
             return factory(new Jed(translations));
         });
     } else {
         if (!window.locales) {
             window.locales = {};
         }
-        window.locales.af = factory(new Jed(translations));
+        window.locales.nl = factory(new Jed(translations));
     }
-}(this, function (af) { 
-    return af; 
+}(this, function (nl) { 
+    return nl; 
 }));

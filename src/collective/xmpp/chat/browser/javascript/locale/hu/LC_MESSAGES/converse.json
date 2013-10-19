@@ -3,489 +3,481 @@
       "": {
          "Project-Id-Version": "Converse.js 0.4",
          "Report-Msgid-Bugs-To": "",
-         "POT-Creation-Date": "2013-09-13 16:02+0200",
-         "PO-Revision-Date": "2013-09-15 11:44+0200",
-         "Last-Translator": "JC Brand <jc@opkode.com>",
-         "Language-Team": "Afrikaans",
-         "Language": "af",
+         "POT-Creation-Date": "2013-09-24 23:22+0200",
+         "PO-Revision-Date": "2013-09-25 22:42+0200",
+         "Last-Translator": "Krisztian Kompar <w3host@w3host.hu>",
+         "Language-Team": "Hungarian",
+         "Language": "hu",
          "MIME-Version": "1.0",
-         "Content-Type": "text/plain; charset=ASCII",
+         "Content-Type": "text/plain; charset=UTF-8",
          "Content-Transfer-Encoding": "8bit",
          "domain": "converse",
-         "lang": "af",
+         "lang": "hu",
          "plural_forms": "nplurals=2; plural=(n != 1);"
       },
       "Disconnected": [
          null,
-         "Verbindung onderbreek"
+         "Szétkapcsolva"
       ],
       "Error": [
          null,
-         "Fout"
+         "Hiba"
       ],
       "Connecting": [
          null,
-         "Verbind tans"
+         "Kapcsolódás"
       ],
       "Connection Failed": [
          null,
-         "Verbinding het gefaal"
+         "Kapcsolódási hiba"
       ],
       "Authenticating": [
          null,
-         "Besig om te bekragtig"
+         "Azonosítás"
       ],
       "Authentication Failed": [
          null,
-         "Bekragtiging het gefaal"
+         "Azonosítási hiba"
       ],
       "Disconnecting": [
          null,
-         "Onderbreek verbinding"
+         "Szétkapcsolás"
       ],
       "me": [
          null,
-         "ek"
+         "én"
       ],
       "%1$s is typing": [
          null,
-         "%1$s tik tans"
+         "%1$s gépel"
       ],
       "Show this menu": [
          null,
-         "Vertoon hierdie keuselys"
+         "Mutasd ezt a menüt"
       ],
       "Write in the third person": [
          null,
-         "Skryf in die derde persoon"
+         ""
       ],
       "Remove messages": [
          null,
-         "Verwyder boodskappe"
+         "Üzenet törlése"
       ],
       "Personal message": [
          null,
-         "Persoonlike boodskap"
+         "Saját üzenet"
       ],
       "Contacts": [
          null,
-         "Kontakte"
+         "Kapcsolatok"
       ],
       "Online": [
          null,
-         "Aangemeld"
+         "Elérhető"
       ],
       "Busy": [
          null,
-         "Besig"
+         "Foglalt"
       ],
       "Away": [
          null,
-         "Afwesig"
+         "Távol"
       ],
       "Offline": [
          null,
-         "Afgemeld"
+         "Nem elérhető"
       ],
       "Click to add new chat contacts": [
          null,
-         "Kliek om nuwe kletskontakte by te voeg"
+         "Új kapcsolatok hozzáadása"
       ],
       "Add a contact": [
          null,
-         "Voeg 'n kontak by"
+         "Új kapcsolat"
       ],
       "Contact username": [
          null,
-         "Konak gebruikersnaam"
+         "Felhasználónév"
       ],
       "Add": [
          null,
-         "Voeg by"
+         "Hozzáadás"
       ],
       "Contact name": [
          null,
-         "Kontaknaam"
+         "Kapcsolat neve"
       ],
       "Search": [
          null,
-         "Soek"
+         "Keresés"
       ],
       "No users found": [
          null,
-         "Geen gebruikers gevind"
+         "Nincs találat"
       ],
       "Click to add as a chat contact": [
          null,
-         "Kliek om as kletskontak by te voeg"
+         "Csevegő kapcsolatként hozzáad"
       ],
       "Click to open this room": [
          null,
-         "Kliek om hierdie kletskamer te open"
+         "Belépés a csevegő szobába"
       ],
       "Show more information on this room": [
          null,
-         "Wys meer inligting aangaande hierdie kletskamer"
+         "További információk a csevegő szobáról"
       ],
       "Description:": [
          null,
-         "Beskrywing:"
+         "Leírás:"
       ],
       "Occupants:": [
          null,
-         "Deelnemers:"
+         "Jelenlevők:"
       ],
       "Features:": [
          null,
-         "Eienskappe:"
+         "Tulajdonságok"
       ],
       "Requires authentication": [
          null,
-         "Benodig magtiging"
+         "Azonosítás szükséges"
       ],
       "Hidden": [
          null,
-         "Verskuil"
+         "Rejtett"
       ],
       "Requires an invitation": [
          null,
-         "Benodig 'n uitnodiging"
+         "Meghívás szükséges"
       ],
       "Moderated": [
          null,
-         "Gemodereer"
+         "Moderált"
       ],
       "Non-anonymous": [
          null,
-         "Nie-anoniem"
+         "NEM névtelen"
       ],
       "Open room": [
          null,
-         "Oop kletskamer"
+         "Nyitott szoba"
       ],
       "Permanent room": [
          null,
-         "Permanente kamer"
+         "Állandó szoba"
       ],
       "Public": [
          null,
-         "Publiek"
+         "Nyílvános"
       ],
       "Semi-anonymous": [
          null,
-         "Deels anoniem"
+         "Félig névtelen"
       ],
       "Temporary room": [
          null,
-         "Tydelike kamer"
+         "Ideiglenes szoba"
       ],
       "Unmoderated": [
          null,
-         "Ongemodereer"
+         "Moderálatlan"
       ],
       "Rooms": [
          null,
-         "Kamers"
+         "Szobák"
       ],
       "Room name": [
          null,
-         "Kamer naam"
+         "A szoba neve"
       ],
       "Nickname": [
          null,
-         "Bynaam"
+         "Becenév"
       ],
       "Server": [
          null,
-         "Bediener"
+         "Szerver"
       ],
       "Join": [
          null,
-         "Sluit aan"
+         "Csatlakozás"
       ],
       "Show rooms": [
          null,
-         "Wys kamers"
+         "Létező szobák"
       ],
       "No rooms on %1$s": [
          null,
-         "Geen kamers op %1$s"
+         "Nincs csevegő szoba a(z) %1$s szerveren"
       ],
       "Rooms on %1$s": [
          null,
-         "Kamers op %1$s"
+         "Csevegő szobák a(z) %1$s szerveren"
       ],
       "Set chatroom topic": [
          null,
-         "Stel kletskamer onderwerp"
+         "Csevegőszoba téma beállítás"
       ],
       "Kick user from chatroom": [
          null,
-         "Skop gebruiker uit die kletskamer"
+         "Felhasználó kiléptetése a csevegő szobából"
       ],
       "Ban user from chatroom": [
          null,
-         "Verban gebruiker vanuit die kletskamer"
+         "Felhasználó kitíltása a csevegő szobából"
       ],
       "Message": [
          null,
-         "Boodskap"
+         "Üzenet"
       ],
       "Save": [
          null,
-         "Stoor"
+         "Mentés"
       ],
       "Cancel": [
          null,
-         "Kanseleer"
+         "Mégsem"
       ],
       "An error occurred while trying to save the form.": [
          null,
-         "A fout het voorgekom terwyl probeer is om die vorm te stoor."
+         "Hiba történt az adatok mentése közben."
       ],
       "This chatroom requires a password": [
          null,
-         "Hiedie kletskamer benodig 'n wagwoord"
+         "A csevegő szoba belépéshez jelszó szükséges"
       ],
       "Password: ": [
          null,
-         "Wagwoord:"
+         "Jelszó:"
       ],
       "Submit": [
          null,
-         "Dien in"
+         "Küldés"
       ],
       "This room is not anonymous": [
          null,
-         "Hierdie vertrek is nie anoniem nie"
+         "Ez a szoba NEM névtelen"
       ],
       "This room now shows unavailable members": [
          null,
-         "Hierdie vertrek wys nou onbeskikbare lede"
+         "Ez a szoba mutatja az elérhetetlen tagokat"
       ],
       "This room does not show unavailable members": [
          null,
-         "Hierdie vertrek wys nie onbeskikbare lede nie"
+         "Ez a szoba nem mutatja az elérhetetlen tagokat"
       ],
       "Non-privacy-related room configuration has changed": [
          null,
-         "Nie-privaatheidverwante kamer instellings het verander"
+         "A szoba általános konfigurációja módosult"
       ],
       "Room logging is now enabled": [
          null,
-         "Kamer log is nou aangeskakel"
+         "A szobába a belépés lehetséges"
       ],
       "Room logging is now disabled": [
          null,
-         "Kamer log is nou afgeskakel"
+         "A szobába a belépés szünetel"
       ],
       "This room is now non-anonymous": [
          null,
-         "Hiedie kamer is nou nie anoniem nie"
+         "Ez a szoba most NEM névtelen"
       ],
       "This room is now semi-anonymous": [
          null,
-         "Hierdie kamer is nou gedeeltelik anoniem"
+         "Ez a szoba most félig névtelen"
       ],
       "This room is now fully-anonymous": [
          null,
-         "Hierdie kamer is nou ten volle anoniem"
+         "Ez a szoba most teljesen névtelen"
       ],
       "A new room has been created": [
          null,
-         "'n Nuwe kamer is geskep"
+         "Létrejött egy új csevegő szoba"
       ],
       "Your nickname has been changed": [
          null,
-         "Jou bynaam is verander"
+         "A beceneved módosításra került"
       ],
       "<strong>%1$s</strong> has been banned": [
          null,
-         "<strong>%1$s</strong> is verban"
+         "A szobából kitíltva: <strong>%1$s</strong>"
       ],
       "<strong>%1$s</strong> has been kicked out": [
          null,
-         "<strong>%1$s</strong> is uitgeskop"
+         "A szobából kidobva: <strong>%1$s</strong>"
       ],
       "<strong>%1$s</strong> has been removed because of an affiliation change": [
          null,
-         "<strong>%1$s</strong> is verwyder a.g.v 'n verandering van affiliasie"
+         "Taglista módosítás miatt a szobából kiléptetve: <strong>%1$s</strong>"
       ],
       "<strong>%1$s</strong> has been removed for not being a member": [
          null,
-         "<strong>%1$s</strong> is nie 'n lid nie, en dus verwyder"
+         "A taglistán nem szerepel így a szobából kiléptetve: <strong>%1$s</strong>"
       ],
       "You have been banned from this room": [
          null,
-         "Jy is uit die kamer verban"
+         "Ki lettél tíltva ebből a szobából"
       ],
       "You have been kicked from this room": [
          null,
-         "Jy is uit die kamer geskop"
+         "Ki lettél dobva ebből a szobából"
       ],
       "You have been removed from this room because of an affiliation change": [
          null,
-         "Jy is vanuit die kamer verwyder a.g.v 'n verandering van affiliasie"
+         "Taglista módosítás miatt kiléptettünk a csevegő szobából"
       ],
       "You have been removed from this room because the room has changed to members-only and you're not a member": [
          null,
-         "Jy is vanuit die kamer verwyder omdat die kamer nou slegs tot lede beperk word en jy nie 'n lid is nie."
+         "Kiléptettünk a csevegő szobából, mert mostantól csak a taglistán szereplők lehetnek jelen."
       ],
       "You have been removed from this room because the MUC (Multi-user chat) service is being shut down.": [
          null,
-         "Jy is van hierdie kamer verwyder aangesien die MUC (Multi-user chat) diens nou afgeskakel word."
+         "Kiléptettünk a csevegő szobából, mert a MUC (Multi-User Chat) szolgáltatás leállításra került."
       ],
       "You are not on the member list of this room": [
          null,
-         "Jy is nie op die ledelys van hierdie kamer nie"
+         "Nem szerepelsz a csevegő szoba taglistáján"
       ],
       "No nickname was specified": [
          null,
-         "Geen bynaam verskaf nie"
+         "Nem lett megadva becenév"
       ],
       "You are not allowed to create new rooms": [
          null,
-         "Jy word nie toegelaat om nog kamers te skep nie"
+         "Nem lehet új csevegő szobát létrehozni"
       ],
       "Your nickname doesn't conform to this room's policies": [
          null,
-         "Jou bynaam voldoen nie aan die kamer se beleid nie"
+         "A beceneved ütközik a csevegő szoba szabályzataival"
       ],
       "Your nickname is already taken": [
          null,
-         "Jou bynaam is reeds geneem"
+         "A becenevedet már valaki használja"
       ],
       "This room does not (yet) exist": [
          null,
-         "Hierdie kamer bestaan tans (nog) nie"
+         "Ez a szoba (még) nem létezik"
       ],
       "This room has reached it's maximum number of occupants": [
          null,
-         "Hierdie kamer het sy maksimum aantal deelnemers bereik"
+         "Ez a csevegő szoba elérte a maximális jelenlevők számát"
       ],
       "Topic set by %1$s to: %2$s": [
          null,
-         "Onderwerp deur %1$s bygewerk na: %2$s"
+         "A következő témát állította be %1$s: %2$s"
       ],
       "This user is a moderator": [
          null,
-         "Hierdie gebruiker is 'n moderator"
+         "Ez a felhasználó egy moderátor"
       ],
       "This user can send messages in this room": [
          null,
-         "Hierdie gebruiker kan boodskappe na die kamer stuur"
+         "Ez a felhasználó küldhet üzenetet ebbe a szobába"
       ],
       "This user can NOT send messages in this room": [
          null,
-         "Hierdie gebruiker kan NIE boodskappe na die kamer stuur nie"
+         "Ez a felhasználó NEM küldhet üzenetet ebbe a szobába"
       ],
       "Click to chat with this contact": [
          null,
-         "Kliek om met hierdie kontak te klets"
+         "Csevegés indítása ezzel a kapcsolatunkkal"
       ],
       "Click to remove this contact": [
          null,
-         "Kliek om hierdie kontak te verwyder"
+         "A kapcsolat törlése"
       ],
       "This contact is busy": [
          null,
-         "Hierdie persoon is besig"
+         "Elfoglalt"
       ],
       "This contact is online": [
          null,
-         "Hierdie persoon is aanlyn"
+         "Online"
       ],
       "This contact is offline": [
          null,
-         "Hierdie persoon is aflyn"
+         "Nincs bejelentkezve"
       ],
       "This contact is unavailable": [
          null,
-         "Hierdie persoon is onbeskikbaar"
+         "Elérhetetlen"
       ],
       "This contact is away for an extended period": [
          null,
-         "Hierdie persoon is vir lank afwesig"
+         "Hosszabb ideje távol"
       ],
       "This contact is away": [
          null,
-         "Hierdie persoon is afwesig"
+         "Távol"
       ],
       "Contact requests": [
          null,
-         "Kontak versoeke"
+         "Kapcsolat felvételi kérés"
       ],
       "My contacts": [
          null,
-         "My kontakte"
+         "Kapcsolatok:"
       ],
       "Pending contacts": [
          null,
-         "Hangende kontakte"
+         "Függőben levő kapcsolatok"
       ],
       "Custom status": [
          null,
-         "Doelgemaakte status"
+         "Egyedi státusz"
       ],
       "Click to change your chat status": [
          null,
-         "Kliek om jou klets-status te verander"
+         "Saját státusz beállítása"
       ],
       "Click here to write a custom status message": [
          null,
-         "Kliek hier om jou eie statusboodskap te skryf"
+         "Egyedi státusz üzenet írása"
       ],
       "online": [
          null,
-         "aangemeld"
+         "online"
       ],
       "busy": [
          null,
-         "besig"
+         "elfoglalt"
       ],
       "away for long": [
          null,
-         "vir lank afwesig"
+         "hosszú ideje távol"
       ],
       "away": [
          null,
-         "afwesig"
+         "távol"
       ],
       "I am %1$s": [
          null,
-         "Ek is %1$s"
+         "%1$s vagyok"
       ],
       "Sign in": [
          null,
-         "Teken in"
+         "Belépés"
       ],
       "XMPP/Jabber Username:": [
          null,
-         "XMPP/Jabber Gebruikersnaam:"
+         "XMPP/Jabber azonosító:"
       ],
       "Password:": [
          null,
-         "Wagwoord"
+         "Jelszó:"
       ],
       "Log In": [
          null,
-         "Meld aan"
+         "Belépés"
       ],
       "BOSH Service URL:": [
          null,
-         "BOSH bediener URL"
+         "BOSH szerver URL"
       ],
       "Online Contacts": [
          null,
-         "Kontakte aangemeld"
-      ],
-      "Connected": [
-         null,
-         "Verbind"
-      ],
-      "Attached": [
-         null,
-         "Geheg"
+         "Online kapcsolatok"
       ]
    }
 }
