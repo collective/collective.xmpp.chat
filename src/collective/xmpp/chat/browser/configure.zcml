@@ -33,6 +33,24 @@
         permission="zope2.View"
         />
 
+    <browser:page
+        for="*"
+        name="otr-allowed"
+        class=".controlpanel.XMPPSettingsView"
+        layer=".interfaces.IXMPPChatLayer"
+        attribute="otr_allowed"
+        permission="zope2.View"
+        />
+
+    <!-- Control panel -->
+    <browser:page
+        name="xmpp-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.XMPPChatSettingsControlPanel"
+        permission="cmf.ManagePortal"
+        layer=".interfaces.IXMPPChatLayer"
+        />
+
     <browser:viewlet
         name="collective.xmpp.chat.onlineusers"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"

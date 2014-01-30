@@ -3,93 +3,108 @@
 
     <!-- Begin OTR dependencies -->
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/build/dep/salsa20.js"
+        id="++resource++collective.xmpp.chat.javascript/otr/salsa20.js"
         insert-after="jquery-integration.js"
-        authenticated="True"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/build/dep/bigint.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/build/dep/salsa20.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/bigint.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/salsa20.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/core.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/build/dep/bigint.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/core.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/bigint.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/enc-base64.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/core.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/enc-base64.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/core.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/crypto-js/src/md5.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/enc-base64.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/md5.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/enc-base64.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/crypto-js/src/evpkdf.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/crypto-js/src/md5.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/evpkdf.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/md5.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/cipher-core.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/crypto-js/src/evpkdf.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/cipher-core.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/evpkdf.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/aes.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/cipher-core.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/aes.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/cipher-core.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha1.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/aes.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/sha1.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/aes.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha256.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha1.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/sha256.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/sha1.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/hmac.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha256.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/hmac.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/sha256.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/pad-nopadding.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/hmac.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/pad-nopadding.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/hmac.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/mode-ctr.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/pad-nopadding.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/mode-ctr.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/pad-nopadding.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/build/dep/eventemitter.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/mode-ctr.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/eventemitter.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/mode-ctr.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
 
     <javascript
-        id="++resource++collective.xmpp.chat.javascript/otr/build/otr.js"
-        insert-after="++resource++collective.xmpp.chat.javascript/otr/build/dep/eventemitter.js"
-        authenticated="True"
+        id="++resource++collective.xmpp.chat.javascript/otr/otr.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/eventemitter.js"
+        expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous() and here.restrictedTraverse('@@otr-allowed')()"
+        authenticated="False"
         />
     <!-- End OTR dependencies -->
 
