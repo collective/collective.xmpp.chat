@@ -1,6 +1,98 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
+    <!-- Begin OTR dependencies -->
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/build/dep/salsa20.js"
+        insert-after="jquery-integration.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/build/dep/bigint.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/build/dep/salsa20.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/core.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/build/dep/bigint.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/enc-base64.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/core.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/crypto-js/src/md5.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/enc-base64.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/crypto-js/src/evpkdf.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/crypto-js/src/md5.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/cipher-core.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/crypto-js/src/evpkdf.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/aes.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/cipher-core.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha1.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/aes.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha256.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha1.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/hmac.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/sha256.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/pad-nopadding.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/hmac.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/mode-ctr.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/pad-nopadding.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/build/dep/eventemitter.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/vendor/cryptojs/mode-ctr.js"
+        authenticated="True"
+        />
+
+    <javascript
+        id="++resource++collective.xmpp.chat.javascript/otr/build/otr.js"
+        insert-after="++resource++collective.xmpp.chat.javascript/otr/build/dep/eventemitter.js"
+        authenticated="True"
+        />
+    <!-- End OTR dependencies -->
+
     <javascript
         id="++resource++collective.xmpp.chat.javascript/strophe.roster.js"
         insert-after="++resource++collective.xmpp.core.js/strophe.js"
