@@ -535,7 +535,7 @@
                 var cipher = CryptoJS.lib.PasswordBasedCipher;
 
                 var result, key, pass;
-                if (typeof u.connection.pass !== "undefined") {
+                if (typeof converse.connection.pass !== "undefined") {
                     pass = converse.connection.pass;
                     var pass_check = this.get('pass_check');
                     if (saved_key && instance_tag && typeof pass_check !== 'undefined') {
@@ -557,7 +557,7 @@
                 instance_tag = OTR.makeInstanceTag();
                 key = new DSA();
 
-                if (typeof u.connection.pass !== "undefined") {
+                if (typeof converse.connection.pass !== "undefined") {
                     // Encrypt the key and set in sessionStorage. Also store
                     // instance tag
                     window.sessionStorage[hex_sha1(this.id+'priv_key')] =
