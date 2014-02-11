@@ -133,8 +133,10 @@
         this.allow_otr = true;
         this.animate = true;
         this.auto_list_rooms = false;
+        this.auto_reconnect = true;
         this.auto_subscribe = false;
         this.bosh_service_url = undefined; // The BOSH connection manager URL.
+        this.cache_otr_key = false;
         this.debug = false;
         this.hide_muc_server = false;
         this.i18n = locales.en;
@@ -157,8 +159,10 @@
             'allow_otr',
             'animate',
             'auto_list_rooms',
+            'auto_reconnect',
             'auto_subscribe',
             'bosh_service_url',
+            'cache_otr_key',
             'connection',
             'debug',
             'fullname',
@@ -167,11 +171,11 @@
             'jid',
             'prebind',
             'rid',
+            'show_call_button',
             'show_controlbox_by_default',
             'show_emoticons',
             'show_only_online_users',
             'show_toolbar',
-            'show_call_button',
             'sid',
             'use_vcards',
             'xhr_custom_status',
@@ -313,41 +317,64 @@
             );
         };
 
-        this.onConnect = function (status) {
-            var $button, $form;
-            if (status === Strophe.Status.CONNECTED) {
-                converse.log('Connected');
-                converse.onConnected();
-            } else if (status === Strophe.Status.DISCONNECTED) {
-                $form = $('#converse-login');
-                $button = $form.find('input[type=submit]');
-                if ($button) { $button.show().siblings('span').remove(); }
-                converse.giveFeedback(__('Disconnected'), 'error');
-                converse.connection.connect(
-                    converse.connection.jid,
-                    converse.connection.pass,
-                    converse.onConnect
+        this.reconnect = function () {
+            converse.giveFeedback(__('Reconnecting'), 'error');
+            // XXX: Couldn't get the prebind case to work here.
+            if (!converse.prebind) {
+                this.connection.connect(
+                    this.connection.jid,
+                    this.connection.pass,
+                    function (status, condition) {
+                        converse.onConnect(status, condition, true);
+                    },
+                    this.connection.wait,
+                    this.connection.hold,
+                    this.connection.route
                 );
+            }
+        };
+
+        this.showLoginButton = function () {
+            var view = converse.chatboxesview.views.controlbox;
+            if (typeof view.loginpanel !== 'undefined') {
+                view.loginpanel.showLoginButton();
+            }
+        };
+
+        this.onConnect = function (status, condition, reconnect) {
+            var $button, $form;
+            if ((status === Strophe.Status.CONNECTED) ||
+                (status === Strophe.Status.ATTACHED)) {
+                if ((typeof reconnect !== 'undefined') && (reconnect)) {
+                    converse.log(status === Strophe.Status.CONNECTED ? 'Reconnected' : 'Reattached');
+                    converse.onReconnected();
+                } else {
+                    converse.log(status === Strophe.Status.CONNECTED ? 'Connected' : 'Attached');
+                    converse.onConnected();
+                }
+            } else if (status === Strophe.Status.DISCONNECTED) {
+                // TODO: Handle case where user manually logs out...
+                converse.giveFeedback(__('Disconnected'), 'error');
+                if (converse.auto_reconnect) {
+                    converse.reconnect();
+                } else {
+                    converse.showLoginButton();
+                }
             } else if (status === Strophe.Status.Error) {
-                $form = $('#converse-login');
-                $button = $form.find('input[type=submit]');
-                if ($button) { $button.show().siblings('span').remove(); }
+                converse.showLoginButton();
                 converse.giveFeedback(__('Error'), 'error');
             } else if (status === Strophe.Status.CONNECTING) {
                 converse.giveFeedback(__('Connecting'));
             } else if (status === Strophe.Status.CONNFAIL) {
-                converse.chatboxesview.views.controlbox.trigger('connection-fail');
+                converse.showLoginButton();
                 converse.giveFeedback(__('Connection Failed'), 'error');
             } else if (status === Strophe.Status.AUTHENTICATING) {
                 converse.giveFeedback(__('Authenticating'));
             } else if (status === Strophe.Status.AUTHFAIL) {
-                converse.chatboxesview.views.controlbox.trigger('auth-fail');
+                converse.showLoginButton();
                 converse.giveFeedback(__('Authentication Failed'), 'error');
             } else if (status === Strophe.Status.DISCONNECTING) {
                 converse.giveFeedback(__('Disconnecting'), 'error');
-            } else if (status === Strophe.Status.ATTACHED) {
-                converse.log('Attached');
-                converse.onConnected();
             }
         };
 
@@ -372,7 +399,7 @@
         this.parseISO8601 = function (datestr) {
             /* Parses string formatted as 2013-02-14T11:27:08.268Z to a Date obj.
             */
-            var numericKeys = [1, 4, 5, 6, 7, 10, 11],
+            var numericKeys = [1, 4, 5, 6, 7, 10, 11],
                 struct = /^\s*(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}\.?\d*)Z\s*$/.exec(datestr),
                 minutesOffset = 0,
                 i, k;
@@ -425,27 +452,35 @@
             this.xmppstatus.fetch({success: callback, error: callback});
         };
 
-        this.initRoster = function () {
-            // Set up the roster
-            this.roster = new this.RosterItems();
-            this.roster.localStorage = new Backbone.LocalStorage(
-                hex_sha1('converse.rosteritems-'+converse.bare_jid));
-
-            // Register callbacks that depend on the roster
+        this.registerRosterHandler = function () {
+            // Register handlers that depend on the roster
             this.connection.roster.registerCallback(
                 $.proxy(this.roster.rosterHandler, this.roster),
                 null, 'presence', null);
+        };
 
+        this.registerRosterXHandler = function () {
             this.connection.addHandler(
                 $.proxy(this.roster.subscribeToSuggestedItems, this.roster),
                 'http://jabber.org/protocol/rosterx', 'message', null);
+        };
 
+        this.registerPresenceHandler = function () {
             this.connection.addHandler(
                 $.proxy(function (presence) {
                     this.presenceHandler(presence);
                     return true;
                 }, this.roster), null, 'presence', null);
+        };
 
+        this.initRoster = function () {
+            // Set up the roster
+            this.roster = new this.RosterItems();
+            this.roster.localStorage = new Backbone.LocalStorage(
+                hex_sha1('converse.rosteritems-'+converse.bare_jid));
+            this.registerRosterHandler();
+            this.registerRosterXHandler();
+            this.registerPresenceHandler();
             // No create the view which will fetch roster items from
             // localStorage
             this.rosterview = new this.RosterView({'model':this.roster});
@@ -467,6 +502,18 @@
                 }
                 this.windowState = e.type;
             },this));
+        };
+
+        this.onReconnected = function () {
+            // We need to re-register all the event handlers on the newly
+            // created connection.
+            this.initStatus($.proxy(function () {
+                this.registerRosterXHandler();
+                this.registerPresenceHandler();
+                this.chatboxes.registerMessageHandler();
+                converse.xmppstatus.sendPresence();
+                this.giveFeedback(__('Online Contacts'));
+            }, this));
         };
 
         this.onConnected = function () {
@@ -528,30 +575,56 @@
                 }
             },
 
+            getSessionPassphrase: function () {
+                return converse.prebind ? converse.connection.jid : converse.connection.pass;
+            },
+
+            generatePrivateKey: function (callback, instance_tag) {
+                var cipher = CryptoJS.lib.PasswordBasedCipher;
+                var key = new DSA();
+                if (converse.cache_otr_key) {
+                    pass = this.getSessionPassphrase();
+                    if (typeof pass !== "undefined") {
+                        // Encrypt the key and set in sessionStorage. Also store instance tag.
+                        window.sessionStorage[hex_sha1(this.id+'priv_key')] =
+                            cipher.encrypt(CryptoJS.algo.AES, key.packPrivate(), pass).toString();
+                        window.sessionStorage[hex_sha1(this.id+'instance_tag')] = instance_tag;
+                            this.save({'pass_check': cipher.encrypt(CryptoJS.algo.AES, 'match', pass).toString()});
+                    }
+                }
+                this.trigger('showHelpMessages', [__('Private key generated.')], null, false);
+                callback({
+                    'key': key,
+                    'instance_tag': instance_tag
+                });
+            },
+
             getSession: function (callback) {
                 // FIXME: sessionStorage is not supported in IE < 8. Perhaps a
                 // user alert is required here...
-                var result, pass, instance_tag, saved_key;
                 var cipher = CryptoJS.lib.PasswordBasedCipher;
-                if (typeof converse.connection.pass !== "undefined") {
-                    instance_tag = window.sessionStorage[hex_sha1(this.id+'instance_tag')];
-                    saved_key = window.sessionStorage[hex_sha1(this.id+'priv_key')];
-                    pass = converse.connection.pass;
-                    var pass_check = this.get('pass_check');
-                    if (saved_key && instance_tag && typeof pass_check !== 'undefined') {
-                        var decrypted = cipher.decrypt(CryptoJS.algo.AES, saved_key, pass);
-                        var key = DSA.parsePrivate(decrypted.toString(CryptoJS.enc.Latin1));
-                        if (cipher.decrypt(CryptoJS.algo.AES, pass_check, pass).toString(CryptoJS.enc.Latin1) === 'match') {
-                            // Verified that the user's password is still the same
-                            this.trigger('showHelpMessages', [__('Re-establishing encrypted session')]);
-                            callback({
-                                'key': key,
-                                'instance_tag': instance_tag
-                            });
+                var result, pass, instance_tag, saved_key;
+                if (converse.cache_otr_key) {
+                    pass = this.getSessionPassphrase();
+                    if (typeof pass !== "undefined") {
+                        instance_tag = window.sessionStorage[hex_sha1(this.id+'instance_tag')];
+                        saved_key = window.sessionStorage[hex_sha1(this.id+'priv_key')];
+                        var pass_check = this.get('pass_check');
+                        if (saved_key && instance_tag && typeof pass_check !== 'undefined') {
+                            var decrypted = cipher.decrypt(CryptoJS.algo.AES, saved_key, pass);
+                            var key = DSA.parsePrivate(decrypted.toString(CryptoJS.enc.Latin1));
+                            if (cipher.decrypt(CryptoJS.algo.AES, pass_check, pass).toString(CryptoJS.enc.Latin1) === 'match') {
+                                // Verified that the passphrase is still the same
+                                this.trigger('showHelpMessages', [__('Re-establishing encrypted session')]);
+                                callback({
+                                    'key': key,
+                                    'instance_tag': instance_tag
+                                });
+                                return; // Our work is done here
+                            }
                         }
                     }
                 }
-
                 // We need to generate a new key and instance tag
                 instance_tag = OTR.makeInstanceTag();
                 this.trigger('showHelpMessages', [
@@ -560,25 +633,7 @@
                     null,
                     true // show spinner
                 );
-
-                var clb = callback;
-                setTimeout($.proxy(function () {
-                    var key = new DSA();
-                    if (typeof converse.connection.pass !== "undefined") {
-                        // Encrypt the key and set in sessionStorage. Also store
-                        // instance tag
-                        window.sessionStorage[hex_sha1(this.id+'priv_key')] =
-                            cipher.encrypt(CryptoJS.algo.AES, key.packPrivate(), pass).toString();
-                        window.sessionStorage[hex_sha1(this.id+'instance_tag')] = instance_tag;
-                            this.save({'pass_check': cipher.encrypt(CryptoJS.algo.AES, 'match', pass).toString()});
-                    }
-                    this.trigger('showHelpMessages', [__('Private key generated.')], null, false);
-                    clb({
-                        'key': key,
-                        'instance_tag': instance_tag
-                    });
-                }, this), 500);
-
+                setTimeout($.proxy(this.generatePrivateKey, this), 500, callback, instance_tag);
             },
 
             updateOTRStatus: function (state) {
@@ -2393,6 +2448,17 @@
         this.ChatBoxes = Backbone.Collection.extend({
             model: converse.ChatBox,
 
+            registerMessageHandler: function () {
+                // TODO: Make this method global to converse, trigger an event
+                // and let messageReceived be called via a handler for that
+                // event.
+                converse.connection.addHandler(
+                    $.proxy(function (message) {
+                        this.messageReceived(message);
+                        return true;
+                    }, this), null, 'message', 'chat');
+            },
+
             onConnected: function () {
                 this.localStorage = new Backbone.LocalStorage(
                     hex_sha1('converse.chatboxes-'+converse.bare_jid));
@@ -2404,16 +2470,9 @@
                 } else {
                     this.get('controlbox').save();
                 }
-                // This will make sure the Roster is set up
+                // This line below will make sure the Roster is set up
                 this.get('controlbox').set({connected:true});
-
-                // Register message handler
-                converse.connection.addHandler(
-                    $.proxy(function (message) {
-                        this.messageReceived(message);
-                        return true;
-                    }, this), null, 'message', 'chat');
-
+                this.registerMessageHandler();
                 // Get cached chatboxes from localstorage
                 this.fetch({
                     add: true,
@@ -3388,7 +3447,7 @@
                 converse.connection.connect(jid, password, converse.onConnect);
             },
 
-            showConnectButton: function () {
+            showLoginButton: function () {
                 var $form = this.$el.find('#converse-login');
                 var $button = $form.find('input[type=submit]');
                 if ($button.length) {
@@ -3399,8 +3458,6 @@
             initialize: function (cfg) {
                 cfg.$parent.html(this.$el.html(this.template()));
                 this.$tabs = cfg.$parent.parent().find('#controlbox-tabs');
-                this.model.on('connection-fail', function () { this.showConnectButton(); }, this);
-                this.model.on('auth-fail', function () { this.showConnectButton(); }, this);
             },
 
             render: function () {

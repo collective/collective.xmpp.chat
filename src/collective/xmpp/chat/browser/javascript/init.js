@@ -4,6 +4,7 @@ $('#conversejs').ready(function () {
         converse.initialize({
             animate: true,
             prebind: true,
+            cache_otr_key: true,
             connection: connection,
             xhr_user_search: true,
             auto_subscribe: $(this).data('autosubscribe'),
