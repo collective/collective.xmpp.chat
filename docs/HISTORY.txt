@@ -5,7 +5,8 @@ Changelog
 0.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Brazilian Portuguese translation was added.
+  [hvelarde]
 
 
 0.3.1 (2013-09-12)
