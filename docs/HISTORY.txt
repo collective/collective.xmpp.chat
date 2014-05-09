@@ -5,6 +5,7 @@ Changelog
 0.3.2 (unreleased)
 ------------------
 
+- In user search, return only required attributes. [jcbrand]
 - Brazilian Portuguese translation was added.
   [hvelarde]
 
