@@ -20,19 +20,7 @@ class SearchUsers(BrowserView):
         if len(searchtext) < 2:
             return []
         panel = UsersOverviewControlPanel(self.context, self.request)
-        users = panel.doSearch(searchtext)
-        # complete name and surname can contain badly encoded values
-        # when returned from plone.pas search therefore we try to convert
-        # them to unicode with the latin characters encoding
-        fields = ['cn', 'sn']
-        for user_dict in users:
-            for field in fields:
-                try:
-                    field_value = user_dict.get(field)
-                    if field_value:
-                        user_dict[field] = unicode(field_value, "ISO-8859-1")
-                except UnicodeDecodeError:
-                    users.remove(user_dict)
-                    log.warn("Can't decode %s", user_dict[field])
-
-        return json.dumps(users)
+        return json.dumps([{
+            'fullname': u['fullname'],
+            'id': u['id']
+            } for u in panel.doSearch(searchtext)])
