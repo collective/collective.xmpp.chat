@@ -1,8 +1,6 @@
-from distribute_setup import use_setuptools
 from setuptools import setup, find_packages
 import os
 
-use_setuptools()
 version = '0.3.2.dev0'
 
 setup(
@@ -27,11 +25,7 @@ setup(
     namespace_packages=['collective', 'collective.xmpp'],
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        'plone.app.jquery>=1.7.2',
-        'setuptools',
-        'collective.xmpp.core',
-    ],
+    install_requires=['collective.xmpp.core'],
     extras_require={
         "sphinx": [
             "Sphinx>=1.0",
