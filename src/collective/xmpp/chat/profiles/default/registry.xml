@@ -5,11 +5,11 @@
     <value key="js">++resource++collective.xmpp.chat.javascript/converse.js</value>
   </records>
 
-  <records prefix="plone.resources/converse_init"
+  <records prefix="plone.resources/converse-init"
          interface='Products.CMFPlone.interfaces.IResourceRegistry'>
     <value key="js">++resource++collective.xmpp.chat.javascript/init.js</value>
     <value key="css">
-      <element>++resource++collective.xmpp.css/converse.css</element>
+      <element>++resource++collective.xmpp.chat.css/converse.css</element>
     </value>
   </records>
 
@@ -18,8 +18,9 @@
     <value key="resources">
       <element>converse_init</element>
     </value>
+    <value key="compile">True</value>
     <value key="enabled">True</value>
-    <value key="jscompilation">++resource++collective.xmpp.chat.javascript/converse-compiled.js</value>
+    <value key="jscompilation">++resource++collective.xmpp.chat.javascript/converse-init-compiled.js</value>
     <value key="csscompilation">++resource++collective.xmpp.chat.css/converse-compiled.css</value>
     <value key="last_compilation">2018-03-20 00:00:00</value>
   </records>
