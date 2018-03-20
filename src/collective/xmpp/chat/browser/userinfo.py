@@ -1,6 +1,7 @@
 from Products.Five import BrowserView
 from collective.xmpp.core.browser import userinfo
-from plone.app.controlpanel.usergroups import UsersOverviewControlPanel
+from Products.CMFPlone.controlpanel.browser.usergroups_usersoverview import \
+    UsersOverviewControlPanel
 import json
 import logging
 log = logging.getLogger(__name__)
