@@ -1,5 +1,4 @@
 require(['converse'], function () {
-    debugger;
     var chatdata = document.getElementById('collective-xmpp-chat-data');
     converse.initialize({
         xhr_user_search: true,
