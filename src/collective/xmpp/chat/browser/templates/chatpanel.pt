@@ -1,3 +1,7 @@
 <div id="collective-xmpp-chat-data" 
     tal:condition="not: context/portal_membership/isAnonymousUser"
-    tal:attributes="auto_subscribe view/auto_subscribe; lang view/lang"></div>
+    tal:attributes="
+        auto_subscribe view/auto_subscribe;
+        bosh_url view/bosh_url;
+        debug view/debug;
+        lang view/lang"></div>

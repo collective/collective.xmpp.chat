@@ -18,6 +18,9 @@ class ChatData(ViewletBase):
         registry = component.getUtility(IRegistry)
         settings = registry.forInterface(IXMPPSettings, check=False)
         self.auto_subscribe = settings.auto_subscribe
+        self.bosh_url = settings.bosh_url
+        self.debug = settings.auto_subscribe
+
         pstate = component.getMultiAdapter(
             (context, request), name='plone_portal_state')
         self.lang = pstate.language()
