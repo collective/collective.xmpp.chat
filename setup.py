@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.2.dev0'
+version = '1.0.0.dev0'
 
 setup(
     name='collective.xmpp.chat',
@@ -12,7 +12,7 @@ setup(
     # Get more strings from
     # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
-    "Framework :: Plone",
+    "Framework :: Plone :: 5.1",
     "Programming Language :: Python",
     ],
     keywords='xmpp chat messaging',
