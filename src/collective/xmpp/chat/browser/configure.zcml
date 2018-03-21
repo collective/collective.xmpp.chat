@@ -1,8 +1,15 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.xmpp.chat">
+
+    <plone:static
+        directory="static"
+        type="plone"
+        name="collective.xmpp.chat"
+        />
 
     <browser:resourceDirectory
         name="collective.xmpp.chat.javascript"
